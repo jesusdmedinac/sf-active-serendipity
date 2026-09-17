@@ -1,0 +1,118 @@
+---
+// Main Entry Point for jesusdmedinac.com (SF Active Serendipity Portal)
+import '../styles/modern-craft.css';
+import AmbientShaderCanvas from '../components/AmbientShaderCanvas.astro';
+import AtmosphericHero from '../components/AtmosphericHero.astro';
+import ProofOfWorkBento from '../components/ProofOfWorkBento.astro';
+import ConsultingCard from '../components/ConsultingCard.astro';
+import ContactGrid from '../components/ContactGrid.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <title>Jesús Medina | Staff Mobile Engineer & KMP Architect</title>
+    <meta name="description" content="Staff Mobile Software Engineer architecting native iOS & Android applications from a single Kotlin Multiplatform codebase. Based in the SF Bay Area." />
+    <meta property="og:title" content="Jesús Medina | Staff Mobile Engineer & KMP Architect" />
+    <meta property="og:description" content="Single-codebase native iOS & Android (KMP). Free 30-min architecture audits for high-growth startups." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jesusdmedinac.com" />
+  </head>
+  <body>
+    <AmbientShaderCanvas />
+
+    <main class="page-main">
+      <AtmosphericHero />
+      <ProofOfWorkBento />
+      <ConsultingCard />
+      <ContactGrid />
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-content">
+        <p class="footer-copy">
+          Designed for high-speed mobile scanning & in-person serendipity in San Francisco.
+        </p>
+        <div class="footer-links">
+          <a href="/display" class="tablet-kiosk-link">
+            <span class="pulse-icon">●</span> Open Tablet Kiosk Display Mode
+          </a>
+        </div>
+        <p class="footer-subcopy">
+          &copy; {new Date().getFullYear()} Jesús Daniel Medina Cruz. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <style>
+      .page-main {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+      }
+
+      .page-footer {
+        position: relative;
+        z-index: 1;
+        border-top: 1px solid var(--border-subtle);
+        background: rgba(9, 9, 11, 0.85);
+        backdrop-filter: blur(12px);
+        padding: 3rem 1.5rem;
+        text-align: center;
+      }
+
+      .footer-content {
+        max-width: 640px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .footer-copy {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+      }
+
+      .footer-links {
+        margin: 0.5rem 0;
+      }
+
+      .tablet-kiosk-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--brand-kmp);
+        background: rgba(127, 82, 255, 0.1);
+        border: 1px solid rgba(127, 82, 255, 0.25);
+        padding: 8px 16px;
+        border-radius: 9999px;
+        transition: all 0.2s ease;
+      }
+
+      .tablet-kiosk-link:hover {
+        background: rgba(127, 82, 255, 0.2);
+        color: #ffffff;
+        transform: translateY(-1px);
+      }
+
+      .pulse-icon {
+        color: var(--brand-android);
+        animation: pulseDot 2s infinite ease-in-out;
+      }
+
+      .footer-subcopy {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+    </style>
+  </body>
+</html>

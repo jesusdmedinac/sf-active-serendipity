@@ -1,0 +1,173 @@
+---
+// Atmospheric Hero component: Machined Titanium & Anodized Green Hardware
+---
+
+<header class="hero-container">
+  <!-- Machined Titanium Location Bezel -->
+  <div class="location-bezel">
+    <span class="led-diode-green"></span>
+    <span class="engraved-label">LOC // SF BAY AREA</span>
+    <span class="status-divider">|</span>
+    <span class="status-mode">ON-SITE & HYBRID READY</span>
+  </div>
+
+  <h1 class="hero-headline">
+    Native iOS & Android from a single <span class="gradient-metal-duo">Kotlin</span> codebase.
+  </h1>
+
+  <p class="hero-subheadline">
+    Staff Mobile Software Engineer & KMP Architect. Eliminating the 2x native engineering burn rate for high-growth startups without cross-platform performance compromises.
+  </p>
+
+  <!-- Machined Hardware Icebreaker Readout -->
+  <div class="hardware-readout">
+    <div class="readout-header">
+      <span class="readout-screws">&bull;</span>
+      <span class="engraved-label">[ PROTOCOL // IN-PERSON CONSULTING ]</span>
+      <span class="readout-screws">&bull;</span>
+    </div>
+    <div class="readout-body">
+      <p class="readout-text">
+        <strong>Sharing a coffee shop or event right now?</strong> Tap my shoulder for <em>unlimited free technical consulting</em> on your startup's mobile architecture.
+      </p>
+    </div>
+  </div>
+
+  <div class="hero-cta-group">
+    <a href="#consulting" class="button btn-anodized-green">
+      <span>Book Free 30-Min Audit</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+    <a href="#contact" class="button btn-titanium">
+      <span>Say Hi / Grab Coffee</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+    </a>
+  </div>
+</header>
+
+<style>
+  .hero-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 1rem 2.5rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .location-bezel {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(180deg, #181b21 0%, #111317 100%);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid var(--chamfer-light);
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 7px 16px;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+  }
+
+  .status-divider {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 0.8rem;
+  }
+
+  .status-mode {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--anodized-green-edge);
+    letter-spacing: 0.04em;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.3rem, 6vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    margin-bottom: 1.25rem;
+    color: #ffffff;
+  }
+
+  .gradient-metal-duo {
+    background: linear-gradient(135deg, #76e3ab 0%, #48a574 40%, #b993f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(118, 227, 171, 0.25);
+  }
+
+  .hero-subheadline {
+    font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+    color: var(--text-metal-secondary);
+    line-height: 1.6;
+    max-width: 640px;
+    margin-bottom: 2.25rem;
+  }
+
+  .hardware-readout {
+    position: relative;
+    background: linear-gradient(145deg, #15181e 0%, #0d0f13 100%);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid rgba(118, 227, 171, 0.35); /* Subtle green anodized top chamfer */
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 12px 24px -6px rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .readout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .readout-screws {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+    line-height: 0;
+  }
+
+  .readout-text {
+    font-size: 0.95rem;
+    color: var(--text-laser-white);
+    line-height: 1.55;
+  }
+
+  .readout-text strong {
+    color: #ffffff;
+  }
+
+  .readout-text em {
+    color: var(--anodized-green-edge);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn-anodized-green {
+    padding: 0 28px;
+    font-size: 1rem;
+  }
+
+  .btn-titanium {
+    padding: 0 26px;
+  }
+</style>

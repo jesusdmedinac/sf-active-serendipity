@@ -1,0 +1,156 @@
+---
+// Direct 3-tap contact channels (WhatsApp, X, LinkedIn)
+---
+
+<section id="contact" class="section-container">
+  <div class="section-header">
+    <span class="badge">Direct Channels</span>
+    <h2 class="section-title">Let's Connect in SF</h2>
+    <p class="section-subtitle">
+      Whether you are hiring a Staff Mobile Engineer, seeking architectural advisory, or just want to grab an espresso at a local café.
+    </p>
+  </div>
+
+  <div class="channels-grid">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/14704061747?text=Hi%20Jesus%2C%20I%20saw%20your%20KMP%20portfolio%20and%20would%20like%20to%20chat!" target="_blank" rel="noopener noreferrer" class="channel-card whatsapp">
+      <div class="channel-icon-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.549 1.742.883 2.796.883 3.183 0 5.77-2.587 5.77-5.766.001-3.182-2.585-5.769-5.77-5.769zm10.154 5.767c0 5.614-4.57 10.183-10.185 10.183-1.782 0-3.453-.464-4.912-1.272l-5.688 1.492 1.517-5.541c-.896-1.503-1.402-3.256-1.402-5.132 0-5.614 4.568-10.184 10.185-10.184 5.615 0 10.185 4.57 10.185 10.184z"/></svg>
+      </div>
+      <div class="channel-info">
+        <h3>WhatsApp (Instant)</h3>
+        <p>Best for coffee shop chats or instant messaging</p>
+        <span class="channel-action">+1 (470) 406-1747 &rarr;</span>
+      </div>
+    </a>
+
+    <!-- X (Twitter) -->
+    <a href="https://x.com/jesusdmedinac" target="_blank" rel="noopener noreferrer" class="channel-card x-twitter">
+      <div class="channel-icon-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </div>
+      <div class="channel-info">
+        <h3>X (Twitter)</h3>
+        <p>Direct DMs & tech discussions</p>
+        <span class="channel-action">@jesusdmedinac &rarr;</span>
+      </div>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com/in/jesusdmedinac" target="_blank" rel="noopener noreferrer" class="channel-card linkedin">
+      <div class="channel-icon-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.22a1.62 1.62 0 0 0-1.62 1.62c0 .89.73 1.62 1.62 1.62a1.62 1.62 0 0 0 1.62-1.62c0-.89-.73-1.62-1.62-1.62z"/></svg>
+      </div>
+      <div class="channel-info">
+        <h3>LinkedIn</h3>
+        <p>Career track record & references</p>
+        <span class="channel-action">in/jesusdmedinac &rarr;</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<style>
+  .section-container {
+    position: relative;
+    z-index: 1;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 5rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .channels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .channel-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 1.75rem;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .channel-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--border-focus);
+    box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.5);
+  }
+
+  .channel-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+  }
+
+  .channel-card.whatsapp:hover .channel-icon-wrap {
+    background: rgba(37, 211, 102, 0.15);
+    color: #25d366;
+    border-color: rgba(37, 211, 102, 0.3);
+  }
+
+  .channel-card.x-twitter:hover .channel-icon-wrap {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+
+  .channel-card.linkedin:hover .channel-icon-wrap {
+    background: rgba(10, 102, 194, 0.15);
+    color: #38bdf8;
+    border-color: rgba(10, 102, 194, 0.3);
+  }
+
+  .channel-info h3 {
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+  }
+
+  .channel-info p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .channel-action {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--brand-kmp);
+    transition: color 0.15s ease;
+  }
+
+  .channel-card:hover .channel-action {
+    color: #c4b5fd;
+  }
+</style>

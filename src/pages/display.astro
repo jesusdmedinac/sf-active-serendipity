@@ -1,0 +1,505 @@
+---
+// Dedicated Full-Screen Tablet Kiosk Mode: Physical Machined Titanium Field Instrument
+import '../styles/modern-craft.css';
+import QRCode from 'qrcode';
+
+// Build-time vector SVG QR code (zero client runtime cost)
+const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
+  type: 'svg',
+  margin: 1,
+  color: {
+    dark: '#0a0c0f',
+    light: '#ffffff',
+  },
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Jesús Medina | Field Instrument Tablet Kiosk</title>
+    <meta name="theme-color" content="#090a0d" />
+  </head>
+  <body class="kiosk-body">
+    <!-- Physical Instrument Chassis Frame -->
+    <div class="chassis-outer">
+      <div class="chassis-bevel">
+        <!-- Corner Machined CNC Screws -->
+        <span class="cnc-screw top-left">&oplus;</span>
+        <span class="cnc-screw top-right">&oplus;</span>
+        <span class="cnc-screw bottom-left">&oplus;</span>
+        <span class="cnc-screw bottom-right">&oplus;</span>
+
+        <main class="kiosk-viewport">
+          <!-- Top Telemetry Instrumentation Bar -->
+          <header class="kiosk-telemetry-bar">
+            <div class="telemetry-item">
+              <span class="led-diode-green"></span>
+              <span class="engraved-label">SYSTEM // ONLINE</span>
+              <span class="telemetry-val">SF_BAY_AREA</span>
+            </div>
+
+            <div class="telemetry-item wakelock-box" id="wakelock-status">
+              <span class="engraved-label">WAKELOCK</span>
+              <span class="status-active">ACTIVE // 60FPS</span>
+            </div>
+
+            <button id="fullscreen-btn" class="button btn-titanium fs-btn" aria-label="Toggle Fullscreen">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+              <span>FULLSCREEN</span>
+            </button>
+          </header>
+
+          <!-- Main Instrument Stage -->
+          <div class="instrument-stage">
+            <!-- Left: Rotating Diagnostic Telemetry Hook -->
+            <div class="telemetry-column">
+              <div class="operator-id">
+                <span class="engraved-label">[ OPERATOR ID: JM-001 ]</span>
+                <span class="operator-name">Jesús Medina</span>
+                <span class="operator-role">Staff Mobile Engineer & KMP Architect</span>
+              </div>
+
+              <div class="hook-rotator" id="hook-rotator">
+                <!-- Slide 1 -->
+                <div class="hook-slide active" data-index="0">
+                  <span class="badge-metal badge-anodized-green">KOTLIN MULTIPLATFORM</span>
+                  <h1 class="slide-headline">
+                    Native iOS & Android from a single <span class="gradient-metal-duo">Kotlin</span> codebase.
+                  </h1>
+                  <p class="slide-sub">
+                    Eliminating 2x native engineering burn rate for high-growth startups without cross-platform performance compromises.
+                  </p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hook-slide" data-index="1">
+                  <span class="badge-metal badge-anodized-green">IN-PERSON SUPERPOWER</span>
+                  <h1 class="slide-headline">
+                    Tap my shoulder for <span class="gradient-green-luster">free live consulting</span> right here.
+                  </h1>
+                  <p class="slide-sub">
+                    Working from this café? Ask me anything about mobile architecture, KMP adoption, or multiplatform performance.
+                  </p>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hook-slide" data-index="2">
+                  <span class="badge-metal badge-scorched-violet">HIGH-IMPACT ADVISORY</span>
+                  <h1 class="slide-headline">
+                    Free 30-Minute <span class="gradient-violet-luster">Architecture Audit</span> for Founders.
+                  </h1>
+                  <p class="slide-sub">
+                    Save 40–50% engineering burn rate while maintaining 100% native performance on Apple & Android hardware.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide progress indicators -->
+              <div class="slide-indicators">
+                <span class="indicator-segment active" data-dot="0"></span>
+                <span class="indicator-segment" data-dot="1"></span>
+                <span class="indicator-segment" data-dot="2"></span>
+              </div>
+            </div>
+
+            <!-- Right: Machined Alloy Plate with Vector QR -->
+            <div class="qr-column">
+              <div class="alloy-plate">
+                <div class="plate-chamfer-border">
+                  <div class="qr-svg-wrapper" set:html={qrSvg}></div>
+                  <div class="qr-plate-label">
+                    <span class="engraved-label">[ SCAN // VERIFIED PROOF OF WORK ]</span>
+                    <span class="target-domain">jesusdmedinac.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Telemetry Ticker -->
+          <footer class="instrument-footer">
+            <div class="spec-ticker">
+              <span class="spec-label">TECH_SPEC:</span>
+              <span class="spec-val">COMPOSE MULTIPLATFORM</span>
+              <span class="spec-sep">//</span>
+              <span class="spec-val">KOTLIN/NATIVE (LLVM)</span>
+              <span class="spec-sep">//</span>
+              <span class="spec-val">SERVER-DRIVEN UI</span>
+              <span class="spec-sep">//</span>
+              <span class="spec-val">SWIFTUI INTEROP</span>
+              <span class="spec-sep">//</span>
+              <span class="spec-val">ZERO JVM LATENCY</span>
+            </div>
+          </footer>
+        </main>
+      </div>
+    </div>
+
+    <style>
+      .kiosk-body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: #08090b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      /* Chassis Outer Box */
+      .chassis-outer {
+        width: 96vw;
+        height: 94vh;
+        max-width: 1240px;
+        background: linear-gradient(145deg, #181c22 0%, #0d0f13 100%);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-top: 2px solid rgba(255, 255, 255, 0.28); /* Specular top light */
+        border-radius: 28px;
+        padding: 10px;
+        box-shadow: 
+          0 30px 80px -10px rgba(0, 0, 0, 0.9),
+          inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        display: flex;
+      }
+
+      .chassis-bevel {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #090a0d;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+      }
+
+      .cnc-screw {
+        position: absolute;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.18);
+        line-height: 1;
+        z-index: 10;
+        pointer-events: none;
+      }
+      .cnc-screw.top-left { top: 12px; left: 14px; }
+      .cnc-screw.top-right { top: 12px; right: 14px; }
+      .cnc-screw.bottom-left { bottom: 12px; left: 14px; }
+      .cnc-screw.bottom-right { bottom: 12px; right: 14px; }
+
+      .kiosk-viewport {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        padding: clamp(1.25rem, 3vw, 2.25rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /* Telemetry Header Bar */
+      .kiosk-telemetry-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .telemetry-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-size: 0.82rem;
+      }
+
+      .telemetry-val {
+        color: var(--text-laser-white);
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.04);
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+
+      .wakelock-box .status-active {
+        color: var(--anodized-green-edge);
+        font-weight: 600;
+      }
+
+      .fs-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+        min-height: 36px;
+        border-radius: 8px;
+      }
+
+      /* Instrument Stage */
+      .instrument-stage {
+        display: grid;
+        grid-template-columns: 1.35fr 1fr;
+        align-items: center;
+        gap: 3rem;
+        margin: auto 0;
+      }
+
+      @media (max-width: 860px) {
+        .instrument-stage {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          text-align: center;
+        }
+        .slide-indicators {
+          justify-content: center;
+        }
+      }
+
+      .telemetry-column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .operator-id {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+      }
+
+      .operator-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.02em;
+        margin-top: 4px;
+      }
+
+      .operator-role {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--text-engraved);
+      }
+
+      .hook-rotator {
+        position: relative;
+        min-height: 220px;
+      }
+
+      .hook-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        pointer-events: none;
+      }
+
+      .hook-slide.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .slide-headline {
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        margin: 12px 0;
+        color: #ffffff;
+      }
+
+      .gradient-metal-duo {
+        background: linear-gradient(135deg, #76e3ab 0%, #48a574 40%, #b993f7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .gradient-green-luster {
+        background: linear-gradient(135deg, #76e3ab 0%, #347253 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .gradient-violet-luster {
+        background: linear-gradient(135deg, #b993f7 0%, #63429e 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .slide-sub {
+        font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+        color: var(--text-metal-secondary);
+        line-height: 1.5;
+        max-width: 520px;
+      }
+
+      .slide-indicators {
+        display: flex;
+        gap: 8px;
+        margin-top: 1.5rem;
+      }
+
+      .indicator-segment {
+        width: 32px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 4px;
+        transition: background 0.3s ease, width 0.3s ease;
+      }
+
+      .indicator-segment.active {
+        background: var(--anodized-green-edge);
+        width: 52px;
+        box-shadow: 0 0 10px var(--anodized-green-edge);
+      }
+
+      /* Machined Alloy Plate for QR Code */
+      .qr-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .alloy-plate {
+        background: linear-gradient(145deg, #242930 0%, #15181d 100%);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 2px solid rgba(255, 255, 255, 0.35); /* CNC chamfer */
+        border-radius: 24px;
+        padding: 1.25rem;
+        box-shadow: 
+          0 20px 50px -10px rgba(0, 0, 0, 0.9),
+          0 0 35px -5px rgba(72, 165, 116, 0.25);
+        max-width: 330px;
+        width: 100%;
+      }
+
+      .plate-chamfer-border {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .qr-svg-wrapper {
+        width: 100%;
+        max-width: 230px;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .qr-svg-wrapper :global(svg) {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .qr-plate-label {
+        margin-top: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .target-domain {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: #090a0d;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      /* Instrument Footer Ticker */
+      .instrument-footer {
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        text-align: center;
+      }
+
+      .spec-ticker {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-engraved);
+      }
+
+      .spec-label {
+        color: var(--anodized-green-edge);
+        font-weight: 700;
+      }
+
+      .spec-val {
+        color: var(--text-metal-secondary);
+      }
+
+      .spec-sep {
+        color: rgba(255, 255, 255, 0.15);
+      }
+    </style>
+
+    <script>
+      // 1. WakeLock API to keep tablet screen awake
+      let wakeLock: any = null;
+      async function requestWakeLock() {
+        if ('wakeLock' in navigator) {
+          try {
+            wakeLock = await (navigator as any).wakeLock.request('screen');
+          } catch (err) {
+            console.log('WakeLock error:', err);
+          }
+        }
+      }
+      requestWakeLock();
+
+      document.addEventListener('visibilitychange', async () => {
+        if (wakeLock !== null && document.visibilityState === 'visible') {
+          await requestWakeLock();
+        }
+      });
+
+      // 2. Fullscreen Toggle
+      const fsBtn = document.getElementById('fullscreen-btn');
+      fsBtn?.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        } else {
+          document.exitFullscreen().catch(() => {});
+        }
+      });
+
+      // 3. Smooth Rotating Hooks every 6 seconds
+      const slides = document.querySelectorAll('.hook-slide');
+      const dots = document.querySelectorAll('.indicator-segment');
+      let currentSlide = 0;
+
+      function rotateSlide() {
+        slides[currentSlide]?.classList.remove('active');
+        dots[currentSlide]?.classList.remove('active');
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        slides[currentSlide]?.classList.add('active');
+        dots[currentSlide]?.classList.add('active');
+      }
+
+      setInterval(rotateSlide, 6000);
+    </script>
+  </body>
+</html>

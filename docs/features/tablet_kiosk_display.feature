@@ -1,0 +1,27 @@
+Feature: Tablet Kiosk Display Mode
+  As Jesús Medina working in San Francisco coffee shops and tech hubs
+  I want a dedicated full-screen display mode on my tablet placed behind my laptop
+  So that founders, CTOs, and engineers can read dynamic hooks from 2 meters away and scan directly to my site
+
+  Scenario: Render full-screen kiosk view at /display with ambient glow
+    Given the tablet navigates to /display
+    When the page renders
+    Then it should display in full-screen dark aesthetic with an ambient backlight glow
+    And it should provide a full-screen toggle button
+
+  Scenario: Activate WakeLock API to keep tablet screen awake
+    Given the kiosk view is mounted
+    When supported by the tablet browser
+    Then it should request a screen WakeLock to prevent the display from sleeping or dimming
+
+  Scenario: Display high-definition vector SVG QR code with quiet zone
+    Given the kiosk view is rendered
+    When inspecting the QR code component
+    Then it should render as a sharp vector SVG with a sufficient quiet zone
+    And the encoded target URL must point to "https://jesusdmedinac.com"
+
+  Scenario: Rotate conversational hooks seamlessly every 6 seconds
+    Given the tablet kiosk is running idle
+    When 6 seconds elapse
+    Then it should transition smoothly to the next conversational hook in the sequence
+    And hooks should include "Building native iOS & Android from a single Kotlin codebase", "Free 30-min KMP & Mobile Architecture Audit", and "Tap my shoulder for free live consulting"

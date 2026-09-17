@@ -1,0 +1,298 @@
+/* Modern Craft Design System: Machined Titanium & Anodized Alloys */
+:root {
+  /* 1. Base Metal Chassis Tokens (CNC Aerospace Alloys) */
+  --metal-void: #090a0d;
+  --metal-gunmetal: #0f1115;
+  --metal-titanium: #16181d;
+  --metal-steel-mid: #1d2127;
+  --metal-steel-bright: #282e37;
+  
+  /* Specular Chamfers & Milling Details */
+  --chamfer-light: rgba(255, 255, 255, 0.18);
+  --chamfer-subtle: rgba(255, 255, 255, 0.08);
+  --chamfer-dark: rgba(0, 0, 0, 0.6);
+  --border-metal: 1px solid var(--chamfer-subtle);
+  --border-cnc-top: 1px solid var(--chamfer-light);
+  
+  /* 2. Anodized Green Tokens (Hero Metallic Accent) */
+  --anodized-green-deep: #163325;
+  --anodized-green-base: #25573e;
+  --anodized-green-surface: linear-gradient(145deg, #327051 0%, #1c4531 60%, #275d43 100%);
+  --anodized-green-surface-active: linear-gradient(145deg, #1a3e2c 0%, #295d43 100%);
+  --anodized-green-luster: #48a574;
+  --anodized-green-edge: #76e3ab;
+  --anodized-green-glow: rgba(72, 165, 116, 0.35);
+
+  /* 3. Scorched Titanium Violet Tokens (JetBrains & KMP) */
+  --titanium-violet-deep: #25143e;
+  --titanium-violet-base: #4a2d77;
+  --titanium-violet-surface: linear-gradient(135deg, #513182 0%, #2a1647 60%, #3e2265 100%);
+  --titanium-violet-luster: #8d62da;
+  --titanium-violet-edge: #b993f7;
+  --titanium-violet-glow: rgba(141, 98, 218, 0.3);
+
+  /* 4. Typography & Monospace Instrumentation */
+  --text-laser-white: #f3f5f8;
+  --text-metal-secondary: #9aa4b2;
+  --text-engraved: #667282;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "Geist", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--metal-void);
+  color: var(--text-laser-white);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Background Subtle Metal Grain / Dot-Matrix Grid */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--text-laser-white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Laser-Engraved Monospace Labels */
+.engraved-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-engraved);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.9), 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Interactive Anodized & Machined Buttons */
+button, a.button {
+  min-height: 48px;
+  min-width: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--anodized-green-edge);
+  outline-offset: 3px;
+}
+
+/* The Anodized Green Aluminum Billet Button */
+.btn-anodized-green {
+  background: var(--anodized-green-surface);
+  border: 1px solid var(--anodized-green-luster);
+  border-top-color: var(--anodized-green-edge);
+  border-bottom-color: var(--anodized-green-deep);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+    0 4px 16px -2px rgba(0, 0, 0, 0.7),
+    0 0 20px -4px var(--anodized-green-glow);
+  color: #f1fcf6;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.btn-anodized-green:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+    0 6px 20px -2px rgba(0, 0, 0, 0.8),
+    0 0 26px -2px var(--anodized-green-glow);
+}
+
+.btn-anodized-green:active {
+  background: var(--anodized-green-surface-active);
+  transform: translateY(1px);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.6),
+    0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Machined Titanium Secondary Button */
+.btn-titanium {
+  background: linear-gradient(145deg, #22262d 0%, #15181d 100%);
+  border: 1px solid var(--chamfer-subtle);
+  border-top: 1px solid var(--chamfer-light);
+  border-bottom: 1px solid var(--chamfer-dark);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.5);
+  color: var(--text-laser-white);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.btn-titanium:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.btn-titanium:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 3D Bento Grid & Modular Titanium Bays */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.col-span-12 { grid-column: span 12; }
+.col-span-8  { grid-column: span 8; }
+.col-span-6  { grid-column: span 6; }
+.col-span-4  { grid-column: span 4; }
+
+@media (max-width: 900px) {
+  .col-span-8, .col-span-6, .col-span-4 {
+    grid-column: span 12;
+  }
+}
+
+/* Procedural 3D Tilt Card Base */
+.tilt-card-wrapper {
+  perspective: 1000px;
+  width: 100%;
+}
+
+.bento-card-titanium {
+  background: linear-gradient(135deg, #181b21 0%, #101216 60%, #15181e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.18); /* Specular CNC chamfer */
+  border-radius: 20px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 12px 32px -8px rgba(0, 0, 0, 0.7);
+  transform-style: preserve-3d;
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+/* Dynamic Anisotropic Sheen Overlay */
+.anisotropic-sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 220px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.03) 40%,
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.bento-card-titanium:hover .anisotropic-sheen {
+  opacity: 1;
+}
+
+.bento-card-titanium:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 20px 40px -10px rgba(0, 0, 0, 0.85),
+    0 0 24px -6px rgba(72, 165, 116, 0.2);
+}
+
+/* Badges Metálicos */
+.badge-metal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--chamfer-subtle);
+  color: var(--text-metal-secondary);
+}
+
+.badge-anodized-green {
+  background: rgba(37, 87, 62, 0.25);
+  border: 1px solid rgba(72, 165, 116, 0.35);
+  border-top-color: rgba(118, 227, 171, 0.5);
+  color: #86efac;
+}
+
+.badge-scorched-violet {
+  background: rgba(74, 45, 119, 0.25);
+  border: 1px solid rgba(141, 98, 218, 0.35);
+  border-top-color: rgba(185, 147, 247, 0.5);
+  color: #c4b5fd;
+}
+
+/* LED Diode Status */
+.led-diode-green {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--anodized-green-edge);
+  box-shadow: 
+    0 0 10px var(--anodized-green-edge),
+    0 0 4px #ffffff;
+  animation: pulseDiode 2s infinite ease-in-out;
+}
+
+@keyframes pulseDiode {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
+}

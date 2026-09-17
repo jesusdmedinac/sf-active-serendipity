@@ -1,0 +1,181 @@
+---
+// Consulting & Advisory Card Component: Machined Titanium Hardware Plaque
+---
+
+<section id="consulting" class="section-container">
+  <div class="consulting-card-machined">
+    <div class="card-glow"></div>
+    
+    <div class="card-content">
+      <div class="badge-row">
+        <span class="engraved-label">[ ADVISORY // 01 ]</span>
+        <span class="badge-metal badge-scorched-violet">Seed to Series B</span>
+        <span class="badge-metal badge-anodized-green">KMP Architecture</span>
+      </div>
+
+      <h2 class="card-title">Free 30-Minute KMP & Mobile Architecture Audit</h2>
+      
+      <p class="card-pitch">
+        Facing the mobile dilemma? You don't have to choose between burning runway on two separate native teams (Swift & Kotlin) or compromising app performance on Flutter or React Native.
+      </p>
+
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon">📉</div>
+          <div>
+            <h4>40–50% Engineering Savings</h4>
+            <p>Share architecture, network, data caching, and business logic without touching native platform bridges.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">⚡</div>
+          <div>
+            <h4>Zero Performance Penalty</h4>
+            <p>Compiles directly to native ARM machine code on iOS via Kotlin/Native and DEX bytecode on Android.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">🎯</div>
+          <div>
+            <h4>Brownfield Safe Migration</h4>
+            <p>Incrementally adopt KMP into your existing apps module by module without high-risk full rewrites.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item highlight">
+          <div class="benefit-icon">☕</div>
+          <div>
+            <h4>In-Person Coffee Superpower</h4>
+            <p><strong>See me at a coffee shop or event right now?</strong> Tap my shoulder for <em>unlimited free live consulting</em> while we share a table.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-action">
+        <a href="https://wa.me/14704061747?text=Hi%20Jesus%2C%20I%20saw%20your%20KMP%20portfolio%20and%20would%20like%20to%20chat%20mobile%20architecture!" target="_blank" rel="noopener noreferrer" class="button btn-anodized-green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.549 1.742.883 2.796.883 3.183 0 5.77-2.587 5.77-5.766.001-3.182-2.585-5.769-5.77-5.769zm10.154 5.767c0 5.614-4.57 10.183-10.185 10.183-1.782 0-3.453-.464-4.912-1.272l-5.688 1.492 1.517-5.541c-.896-1.503-1.402-3.256-1.402-5.132 0-5.614 4.568-10.184 10.185-10.184 5.615 0 10.185 4.57 10.185 10.184z"/></svg>
+          <span>Claim 30-Min Audit on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem;
+  }
+
+  .consulting-card-machined {
+    position: relative;
+    background: linear-gradient(145deg, #181b21 0%, #0e1014 100%);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid var(--chamfer-light);
+    border-radius: 24px;
+    padding: clamp(2rem, 5vw, 3.5rem);
+    overflow: hidden;
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 20px 50px -10px rgba(0, 0, 0, 0.85);
+  }
+
+  .card-glow {
+    position: absolute;
+    top: -30%;
+    left: 20%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(72, 165, 116, 0.18) 0%, transparent 70%);
+    filter: blur(50px);
+    pointer-events: none;
+  }
+
+  .card-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+
+  .card-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 1rem;
+    line-height: 1.15;
+    color: #ffffff;
+  }
+
+  .card-pitch {
+    color: var(--text-metal-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-bottom: 2.25rem;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .benefit-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .benefit-item.highlight {
+    background: rgba(37, 87, 62, 0.15);
+    border-color: rgba(72, 165, 116, 0.35);
+    border-top-color: rgba(118, 227, 171, 0.5);
+  }
+
+  .benefit-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .benefit-item h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: #ffffff;
+  }
+
+  .benefit-item p {
+    font-size: 0.88rem;
+    color: var(--text-metal-secondary);
+    line-height: 1.5;
+  }
+
+  .benefit-item.highlight em {
+    color: var(--anodized-green-edge);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .card-action {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .btn-anodized-green {
+    padding: 0 32px;
+  }
+</style>
