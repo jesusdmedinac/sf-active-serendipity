@@ -43,3 +43,9 @@ Feature: Tablet Kiosk Display Mode
     When reading the operator identity block
     Then it should display the full name "Jesús Daniel Medina Cruz"
     And it should display "Staff Mobile Engineer & KMP Architect" as a unified subtitle without redundant badges
+
+  Scenario: Chromatic storytelling across kiosk slides and synchronized indicators
+    Given the kiosk view rotates between the three diagnostic slides
+    When slide 1 (KMP Core) is active, its badge, title accent, and step indicator must show anodized green
+    When slide 2 (In-Person Consulting) is active, its badge, title accent, and step indicator must show green-violet duo gradient
+    When slide 3 (Architecture Audit) is active, its badge, title accent, and step indicator must show scorched violet

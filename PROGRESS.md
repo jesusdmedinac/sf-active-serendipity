@@ -24,6 +24,7 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Edge-to-edge hardware enclosure framing for tablet viewport
 - [x] Scenario: Eliminate iPadOS viewport scroll and respect safe-area insets
 - [x] Scenario: Display full name and unified role subtitle without redundancy
+- [x] Scenario: Chromatic storytelling across kiosk slides and synchronized indicators
 
 ## Feature: SF Active Serendipity Tactical Playbook
 - [x] Scenario: Document coffee shop hotspot routes in SoMa and South Park

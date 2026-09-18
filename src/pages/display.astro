@@ -65,29 +65,29 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
               </div>
 
               <div class="hook-rotator" id="hook-rotator">
-                <!-- Slide 1 -->
+                <!-- Slide 1: Green Anodized -->
                 <div class="hook-slide active" data-index="0">
                   <span class="badge-metal badge-anodized-green">KOTLIN MULTIPLATFORM</span>
                   <h1 class="slide-headline">
-                    Native iOS & Android from a single <span class="gradient-metal-duo">Kotlin</span> codebase.
+                    Native iOS & Android from a single <span class="gradient-green-luster">Kotlin</span> codebase.
                   </h1>
                   <p class="slide-sub">
                     Eliminating 2x native engineering burn rate for high-growth startups without cross-platform performance compromises.
                   </p>
                 </div>
 
-                <!-- Slide 2 -->
+                <!-- Slide 2: Duo Gradient (Green to Violet) -->
                 <div class="hook-slide" data-index="1">
-                  <span class="badge-metal badge-anodized-green">IN-PERSON SUPERPOWER</span>
+                  <span class="badge-metal badge-metal-duo">IN-PERSON SUPERPOWER</span>
                   <h1 class="slide-headline">
-                    Tap my shoulder for <span class="gradient-green-luster">free live consulting</span> right here.
+                    Tap my shoulder for <span class="gradient-metal-duo">free live consulting</span> right here.
                   </h1>
                   <p class="slide-sub">
                     Working from this café? Ask me anything about mobile architecture, KMP adoption, or multiplatform performance.
                   </p>
                 </div>
 
-                <!-- Slide 3 -->
+                <!-- Slide 3: Scorched Violet -->
                 <div class="hook-slide" data-index="2">
                   <span class="badge-metal badge-scorched-violet">HIGH-IMPACT ADVISORY</span>
                   <h1 class="slide-headline">
@@ -101,9 +101,9 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
 
               <!-- Slide progress indicators -->
               <div class="slide-indicators">
-                <span class="indicator-segment active" data-dot="0"></span>
-                <span class="indicator-segment" data-dot="1"></span>
-                <span class="indicator-segment" data-dot="2"></span>
+                <span class="indicator-segment active dot-green" data-dot="0"></span>
+                <span class="indicator-segment dot-duo" data-dot="1"></span>
+                <span class="indicator-segment dot-violet" data-dot="2"></span>
               </div>
             </div>
 
@@ -363,6 +363,15 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
         max-width: 520px;
       }
 
+      .badge-metal-duo {
+        background: linear-gradient(135deg, rgba(37, 87, 62, 0.4) 0%, rgba(74, 45, 119, 0.4) 100%);
+        border: 1px solid rgba(118, 227, 171, 0.45);
+        border-right-color: rgba(185, 147, 247, 0.55);
+        border-bottom-color: rgba(185, 147, 247, 0.55);
+        color: #f1f5f9;
+        box-shadow: 0 0 12px rgba(118, 227, 171, 0.2);
+      }
+
       .slide-indicators {
         display: flex;
         gap: 8px;
@@ -374,13 +383,25 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
         height: 5px;
         background: rgba(255, 255, 255, 0.12);
         border-radius: 4px;
-        transition: background 0.3s ease, width 0.3s ease;
+        transition: background 0.4s ease, width 0.4s ease, box-shadow 0.4s ease;
       }
 
-      .indicator-segment.active {
-        background: var(--anodized-green-edge);
+      .indicator-segment.active.dot-green {
+        background: var(--anodized-green-edge, #76e3ab);
         width: 52px;
-        box-shadow: 0 0 10px var(--anodized-green-edge);
+        box-shadow: 0 0 12px rgba(118, 227, 171, 0.8);
+      }
+
+      .indicator-segment.active.dot-duo {
+        background: linear-gradient(90deg, #76e3ab 0%, #b993f7 100%);
+        width: 52px;
+        box-shadow: 0 0 12px rgba(185, 147, 247, 0.7);
+      }
+
+      .indicator-segment.active.dot-violet {
+        background: #b993f7;
+        width: 52px;
+        box-shadow: 0 0 12px rgba(185, 147, 247, 0.8);
       }
 
       /* Machined Alloy Plate for QR Code */
