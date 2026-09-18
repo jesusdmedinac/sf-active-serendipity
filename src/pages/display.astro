@@ -145,27 +145,24 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
         width: 100vw;
         height: 100vh;
         overflow: hidden;
-        background: #08090b;
+        background: #000000;
         display: flex;
-        align-items: center;
-        justify-content: center;
         user-select: none;
         -webkit-user-select: none;
       }
 
-      /* Chassis Outer Box */
+      /* Chassis Outer Box (Edge-to-Edge Tablet Hardware Enclosure) */
       .chassis-outer {
-        width: 96vw;
-        height: 94vh;
-        max-width: 1240px;
-        background: linear-gradient(145deg, #181c22 0%, #0d0f13 100%);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-top: 2px solid rgba(255, 255, 255, 0.28); /* Specular top light */
-        border-radius: 28px;
-        padding: 10px;
-        box-shadow: 
-          0 30px 80px -10px rgba(0, 0, 0, 0.9),
-          inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        width: 100vw;
+        height: 100vh;
+        max-width: none;
+        background: linear-gradient(180deg, #181c22 0%, #0c0e12 100%);
+        border: none;
+        border-top: 2px solid rgba(255, 255, 255, 0.35); /* CNC specular top highlight */
+        border-radius: 0;
+        padding: 8px;
+        box-sizing: border-box;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.85);
         display: flex;
       }
 
@@ -173,17 +170,19 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
         position: relative;
         width: 100%;
         height: 100%;
-        background: #090a0d;
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        border-radius: 20px;
+        background: #090b0e;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
         overflow: hidden;
         display: flex;
+        box-sizing: border-box;
       }
 
       .cnc-screw {
         position: absolute;
-        font-size: 1.1rem;
-        color: rgba(255, 255, 255, 0.18);
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.22);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
         line-height: 1;
         z-index: 10;
         pointer-events: none;
@@ -198,10 +197,11 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
         z-index: 1;
         width: 100%;
         height: 100%;
-        padding: clamp(1.25rem, 3vw, 2.25rem);
+        padding: clamp(1.25rem, 3.2vw, 2.5rem);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        box-sizing: border-box;
       }
 
       /* Telemetry Header Bar */

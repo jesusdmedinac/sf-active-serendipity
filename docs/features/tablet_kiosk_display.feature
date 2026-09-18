@@ -25,3 +25,9 @@ Feature: Tablet Kiosk Display Mode
     When 6 seconds elapse
     Then it should transition smoothly to the next conversational hook in the sequence
     And hooks should include "Building native iOS & Android from a single Kotlin codebase", "Free 30-min KMP & Mobile Architecture Audit", and "Tap my shoulder for free live consulting"
+
+  Scenario: Edge-to-edge hardware enclosure framing for tablet viewport
+    Given the kiosk view is rendered on an iPad or tablet
+    When viewed in full screen
+    Then the physical chassis should extend edge-to-edge across 100% of the viewport without margins
+    And CNC corner screws and machined chamfers must align with the display corners
