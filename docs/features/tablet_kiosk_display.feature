@@ -31,3 +31,9 @@ Feature: Tablet Kiosk Display Mode
     When viewed in full screen
     Then the physical chassis should extend edge-to-edge across 100% of the viewport without margins
     And CNC corner screws and machined chamfers must align with the display corners
+
+  Scenario: Eliminate iPadOS viewport scroll and respect safe-area insets
+    Given the kiosk is rendered on iPadOS Safari
+    When the system status bar remains visible in fullscreen mode
+    Then the layout must size dynamically using 100dvh and safe-area insets
+    And overscroll bounce must be locked so no manual scrolling is required

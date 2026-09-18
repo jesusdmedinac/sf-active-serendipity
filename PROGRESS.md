@@ -22,6 +22,7 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Display high-definition vector SVG QR code with quiet zone
 - [x] Scenario: Rotate conversational hooks seamlessly every 6 seconds
 - [x] Scenario: Edge-to-edge hardware enclosure framing for tablet viewport
+- [x] Scenario: Eliminate iPadOS viewport scroll and respect safe-area insets
 
 ## Feature: SF Active Serendipity Tactical Playbook
 - [x] Scenario: Document coffee shop hotspot routes in SoMa and South Park
