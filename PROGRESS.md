@@ -36,3 +36,9 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Transform Bento Grid into modular titanium rack bays with laser-etched metadata
 - [x] Scenario: Implement procedural 3D tilt and anisotropic light with zero asset weight
 - [x] Scenario: Style tablet kiosk as a physical titanium diagnostic tool
+
+## Feature: Interface Label Cleanup and Professional Humanization
+- [x] Scenario: Clean telemetry bar on tablet kiosk (/display)
+- [x] Scenario: Humanize operator and QR labels on tablet kiosk (/display)
+- [x] Scenario: Clean hero and advisory labels on landing page (/)
+- [x] Scenario: Professionalize Bento Grid project tags (/)

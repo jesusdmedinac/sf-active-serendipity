@@ -40,13 +40,13 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
           <header class="kiosk-telemetry-bar">
             <div class="telemetry-item">
               <span class="led-diode-green"></span>
-              <span class="engraved-label">SYSTEM // ONLINE</span>
-              <span class="telemetry-val">SF_BAY_AREA</span>
+              <span class="engraved-label">ACTIVE IN</span>
+              <span class="telemetry-val">SAN FRANCISCO</span>
             </div>
 
             <div class="telemetry-item wakelock-box" id="wakelock-status">
-              <span class="engraved-label">WAKELOCK</span>
-              <span class="status-active">ACTIVE // 60FPS</span>
+              <span class="engraved-label">STATUS</span>
+              <span class="status-active">OPEN FOR CHAT</span>
             </div>
 
             <button id="fullscreen-btn" class="button btn-titanium fs-btn" aria-label="Toggle Fullscreen">
@@ -60,7 +60,7 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
             <!-- Left: Rotating Diagnostic Telemetry Hook -->
             <div class="telemetry-column">
               <div class="operator-id">
-                <span class="engraved-label">[ OPERATOR ID: JM-001 ]</span>
+                <span class="engraved-label">[ KMP & MOBILE ARCHITECT ]</span>
                 <span class="operator-name">Jesús Medina</span>
                 <span class="operator-role">Staff Mobile Engineer & KMP Architect</span>
               </div>
@@ -114,7 +114,7 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
                 <div class="plate-chamfer-border">
                   <div class="qr-svg-wrapper" set:html={qrSvg}></div>
                   <div class="qr-plate-label">
-                    <span class="engraved-label">[ SCAN // VERIFIED PROOF OF WORK ]</span>
+                    <span class="engraved-label">[ SCAN FOR CODE & PORTFOLIO ]</span>
                     <span class="target-domain">jesusdmedinac.com</span>
                   </div>
                 </div>
@@ -125,15 +125,15 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
           <!-- Bottom Telemetry Ticker -->
           <footer class="instrument-footer">
             <div class="spec-ticker">
-              <span class="spec-label">TECH_SPEC:</span>
+              <span class="spec-label">CORE ARCHITECTURE:</span>
               <span class="spec-val">COMPOSE MULTIPLATFORM</span>
-              <span class="spec-sep">//</span>
+              <span class="spec-sep">•</span>
               <span class="spec-val">KOTLIN/NATIVE (LLVM)</span>
-              <span class="spec-sep">//</span>
+              <span class="spec-sep">•</span>
               <span class="spec-val">SERVER-DRIVEN UI</span>
-              <span class="spec-sep">//</span>
+              <span class="spec-sep">•</span>
               <span class="spec-val">SWIFTUI INTEROP</span>
-              <span class="spec-sep">//</span>
+              <span class="spec-sep">•</span>
               <span class="spec-val">ZERO JVM LATENCY</span>
             </div>
           </footer>
@@ -494,13 +494,22 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
 
       // 2. Fullscreen Toggle
       const fsBtn = document.getElementById('fullscreen-btn');
+      const fsBtnText = fsBtn?.querySelector('span');
+      function updateFsBtn() {
+        if (document.fullscreenElement) {
+          if (fsBtnText) fsBtnText.textContent = 'EXIT FULLSCREEN';
+        } else {
+          if (fsBtnText) fsBtnText.textContent = 'FULLSCREEN';
+        }
+      }
       fsBtn?.addEventListener('click', () => {
         if (!document.fullscreenElement) {
-          document.documentElement.requestFullscreen().catch(() => {});
+          document.documentElement.requestFullscreen().then(updateFsBtn).catch(() => {});
         } else {
-          document.exitFullscreen().catch(() => {});
+          document.exitFullscreen().then(updateFsBtn).catch(() => {});
         }
       });
+      document.addEventListener('fullscreenchange', updateFsBtn);
 
       // 3. Smooth Rotating Hooks every 6 seconds
       const slides = document.querySelectorAll('.hook-slide');
