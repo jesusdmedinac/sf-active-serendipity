@@ -37,3 +37,9 @@ Feature: Tablet Kiosk Display Mode
     When the system status bar remains visible in fullscreen mode
     Then the layout must size dynamically using 100dvh and safe-area insets
     And overscroll bounce must be locked so no manual scrolling is required
+
+  Scenario: Display full name and unified role subtitle without redundancy
+    Given the kiosk view is rendered
+    When reading the operator identity block
+    Then it should display the full name "Jesús Daniel Medina Cruz"
+    And it should display "Staff Mobile Engineer & KMP Architect" as a unified subtitle without redundant badges
