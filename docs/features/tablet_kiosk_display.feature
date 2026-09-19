@@ -54,5 +54,5 @@ Feature: Tablet Kiosk Display Mode
     Given the kiosk view is rendered
     When reading the telemetry footer ticker
     Then it should display the label "AREAS OF EXPERTISE:"
-    And it should list "iOS & Android Engineering", "Kotlin Multiplatform & Compose", "Mobile Advisory", and "Technical Mentorship"
+    And it should list "iOS & Android", "Kotlin Multiplatform & Compose", "Mobile Advisory", and "Technical Mentorship"
     And the font size must scale to 1rem for high readability at distance
