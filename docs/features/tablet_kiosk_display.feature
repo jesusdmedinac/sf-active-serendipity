@@ -49,3 +49,10 @@ Feature: Tablet Kiosk Display Mode
     When slide 1 (KMP Core) is active, its badge, title accent, and step indicator must show anodized green
     When slide 2 (In-Person Consulting) is active, its badge, title accent, and step indicator must show green-violet duo gradient
     When slide 3 (Architecture Audit) is active, its badge, title accent, and step indicator must show scorched violet
+
+  Scenario: Display accessible areas of expertise in telemetry footer
+    Given the kiosk view is rendered
+    When reading the telemetry footer ticker
+    Then it should display the label "AREAS OF EXPERTISE:"
+    And it should list "iOS & Android Engineering", "Kotlin Multiplatform & Compose", "Mobile Advisory", and "Technical Mentorship"
+    And the font size must scale to 1rem for high readability at distance

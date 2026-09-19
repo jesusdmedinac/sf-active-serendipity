@@ -124,16 +124,14 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
           <!-- Bottom Telemetry Ticker -->
           <footer class="instrument-footer">
             <div class="spec-ticker">
-              <span class="spec-label">CORE ARCHITECTURE:</span>
-              <span class="spec-val">COMPOSE MULTIPLATFORM</span>
+              <span class="spec-label">AREAS OF EXPERTISE:</span>
+              <span class="spec-val">iOS & Android Engineering</span>
               <span class="spec-sep">•</span>
-              <span class="spec-val">KOTLIN/NATIVE (LLVM)</span>
+              <span class="spec-val">Kotlin Multiplatform & Compose</span>
               <span class="spec-sep">•</span>
-              <span class="spec-val">SERVER-DRIVEN UI</span>
+              <span class="spec-val">Mobile Advisory</span>
               <span class="spec-sep">•</span>
-              <span class="spec-val">SWIFTUI INTEROP</span>
-              <span class="spec-sep">•</span>
-              <span class="spec-val">ZERO JVM LATENCY</span>
+              <span class="spec-val">Technical Mentorship</span>
             </div>
           </footer>
         </main>
@@ -477,24 +475,27 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         flex-wrap: wrap;
         font-family: var(--font-mono);
-        font-size: 0.75rem;
+        font-size: 1rem;
+        line-height: 1.4;
         color: var(--text-engraved);
       }
 
       .spec-label {
         color: var(--anodized-green-edge);
         font-weight: 700;
+        letter-spacing: 0.03em;
       }
 
       .spec-val {
         color: var(--text-metal-secondary);
+        font-weight: 500;
       }
 
       .spec-sep {
-        color: rgba(255, 255, 255, 0.15);
+        color: rgba(255, 255, 255, 0.2);
       }
     </style>
 
