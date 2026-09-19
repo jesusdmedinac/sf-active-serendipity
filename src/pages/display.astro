@@ -421,7 +421,6 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
           0 20px 50px -10px rgba(0, 0, 0, 0.9),
           0 0 35px -5px rgba(72, 165, 116, 0.25);
         width: 100%;
-        max-width: min(100%, 52vh);
       }
 
       .plate-chamfer-border {
@@ -461,11 +460,10 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
 
       .target-domain {
         font-family: var(--font-mono);
-        font-size: clamp(1.4rem, 2.2vw, 2rem);
+        font-size: 2rem;
         color: #090a0d;
         font-weight: 700;
         letter-spacing: -0.01em;
-        white-space: nowrap;
       }
 
       /* Instrument Footer Ticker */
