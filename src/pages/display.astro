@@ -262,7 +262,7 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
       /* Instrument Stage */
       .instrument-stage {
         display: grid;
-        grid-template-columns: 1.35fr 1fr;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 3rem;
         margin: auto 0;
@@ -420,7 +420,6 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
         box-shadow: 
           0 20px 50px -10px rgba(0, 0, 0, 0.9),
           0 0 35px -5px rgba(72, 165, 116, 0.25);
-        max-width: 330px;
         width: 100%;
       }
 
@@ -435,7 +434,6 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
 
       .qr-svg-wrapper {
         width: 100%;
-        max-width: 230px;
         aspect-ratio: 1 / 1;
         display: flex;
         align-items: center;
@@ -456,9 +454,13 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
         gap: 2px;
       }
 
+      .engraved-label{
+        font-size: 1rem;
+      }
+
       .target-domain {
         font-family: var(--font-mono);
-        font-size: 0.85rem;
+        font-size: 2rem;
         color: #090a0d;
         font-weight: 700;
         letter-spacing: -0.01em;
