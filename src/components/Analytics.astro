@@ -1,0 +1,69 @@
+---
+interface Props {
+  id?: string;
+}
+
+const { id } = Astro.props;
+const gaId = id || import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+---
+
+{
+  gaId && (
+    <>
+      {/* Google tag (gtag.js) */}
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+      <script is:inline define:vars={{ gaId }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          window.dataLayer.push(arguments);
+        }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', gaId, {
+          send_page_view: true,
+          anonymize_ip: true,
+        });
+
+        // Track In-Person QR attribution and conversion CTAs
+        document.addEventListener('DOMContentLoaded', () => {
+          // 1. Explicit event if arrived via Kiosk QR
+          const urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.get('utm_source') === 'kiosk_qr') {
+            gtag('event', 'kiosk_qr_scan_detected', {
+              event_category: 'acquisition',
+              event_label: 'In-Person Coffee Kiosk Scan',
+              source: 'kiosk_qr',
+              campaign: urlParams.get('utm_campaign') || 'sf_serendipity'
+            });
+          }
+
+          // 2. Event delegation for conversion CTAs
+          document.addEventListener('click', (e) => {
+            const target = e.target.closest('a, button');
+            if (!target) return;
+
+            const href = target.getAttribute('href') || '';
+            const text = target.textContent?.trim() || '';
+
+            if (href.includes('#consulting') || target.classList.contains('btn-anodized-green')) {
+              gtag('event', 'conversion_audit_click', {
+                event_category: 'conversion',
+                event_label: text || 'Book Free 30-Min Audit'
+              });
+            } else if (href.includes('#contact') || target.classList.contains('btn-titanium')) {
+              gtag('event', 'conversion_coffee_click', {
+                event_category: 'conversion',
+                event_label: text || 'Say Hi / Grab Coffee'
+              });
+            } else if (href.startsWith('mailto:') || href.includes('linkedin.com') || href.includes('github.com') || href.includes('x.com')) {
+              gtag('event', 'contact_channel_click', {
+                event_category: 'contact',
+                event_label: href
+              });
+            }
+          });
+        });
+      </script>
+    </>
+  )
+}

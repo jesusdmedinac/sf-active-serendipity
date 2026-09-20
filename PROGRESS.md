@@ -45,3 +45,10 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Humanize operator and QR labels on tablet kiosk (/display)
 - [x] Scenario: Clean hero and advisory labels on landing page (/)
 - [x] Scenario: Professionalize Bento Grid project tags (/)
+
+## Feature: Web Analytics & In-Person QR Attribution
+- [x] Scenario: Render Google Analytics 4 tag when measurement ID is configured
+- [x] Scenario: Generate high-definition QR code with in-person UTM tracking parameters
+- [x] Scenario: Track high-intent CTA conversion events
+
+

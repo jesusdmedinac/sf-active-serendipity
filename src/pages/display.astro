@@ -2,9 +2,11 @@
 // Dedicated Full-Screen Tablet Kiosk Mode: Physical Machined Titanium Field Instrument
 import '../styles/modern-craft.css';
 import QRCode from 'qrcode';
+import Analytics from '../components/Analytics.astro';
 
-// Build-time vector SVG QR code (zero client runtime cost)
-const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
+// Build-time vector SVG QR code with in-person UTM attribution
+const QR_TARGET_URL = 'https://jesusdmedinac.com/?utm_source=kiosk_qr&utm_medium=display&utm_campaign=sf_serendipity';
+const qrSvg = await QRCode.toString(QR_TARGET_URL, {
   type: 'svg',
   margin: 1,
   color: {
@@ -24,6 +26,7 @@ const qrSvg = await QRCode.toString('https://jesusdmedinac.com', {
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Field Kiosk" />
+    <Analytics />
   </head>
   <body class="kiosk-body">
     <!-- Physical Instrument Chassis Frame -->
