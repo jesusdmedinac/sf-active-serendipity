@@ -51,4 +51,12 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Generate high-definition QR code with in-person UTM tracking parameters
 - [x] Scenario: Track high-intent CTA conversion events
 
+## Feature: Reposicionamiento como Portal Oficial de Consultoría Móvil Independiente (PST / Norteamérica) (#1)
+- [ ] Scenario: Reposition Location and Availability in AtmosphericHero
+- [ ] Scenario: Transform ConsultingCard into 3-Tier Productized Services Plaque
+- [ ] Scenario: Reframe Global Meta Tags and Footer for Executive Consulting
+- [ ] Scenario: Retain and Synchronize Tablet Kiosk Mode for California Events
+
+
+
 
