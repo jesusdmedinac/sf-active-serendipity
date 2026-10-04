@@ -141,6 +141,82 @@
         </div>
       </div>
     </div>
+
+    <!-- 3. Specialized Entry Package: Migration Feasibility Assessment -->
+    <div class="assessment-block">
+      <div class="assessment-card-machined">
+        <div class="assessment-header">
+          <div class="assessment-badge-row">
+            <span class="engraved-label">[ FIXED-SCOPE ENTRY ASSESSMENT ]</span>
+            <span class="badge-metal badge-scorched-violet">Fixed-Scope Package</span>
+            <span class="badge-metal badge-anodized-green">De-Risk Migration</span>
+          </div>
+          <h3 class="assessment-title">Migration Feasibility Assessment</h3>
+          <p class="assessment-subtitle">
+            Before writing a single line of production code, de-risk your app modernization with an exhaustive architectural investigation, dependency audit, and phased strangler plan.
+          </p>
+        </div>
+
+        <div class="deliverables-grid">
+          <!-- Deliverable 1 -->
+          <div class="deliverable-item">
+            <div class="deliverable-badge">
+              <span class="deliverable-num">01</span>
+            </div>
+            <div class="deliverable-body">
+              <h4 class="deliverable-title">Dependency & Bridge Audit</h4>
+              <p class="deliverable-desc">
+                Analysis of native plugins, SDK integrations, and bridge bottlenecks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Deliverable 2 -->
+          <div class="deliverable-item">
+            <div class="deliverable-badge">
+              <span class="deliverable-num">02</span>
+            </div>
+            <div class="deliverable-body">
+              <h4 class="deliverable-title">Architecture Recommendation</h4>
+              <p class="deliverable-desc">
+                Clear architectural destination selection (Dual Native vs KMP Core vs CMP).
+              </p>
+            </div>
+          </div>
+
+          <!-- Deliverable 3 -->
+          <div class="deliverable-item">
+            <div class="deliverable-badge">
+              <span class="deliverable-num">03</span>
+            </div>
+            <div class="deliverable-body">
+              <h4 class="deliverable-title">Roadmap & Risk Matrix</h4>
+              <p class="deliverable-desc">
+                Phased strangler migration plan, effort estimations, and risk mitigations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Panel for Direct Assessment Request -->
+        <div class="assessment-action-panel">
+          <div class="action-caption">
+            <span class="engraved-label">[ PRAGMATIC MODERNIZATION PATHWAY ]</span>
+            <p>Ready to de-risk your app's transition to native or Kotlin Multiplatform?</p>
+          </div>
+          <div class="action-buttons-group">
+            <a href="https://cal.com/jesusdmedinac/migration-feasibility" target="_blank" rel="noopener noreferrer" class="button btn-anodized-green">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Request Feasibility Assessment</span>
+            </a>
+            <a href="https://wa.me/14704061747?text=Hi%20Jesus%2C%20I%20am%20exploring%20migrating%20our%20mobile%20app%20to%20native%2FKMP%20and%20would%20like%20to%20discuss%20a%20feasibility%20assessment." target="_blank" rel="noopener noreferrer" class="button btn-titanium">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.549 1.742.883 2.796.883 3.183 0 5.77-2.587 5.77-5.766.001-3.182-2.585-5.769-5.77-5.769zm10.154 5.767c0 5.614-4.57 10.183-10.185 10.183-1.782 0-3.453-.464-4.912-1.272l-5.688 1.492 1.517-5.541c-.896-1.503-1.402-3.256-1.402-5.132 0-5.614 4.568-10.184 10.185-10.184 5.615 0 10.185 4.57 10.185 10.184z"/></svg>
+              <span>Chat via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -485,6 +561,149 @@
   @media (max-width: 900px) {
     .workflow-stages-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  /* Assessment Block Styles */
+  .assessment-block {
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .assessment-card-machined {
+    background: linear-gradient(145deg, #181b21 0%, #0e1014 100%);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid var(--anodized-green-edge);
+    border-radius: 20px;
+    padding: clamp(1.75rem, 4vw, 2.5rem);
+    box-shadow: 
+      inset 0 1px 0 rgba(118, 227, 171, 0.2),
+      0 16px 40px -8px rgba(0, 0, 0, 0.6);
+  }
+
+  .assessment-header {
+    margin-bottom: 2rem;
+  }
+
+  .assessment-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .assessment-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .assessment-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-metal-secondary);
+    line-height: 1.55;
+    max-width: 780px;
+  }
+
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .deliverable-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .deliverable-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(37, 87, 62, 0.35);
+    border: 1px solid rgba(72, 165, 116, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .deliverable-num {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--anodized-green-edge);
+  }
+
+  .deliverable-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+  }
+
+  .deliverable-desc {
+    font-size: 0.85rem;
+    color: var(--text-metal-secondary);
+    line-height: 1.5;
+  }
+
+  .assessment-action-panel {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 1.4rem 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .action-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .action-caption p {
+    font-size: 0.92rem;
+    color: var(--text-laser-white);
+  }
+
+  .action-buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .deliverables-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .assessment-action-panel {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .action-buttons-group {
+      width: 100%;
+    }
+
+    .action-buttons-group .button {
+      flex: 1;
+      justify-content: center;
     }
   }
 </style>
