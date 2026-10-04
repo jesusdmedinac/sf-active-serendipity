@@ -86,6 +86,61 @@
         </div>
       </div>
     </div>
+
+    <!-- 2. AI-Accelerated Migration Workflow -->
+    <div class="workflow-block">
+      <div class="workflow-header">
+        <span class="engraved-label">[ AI-ACCELERATED MODERNIZATION WORKFLOW ]</span>
+        <h3 class="workflow-title">High-Velocity Transpilation + Staff Architectural Hardening</h3>
+        <p class="workflow-subtitle">
+          Combining cutting-edge AI tooling with senior human architectural craft to deliver secure, production-grade native migrations in weeks rather than quarters.
+        </p>
+      </div>
+
+      <div class="workflow-stages-grid">
+        <!-- Stage 1: AI-Assisted Transpilation -->
+        <div class="stage-card">
+          <div class="stage-tag-row">
+            <span class="stage-badge">STAGE 01</span>
+            <span class="badge-metal badge-titanium">AST Mapping</span>
+          </div>
+          <h4 class="stage-title">AI-Assisted Transpilation</h4>
+          <div class="stage-focus-box">
+            <span class="focus-label">FOCUS:</span>
+            <span class="focus-value">Codebase transformation & AST mapping</span>
+          </div>
+          <p class="stage-deliverables-text">
+            <strong>Key Deliverables:</strong> Rapid extraction of models, business logic, and UI components from legacy cross-platform code.
+          </p>
+          <ul class="stage-features-list">
+            <li>Automated AST parsing of React Native / Flutter components into Kotlin/Compose models</li>
+            <li>High-throughput extraction of TypeScript/Dart business logic without manual boilerplate</li>
+            <li>Algorithmic detection of deprecated plugins and native iOS/Android bridge dependencies</li>
+          </ul>
+        </div>
+
+        <!-- Stage 2: Staff Architectural Hardening -->
+        <div class="stage-card stage-card-highlight">
+          <div class="stage-tag-row">
+            <span class="stage-badge badge-green">STAGE 02</span>
+            <span class="badge-metal badge-anodized-green">Staff Engineering</span>
+          </div>
+          <h4 class="stage-title">Staff Architectural Hardening</h4>
+          <div class="stage-focus-box focus-box-green">
+            <span class="focus-label">FOCUS:</span>
+            <span class="focus-value">Human-led architectural engineering</span>
+          </div>
+          <p class="stage-deliverables-text">
+            <strong>Key Deliverables:</strong> Clean Architecture, MVI state flow, zero-bridge native performance, and comprehensive TDD test suites.
+          </p>
+          <ul class="stage-features-list">
+            <li>Refactoring shared modules into clean Domain, Data, and Presentation boundaries</li>
+            <li>Replacing brittle bridges with direct native compilation and memory safety</li>
+            <li>Comprehensive unit and UI test automation ensuring zero functional regressions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -278,6 +333,157 @@
 
   @media (max-width: 900px) {
     .pathways-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Workflow Block Styles */
+  .workflow-block {
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .workflow-header {
+    margin-bottom: 2rem;
+  }
+
+  .workflow-title {
+    font-size: 1.45rem;
+    color: #ffffff;
+    margin-top: 0.35rem;
+    letter-spacing: -0.02em;
+  }
+
+  .workflow-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-metal-secondary);
+    line-height: 1.5;
+    max-width: 720px;
+    margin-top: 0.4rem;
+  }
+
+  .workflow-stages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stage-card {
+    background: linear-gradient(160deg, #181b21 0%, #101217 100%);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid var(--chamfer-light);
+    border-radius: 18px;
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .stage-card-highlight {
+    background: linear-gradient(160deg, #18231d 0%, #0e1511 100%);
+    border-color: rgba(72, 165, 116, 0.4);
+    border-top: 1px solid var(--anodized-green-edge);
+  }
+
+  .stage-tag-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.85rem;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .stage-badge {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-engraved);
+    letter-spacing: 0.06em;
+  }
+
+  .stage-badge.badge-green {
+    color: var(--anodized-green-edge);
+  }
+
+  .stage-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+  }
+
+  .stage-focus-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 1rem;
+  }
+
+  .stage-focus-box.focus-box-green {
+    background: rgba(37, 87, 62, 0.25);
+    border-color: rgba(72, 165, 116, 0.4);
+    color: var(--anodized-green-edge);
+  }
+
+  .focus-label {
+    font-weight: 700;
+    color: var(--text-metal-secondary);
+  }
+
+  .focus-value {
+    color: var(--text-laser-white);
+  }
+
+  .stage-deliverables-text {
+    font-size: 0.88rem;
+    color: var(--text-laser-white);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .stage-deliverables-text strong {
+    color: #ffffff;
+  }
+
+  .stage-features-list {
+    list-style: none;
+    margin-top: auto;
+    padding-top: 1.15rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .stage-features-list li {
+    font-size: 0.82rem;
+    color: var(--text-metal-secondary);
+    line-height: 1.45;
+    position: relative;
+    padding-left: 14px;
+  }
+
+  .stage-features-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--anodized-green-edge);
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 900px) {
+    .workflow-stages-grid {
       grid-template-columns: 1fr;
     }
   }
