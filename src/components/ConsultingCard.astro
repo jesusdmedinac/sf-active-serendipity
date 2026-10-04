@@ -108,6 +108,15 @@
           </a>
         </div>
       </div>
+
+      <!-- Secondary Modernization Hook -->
+      <div class="secondary-offering-hook">
+        <span class="engraved-label">[ CROSS-PLATFORM MODERNIZATION ]</span>
+        <a href="#modernization" class="hook-link">
+          <span>Migrating from React Native or Flutter? Explore Modernization Pathways & Feasibility Audits</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -371,5 +380,34 @@
       flex: 1;
       justify-content: center;
     }
+  }
+
+  .secondary-offering-hook {
+    margin-top: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .hook-link {
+    color: var(--anodized-green-edge);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .hook-link:hover {
+    opacity: 0.85;
+    text-decoration: underline;
+    transform: translateX(2px);
   }
 </style>
