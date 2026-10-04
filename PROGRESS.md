@@ -52,13 +52,19 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Track high-intent CTA conversion events
 
 ## Feature: Reposition as Official Independent Mobile Architecture Consulting Portal (PST / North America) (#1)
-- [ ] Scenario: Reposition Location and Availability in AtmosphericHero
-- [ ] Scenario: Transform ConsultingCard into 3-Tier Productized Services Plaque
-- [ ] Scenario: Reframe Global Meta Tags and Footer for Executive Consulting
-- [ ] Scenario: Retain and Synchronize Tablet Kiosk Mode for California Events
+- [x] Scenario: Reposition Location and Availability in AtmosphericHero
+- [x] Scenario: Transform ConsultingCard into 3-Tier Productized Services Plaque
+- [x] Scenario: Reframe Global Meta Tags and Footer for Executive Consulting
+- [x] Scenario: Retain and Synchronize Tablet Kiosk Mode for California Events
 
 ## Feature: Cross-Platform to Native & Kotlin Multiplatform Migration Services (#2)
 - [ ] Scenario: Display Three Modernization Architectural Pathways
 - [ ] Scenario: Showcase AI-Accelerated Migration Workflow
 - [ ] Scenario: Position Migration Services as a Specialized Secondary Offering
 - [ ] Scenario: Define Migration Feasibility Assessment and Deliverables
+
+## Feature: Zora KMP Starter Kit and Flagship Project Showcase (#3)
+- [ ] Scenario: Display Zora KMP Starter Kit Featured Product Bay
+- [ ] Scenario: Concierge MVP Direct WhatsApp Purchase CTA
+- [ ] Scenario: Showcase Zora Flagship Teaser Bay
+- [ ] Scenario: Maintain Responsive Unified Bento and Section Flow
