@@ -56,8 +56,9 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [ ] Scenario: Transform ConsultingCard into 3-Tier Productized Services Plaque
 - [ ] Scenario: Reframe Global Meta Tags and Footer for Executive Consulting
 - [ ] Scenario: Retain and Synchronize Tablet Kiosk Mode for California Events
+
 ## Feature: Cross-Platform to Native & Kotlin Multiplatform Migration Services (#2)
 - [ ] Scenario: Display Three Modernization Architectural Pathways
-- [ ] Scenario: Highlight Two-Stage Migration Acceleration Engine
-- [ ] Scenario: Integrate Modular Migration Capability into Consulting Showcase
-- [ ] Scenario: Present Migration Feasibility Assessment Scope and Deliverables
+- [ ] Scenario: Showcase AI-Accelerated Migration Workflow
+- [ ] Scenario: Position Migration Services as a Specialized Secondary Offering
+- [ ] Scenario: Define Migration Feasibility Assessment and Deliverables

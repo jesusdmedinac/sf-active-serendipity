@@ -12,26 +12,26 @@ Feature: Cross-Platform to Native and KMP Migration Services
       | Native UI + Shared KMP Core | Native UI (SwiftUI / Compose) + Kotlin Multiplatform Shared Core | Native UX feel with unified business logic, networking, and offline state |
       | 100% Compose Multiplatform | Single declarative UI + shared multiplatform codebase | Maximum code parity and rapid feature iteration across platforms |
 
-  Scenario: Highlight Two-Stage Migration Acceleration Engine
+  Scenario: Showcase AI-Accelerated Migration Workflow
     Given an engineering team evaluating migration velocity and code quality
     When they review the migration delivery methodology
-    Then it should showcase a two-stage accelerator workflow:
+    Then it should highlight an AI-accelerated modernization workflow:
       | Stage | Focus | Key Deliverables |
-      | Automated Transformation | Tool-assisted baseline transpilation | Rapid UI & model extraction using official migration assistants and AST tools |
-      | Staff Architectural Hardening | Human-led architectural engineering | Clean Architecture, MVI state flow, zero-bridge native performance, and TDD test suites |
+      | AI-Assisted Transpilation | Codebase transformation & AST mapping | Rapid extraction of models, business logic, and UI components from legacy cross-platform code |
+      | Staff Architectural Hardening | Human-led architectural engineering | Clean Architecture, MVI state flow, zero-bridge native performance, and comprehensive TDD test suites |
 
-  Scenario: Integrate Modular Migration Capability into Consulting Showcase
-    Given the consulting portal's primary 3-tier advisory architecture
+  Scenario: Position Migration Services as a Specialized Secondary Offering
+    Given the consulting portal's primary 3-tier advisory architecture (Audit, KMP Sprint, Fractional Architect)
     When the visitor navigates the capabilities and services
-    Then the migration offering must appear as a specialized modernization capability
-    And it must not displace the primary Fractional Staff Architect and Audit advisory tiers
+    Then the migration offering must appear as a modular specialized modernization service
+    And it must not displace or overshadow the primary fractional advisory tiers
     And it should provide a direct pathway to request a Migration Feasibility Assessment
 
-  Scenario: Present Migration Feasibility Assessment Scope and Deliverables
+  Scenario: Define Migration Feasibility Assessment and Deliverables
     Given a CTO or VP of Engineering considering a cross-platform migration
     When they evaluate the entry-level assessment package
     Then it must define a fixed-scope feasibility audit delivering:
       | Deliverable | Description |
       | Dependency & Bridge Audit | Analysis of native plugins, SDK integrations, and bridge bottlenecks |
-      | Architecture Roadmap | Concrete target architecture selection and phased strangler migration plan |
-      | Risk & Velocity Matrix | Effort estimations, risk mitigations, and team enablement strategy |
+      | Architecture Recommendation | Clear architectural destination selection (Dual Native vs KMP Core vs CMP) |
+      | Roadmap & Risk Matrix | Phased strangler migration plan, effort estimations, and risk mitigations |
