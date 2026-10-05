@@ -58,10 +58,10 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Retain and Synchronize Tablet Kiosk Mode for California Events
 
 ## Feature: Cross-Platform to Native & Kotlin Multiplatform Migration Services (#2)
-- [ ] Scenario: Display Three Modernization Architectural Pathways
-- [ ] Scenario: Showcase AI-Accelerated Migration Workflow
-- [ ] Scenario: Position Migration Services as a Specialized Secondary Offering
-- [ ] Scenario: Define Migration Feasibility Assessment and Deliverables
+- [x] Scenario: Display Three Modernization Architectural Pathways
+- [x] Scenario: Showcase AI-Accelerated Migration Workflow
+- [x] Scenario: Position Migration Services as a Specialized Secondary Offering
+- [x] Scenario: Define Migration Feasibility Assessment and Deliverables
 
 ## Feature: Zora KMP Starter Kit and Flagship Project Showcase (#3)
 - [ ] Scenario: Display Zora KMP Starter Kit Featured Product Bay
