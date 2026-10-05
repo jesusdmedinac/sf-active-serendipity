@@ -24,7 +24,7 @@ const gaId = id || import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
           anonymize_ip: true,
         });
 
-        // Track In-Person QR attribution and conversion CTAs
+        // Track In-Person QR attribution, scroll depth, and conversion CTAs across the services pyramid
         document.addEventListener('DOMContentLoaded', () => {
           // 1. Explicit event if arrived via Kiosk QR
           const urlParams = new URLSearchParams(window.location.search);
@@ -37,28 +37,140 @@ const gaId = id || import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
             });
           }
 
-          // 2. Event delegation for conversion CTAs
+          // 2. Section visibility tracking via IntersectionObserver
+          const sections = document.querySelectorAll('section[id], header[class*="hero"]');
+          if ('IntersectionObserver' in window) {
+            const viewedSections = new Set();
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const sectionId = entry.target.id || 'hero';
+                  if (!viewedSections.has(sectionId)) {
+                    viewedSections.add(sectionId);
+                    gtag('event', 'funnel_section_view', {
+                      event_category: 'engagement',
+                      section_id: sectionId
+                    });
+                  }
+                }
+              });
+            }, { threshold: 0.35 });
+
+            sections.forEach((sec) => observer.observe(sec));
+          }
+
+          // 3. Granular Funnel Event Delegation
           document.addEventListener('click', (e) => {
             const target = e.target.closest('a, button');
             if (!target) return;
 
             const href = target.getAttribute('href') || '';
             const text = target.textContent?.trim() || '';
+            const closestSection = target.closest('section, header')?.id || 'page';
 
-            if (href.includes('#consulting') || target.classList.contains('btn-anodized-green')) {
-              gtag('event', 'conversion_audit_click', {
+            // A. Google Calendar Bookings (Level 2: Diagnostics & Audits)
+            if (href.includes('calendar.app.google')) {
+              const service = closestSection === 'modernization' ? 'migration_feasibility' : 'architecture_audit';
+              gtag('event', 'calendar_booking_intent', {
                 event_category: 'conversion',
-                event_label: text || 'Book Free 30-Min Audit'
+                service_tier: service,
+                source_section: closestSection,
+                cta_label: text
               });
-            } else if (href.includes('#contact') || target.classList.contains('btn-titanium')) {
-              gtag('event', 'conversion_coffee_click', {
+              return;
+            }
+
+            // B. WhatsApp Direct Conversations (Levels 1, 2, 4, 5)
+            if (href.includes('wa.me')) {
+              let intentLevel = 'contact_instant';
+              let intentDetails = {
+                source_section: closestSection,
+                cta_label: text
+              };
+
+              const lowerHref = href.toLowerCase();
+              if (lowerHref.includes('private%20beta') || lowerHref.includes('zora%20marketplace')) {
+                intentLevel = 'flagship_beta_intent';
+                intentDetails.funnel_level = '5_flagship';
+                intentDetails.product = 'zora_marketplace';
+              } else if (lowerHref.includes('basic%20zora')) {
+                intentLevel = 'product_purchase_intent';
+                intentDetails.funnel_level = '1_product';
+                intentDetails.tier = 'basic';
+                intentDetails.price = 149;
+              } else if (lowerHref.includes('premium%20zora')) {
+                intentLevel = 'product_purchase_intent';
+                intentDetails.funnel_level = '1_product';
+                intentDetails.tier = 'premium';
+                intentDetails.price = 349;
+              } else if (lowerHref.includes('license%20for%20the%20zora')) {
+                intentLevel = 'product_purchase_intent';
+                intentDetails.funnel_level = '1_product';
+                intentDetails.tier = 'general';
+              } else if (lowerHref.includes('migrating')) {
+                intentLevel = 'consulting_inquiry_intent';
+                intentDetails.funnel_level = '2_migration';
+                intentDetails.service = 'migration_assessment';
+              } else if (lowerHref.includes('architecture%20consulting')) {
+                intentLevel = 'consulting_inquiry_intent';
+                intentDetails.funnel_level = '4_consulting';
+                intentDetails.service = 'architecture_advisory';
+              }
+
+              gtag('event', intentLevel, {
                 event_category: 'conversion',
-                event_label: text || 'Say Hi / Grab Coffee'
+                ...intentDetails
               });
-            } else if (href.startsWith('mailto:') || href.includes('linkedin.com') || href.includes('github.com') || href.includes('x.com')) {
+              return;
+            }
+
+            // C. Cross-Funnel Navigation Hooks (.hook-link)
+            if (target.classList.contains('hook-link')) {
+              gtag('event', 'cross_funnel_navigation', {
+                event_category: 'navigation',
+                from_section: closestSection,
+                target_anchor: href,
+                cta_label: text
+              });
+              return;
+            }
+
+            // D. Open Source & Ecosystem Authority (Level 0)
+            if (href.includes('github.com/jesusdmedinac/json-to-compose')) {
+              gtag('event', 'open_source_engagement', {
+                event_category: 'authority',
+                project: 'json-to-compose'
+              });
+              return;
+            } else if (href.includes('desde0.jesusdmedinac.com')) {
+              gtag('event', 'open_source_engagement', {
+                event_category: 'authority',
+                project: 'desde0_academy'
+              });
+              return;
+            } else if (href.includes('kotlin-toolchain.org')) {
+              gtag('event', 'ecosystem_toolchain_click', {
+                event_category: 'authority',
+                resource: 'kotlin_toolchain'
+              });
+              return;
+            }
+
+            // E. Internal Jump CTAs
+            if (href.startsWith('#')) {
+              gtag('event', 'internal_jump_click', {
+                event_category: 'navigation',
+                target_anchor: href,
+                cta_label: text
+              });
+              return;
+            }
+
+            // F. External Social / Contact Channels
+            if (href.includes('linkedin.com') || href.includes('x.com') || href.includes('github.com') || href.startsWith('mailto:')) {
               gtag('event', 'contact_channel_click', {
                 event_category: 'contact',
-                event_label: href
+                channel_url: href
               });
             }
           });
