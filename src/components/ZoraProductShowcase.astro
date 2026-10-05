@@ -190,6 +190,83 @@
         </a>
       </div>
     </div>
+
+    <!-- Flagship Engineering Initiative: Zora Used Auto Parts Marketplace -->
+    <div class="flagship-block">
+      <div class="flagship-header">
+        <div class="badge-row">
+          <span class="engraved-label">[ FLAGSHIP ENGINEERING INITIATIVE ]</span>
+          <span class="badge-metal badge-scorched-violet">AI Reverse Auction</span>
+          <span class="badge-metal badge-anodized-green">
+            <span class="led-diode-green"></span> Active Development • Private Beta
+          </span>
+        </div>
+        <h3 class="flagship-title">Zora: Global AI-Powered Auto Parts Marketplace</h3>
+        <p class="flagship-subtitle">
+          Disrupting the multi-billion dollar fragmented auto recyclers industry with an AI-driven reverse auction engine that connects vehicle owners directly to licensed salvage yards.
+        </p>
+      </div>
+
+      <div class="flagship-chassis-grid">
+        <!-- Feature 1: Reverse Auction Engine -->
+        <div class="machined-module-card flagship-card">
+          <div class="flagship-card-header">
+            <span class="card-icon-tag">01</span>
+            <span class="engraved-label">REAL-TIME BIDDING ENGINE</span>
+          </div>
+          <h4 class="flagship-feature-title">Real-Time Reverse Auction</h4>
+          <p class="flagship-feature-desc">
+            Vehicle owners post part requests with VIN verification and damage photos. Licensed salvage yards submit competing bids within minutes, compressing search times from days to seconds.
+          </p>
+          <ul class="deliverables-list text-secondary">
+            <li>Sub-second bid broadcast via WebSocket & KMP reactive state</li>
+            <li>Automated VIN decoding and OEM interchange part cross-referencing</li>
+            <li>Direct escrow payment hold and automated freight shipping generation</li>
+          </ul>
+        </div>
+
+        <!-- Feature 2: Multimodal AI Visual Part Inspection -->
+        <div class="machined-module-card is-featured flagship-card">
+          <div class="flagship-card-header">
+            <span class="card-icon-tag tag-green">02</span>
+            <span class="engraved-label">MULTIMODAL AI & COMPUTER VISION</span>
+          </div>
+          <h4 class="flagship-feature-title">AI Part Diagnostics & Verification</h4>
+          <p class="flagship-feature-desc">
+            On-device and edge multimodal vision pipelines inspect salvage yard part photos, assessing wear, corrosion, and verifying exact compatibility before bid acceptance.
+          </p>
+          <ul class="deliverables-list text-secondary">
+            <li>Multimodal LLM / vision verification for structural damage detection</li>
+            <li>Automated OEM part stamping recognition and serial validation</li>
+            <li>Fraud prevention and counterfeit component filtering</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Private Beta Telemetry & Invitation Strip -->
+      <div class="flagship-telemetry-strip">
+        <div class="telemetry-info">
+          <div class="telemetry-item">
+            <span class="telemetry-label">STATUS</span>
+            <span class="telemetry-val"><span class="led-diode-green"></span> Active Development • Private Beta</span>
+          </div>
+          <div class="telemetry-item">
+            <span class="telemetry-label">CORE PLATFORM</span>
+            <span class="telemetry-val">100% Shared Kotlin Multiplatform</span>
+          </div>
+          <div class="telemetry-item">
+            <span class="telemetry-label">PARTNER NETWORK</span>
+            <span class="telemetry-val">North American Recyclers & Salvage Yards</span>
+          </div>
+        </div>
+        <div class="telemetry-action">
+          <a href="https://wa.me/14704061747?text=Hi%20Jesus%2C%20I%20am%20interested%20in%20the%20Zora%20marketplace%20private%20beta%20and%20technical%20preview." target="_blank" rel="noopener noreferrer" class="button btn-anodized-green btn-compact">
+            <span>Request Private Beta Access</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -436,6 +513,157 @@
   @media (max-width: 900px) {
     .product-tiers-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  /* Flagship Engineering Initiative Styles */
+  .flagship-block {
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .flagship-header {
+    margin-bottom: 2rem;
+  }
+
+  .flagship-title {
+    font-size: 1.45rem;
+    color: #ffffff;
+    margin-top: 0.35rem;
+    letter-spacing: -0.02em;
+  }
+
+  .flagship-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-metal-secondary);
+    line-height: 1.55;
+    max-width: 760px;
+    margin-top: 0.4rem;
+  }
+
+  .flagship-chassis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .flagship-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .flagship-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.85rem;
+  }
+
+  .card-icon-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-engraved);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--chamfer-subtle);
+    border-radius: 6px;
+    padding: 2px 7px;
+  }
+
+  .card-icon-tag.tag-green {
+    color: var(--anodized-green-edge);
+    background: rgba(37, 87, 62, 0.3);
+    border-color: rgba(72, 165, 116, 0.4);
+  }
+
+  .flagship-feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+  }
+
+  .flagship-feature-desc {
+    font-size: 0.88rem;
+    color: var(--text-metal-secondary);
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Telemetry Strip */
+  .flagship-telemetry-strip {
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 1.25rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .telemetry-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .telemetry-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .telemetry-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--text-engraved);
+    letter-spacing: 0.06em;
+  }
+
+  .telemetry-val {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--text-laser-white);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-compact {
+    min-height: 42px;
+    font-size: 0.88rem;
+    padding: 0 18px;
+  }
+
+  @media (max-width: 900px) {
+    .flagship-chassis-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .flagship-telemetry-strip {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .telemetry-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .telemetry-action {
+      width: 100%;
+    }
+
+    .telemetry-action .button {
+      width: 100%;
     }
   }
 </style>
