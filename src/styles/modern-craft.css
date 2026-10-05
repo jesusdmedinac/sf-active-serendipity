@@ -102,6 +102,7 @@ button, a.button {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  padding: 0 22px;
   border-radius: 12px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -119,6 +120,7 @@ button:focus-visible, a:focus-visible {
 
 /* The Anodized Green Aluminum Billet Button */
 .btn-anodized-green {
+  padding: 0 24px;
   background: var(--anodized-green-surface);
   border: 1px solid var(--anodized-green-luster);
   border-top-color: var(--anodized-green-edge);
@@ -151,6 +153,7 @@ button:focus-visible, a:focus-visible {
 
 /* Machined Titanium Secondary Button */
 .btn-titanium {
+  padding: 0 22px;
   background: linear-gradient(145deg, #22262d 0%, #15181d 100%);
   border: 1px solid var(--chamfer-subtle);
   border-top: 1px solid var(--chamfer-light);
@@ -295,4 +298,180 @@ button:focus-visible, a:focus-visible {
 @keyframes pulseDiode {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+/* ==========================================================================
+   Shared Structural Components & Modern Craft Layout Tokens
+   ========================================================================== */
+
+/* Shared Section Container & Header */
+.section-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem;
+}
+
+.section-header {
+  margin-bottom: 2.5rem;
+}
+
+.section-header.text-center {
+  text-align: center;
+}
+
+.section-header.text-center .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.section-subtitle {
+  color: var(--text-metal-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 780px;
+}
+
+/* Badge Row */
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+/* Machined Titanium Enclosure / Chassis */
+.machined-chassis {
+  position: relative;
+  background: linear-gradient(145deg, #171a20 0%, #0d0f13 100%);
+  border: 1px solid var(--chamfer-subtle);
+  border-top: 1px solid var(--chamfer-light);
+  border-radius: 24px;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  overflow: hidden;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 20px 50px -10px rgba(0, 0, 0, 0.85);
+}
+
+.machined-chassis.highlight-anodized {
+  border-top: 1px solid var(--anodized-green-edge);
+  box-shadow: 
+    inset 0 1px 0 rgba(118, 227, 171, 0.2),
+    0 16px 40px -8px rgba(0, 0, 0, 0.6);
+}
+
+/* Modular Sub-Cards (Tiers, Pathways, Stages) */
+.machined-module-card {
+  position: relative;
+  background: linear-gradient(160deg, #171a20 0%, #101216 100%);
+  border: 1px solid var(--chamfer-subtle);
+  border-top: 1px solid var(--chamfer-light);
+  border-radius: 18px;
+  padding: 1.75rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.machined-module-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.machined-module-card.is-featured {
+  background: linear-gradient(160deg, #18231d 0%, #0e1511 100%);
+  border-color: rgba(72, 165, 116, 0.4);
+  border-top: 1px solid var(--anodized-green-edge);
+  box-shadow: 
+    inset 0 1px 0 rgba(118, 227, 171, 0.2),
+    0 12px 32px -6px rgba(37, 87, 62, 0.35);
+}
+
+/* Machined Action Bar (Diagnostic Booking & Contact) */
+.machined-action-bar {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--chamfer-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.4rem 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.action-buttons-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .machined-action-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .action-buttons-group {
+    width: 100%;
+  }
+
+  .action-buttons-group .button {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* Deliverables & Features Checklist */
+.deliverables-list {
+  list-style: none;
+  margin-top: auto;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.deliverables-list li {
+  font-size: 0.82rem;
+  color: var(--text-laser-white);
+  line-height: 1.45;
+  position: relative;
+  padding-left: 18px;
+}
+
+.deliverables-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--anodized-green-edge);
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.deliverables-list.bulleted li::before {
+  content: "•";
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.deliverables-list.text-secondary li {
+  color: var(--text-metal-secondary);
 }

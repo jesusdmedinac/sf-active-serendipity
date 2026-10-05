@@ -3,7 +3,7 @@
 ---
 
 <section id="modernization" class="section-container">
-  <div class="migration-container-machined">
+  <div class="machined-chassis">
     <div class="section-header">
       <div class="badge-row">
         <span class="engraved-label">[ SPECIALIZED MODERNIZATION & MIGRATIONS ]</span>
@@ -25,7 +25,7 @@
 
       <div class="pathways-grid">
         <!-- Pathway 1: Dual Native -->
-        <div class="pathway-card">
+        <div class="machined-module-card pathway-card">
           <div class="pathway-badge-row">
             <span class="pathway-option-label">Option 01</span>
             <span class="badge-metal badge-titanium">Platform Purity</span>
@@ -37,7 +37,7 @@
           <p class="pathway-description">
             Pure uncompromised native performance and platform conventions.
           </p>
-          <ul class="pathway-details">
+          <ul class="deliverables-list bulleted text-secondary">
             <li>Zero abstraction layer overhead & instant day-one OS API access</li>
             <li>Ideal for hardware-intensive apps, widgets, CarPlay & watchOS</li>
             <li>Native iOS & Android ergonomics adhering to Apple & Google HIG</li>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Pathway 2: Native UI + Shared KMP Core (Recommended) -->
-        <div class="pathway-card pathway-featured">
+        <div class="machined-module-card is-featured pathway-card">
           <div class="pathway-glow"></div>
           <div class="pathway-badge-row">
             <span class="pathway-option-label highlight">Option 02</span>
@@ -58,7 +58,7 @@
           <p class="pathway-description">
             Native UX feel with unified business logic, networking, and offline state.
           </p>
-          <ul class="pathway-details">
+          <ul class="deliverables-list bulleted text-secondary">
             <li>SwiftUI & Jetpack Compose frontends guarantee 100% native fluidity</li>
             <li>Single source of truth for domain logic, SQLite, encryption & networking</li>
             <li>Eliminates duplicate bug fixes and state drift between platforms</li>
@@ -66,7 +66,7 @@
         </div>
 
         <!-- Pathway 3: 100% Compose Multiplatform -->
-        <div class="pathway-card">
+        <div class="machined-module-card pathway-card">
           <div class="pathway-badge-row">
             <span class="pathway-option-label">Option 03</span>
             <span class="badge-metal badge-scorched-violet">Maximum Parity</span>
@@ -78,7 +78,7 @@
           <p class="pathway-description">
             Maximum code parity and rapid feature iteration across platforms.
           </p>
-          <ul class="pathway-details">
+          <ul class="deliverables-list bulleted text-secondary">
             <li>Unified Compose declarative UI rendered directly on iOS, Android & Desktop</li>
             <li>Fastest time-to-market for lean product and startup teams</li>
             <li>True native compilation via Kotlin/Native with no runtime webview bridge</li>
@@ -99,7 +99,7 @@
 
       <div class="workflow-stages-grid">
         <!-- Stage 1: AI-Assisted Transpilation -->
-        <div class="stage-card">
+        <div class="machined-module-card stage-card">
           <div class="stage-tag-row">
             <span class="stage-badge">STAGE 01</span>
             <span class="badge-metal badge-titanium">AST Mapping</span>
@@ -112,7 +112,7 @@
           <p class="stage-deliverables-text">
             <strong>Key Deliverables:</strong> Rapid extraction of models, business logic, and UI components from legacy cross-platform code.
           </p>
-          <ul class="stage-features-list">
+          <ul class="deliverables-list text-secondary">
             <li>Automated AST parsing of React Native / Flutter components into Kotlin/Compose models</li>
             <li>High-throughput extraction of TypeScript/Dart business logic without manual boilerplate</li>
             <li>Algorithmic detection of deprecated plugins and native iOS/Android bridge dependencies</li>
@@ -120,7 +120,7 @@
         </div>
 
         <!-- Stage 2: Staff Architectural Hardening -->
-        <div class="stage-card stage-card-highlight">
+        <div class="machined-module-card is-featured stage-card">
           <div class="stage-tag-row">
             <span class="stage-badge badge-green">STAGE 02</span>
             <span class="badge-metal badge-anodized-green">Staff Engineering</span>
@@ -133,7 +133,7 @@
           <p class="stage-deliverables-text">
             <strong>Key Deliverables:</strong> Clean Architecture, MVI state flow, zero-bridge native performance, and comprehensive TDD test suites.
           </p>
-          <ul class="stage-features-list">
+          <ul class="deliverables-list text-secondary">
             <li>Refactoring shared modules into clean Domain, Data, and Presentation boundaries</li>
             <li>Replacing brittle bridges with direct native compilation and memory safety</li>
             <li>Comprehensive unit and UI test automation ensuring zero functional regressions</li>
@@ -144,7 +144,7 @@
 
     <!-- 3. Specialized Entry Package: Migration Feasibility Assessment -->
     <div class="assessment-block">
-      <div class="assessment-card-machined">
+      <div class="machined-chassis highlight-anodized assessment-card">
         <div class="assessment-header">
           <div class="assessment-badge-row">
             <span class="engraved-label">[ FIXED-SCOPE ENTRY ASSESSMENT ]</span>
@@ -199,7 +199,7 @@
         </div>
 
         <!-- Action Panel for Direct Assessment Request -->
-        <div class="assessment-action-panel">
+        <div class="machined-action-bar">
           <div class="action-caption">
             <span class="engraved-label">[ PRAGMATIC MODERNIZATION PATHWAY ]</span>
             <p>Ready to de-risk your app's transition to native or Kotlin Multiplatform?</p>
@@ -221,48 +221,7 @@
 </section>
 
 <style>
-  .section-container {
-    position: relative;
-    z-index: 1;
-    max-width: 1040px;
-    margin: 0 auto;
-    padding: 3.5rem 1.25rem;
-  }
-
-  .migration-container-machined {
-    position: relative;
-    background: linear-gradient(145deg, #15181e 0%, #0c0e12 100%);
-    border: 1px solid var(--chamfer-subtle);
-    border-top: 1px solid var(--chamfer-light);
-    border-radius: 24px;
-    padding: clamp(2rem, 5vw, 3.5rem);
-    overflow: hidden;
-    box-shadow: 
-      inset 0 1px 0 rgba(255, 255, 255, 0.08),
-      0 20px 50px -10px rgba(0, 0, 0, 0.85);
-  }
-
-  .badge-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1.25rem;
-  }
-
-  .section-title {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    margin-bottom: 1rem;
-    line-height: 1.15;
-    color: #ffffff;
-    letter-spacing: -0.03em;
-  }
-
   .section-subtitle {
-    color: var(--text-metal-secondary);
-    font-size: 1.05rem;
-    line-height: 1.6;
-    max-width: 780px;
     margin-bottom: 2.75rem;
   }
 
@@ -286,35 +245,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
-  }
-
-  .pathway-card {
-    position: relative;
-    background: linear-gradient(160deg, #181b21 0%, #101217 100%);
-    border: 1px solid var(--chamfer-subtle);
-    border-top: 1px solid var(--chamfer-light);
-    border-radius: 18px;
-    padding: 1.75rem 1.4rem;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 8px 24px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-
-  .pathway-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .pathway-featured {
-    background: linear-gradient(160deg, #18231d 0%, #0e1511 100%);
-    border-color: rgba(72, 165, 116, 0.4);
-    border-top: 1px solid var(--anodized-green-edge);
-    box-shadow: 
-      inset 0 1px 0 rgba(118, 227, 171, 0.2),
-      0 12px 32px -6px rgba(37, 87, 62, 0.35);
   }
 
   .pathway-glow {
@@ -381,32 +311,6 @@
     font-weight: 500;
   }
 
-  .pathway-details {
-    list-style: none;
-    margin-top: auto;
-    padding-top: 1.15rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .pathway-details li {
-    font-size: 0.82rem;
-    color: var(--text-metal-secondary);
-    line-height: 1.45;
-    position: relative;
-    padding-left: 14px;
-  }
-
-  .pathway-details li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--anodized-green-edge);
-    font-weight: bold;
-  }
-
   @media (max-width: 900px) {
     .pathways-grid {
       grid-template-columns: 1fr;
@@ -443,25 +347,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-  }
-
-  .stage-card {
-    background: linear-gradient(160deg, #181b21 0%, #101217 100%);
-    border: 1px solid var(--chamfer-subtle);
-    border-top: 1px solid var(--chamfer-light);
-    border-radius: 18px;
-    padding: 1.75rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 8px 24px rgba(0, 0, 0, 0.4);
-  }
-
-  .stage-card-highlight {
-    background: linear-gradient(160deg, #18231d 0%, #0e1511 100%);
-    border-color: rgba(72, 165, 116, 0.4);
-    border-top: 1px solid var(--anodized-green-edge);
   }
 
   .stage-tag-row {
@@ -531,33 +416,6 @@
     color: #ffffff;
   }
 
-  .stage-features-list {
-    list-style: none;
-    margin-top: auto;
-    padding-top: 1.15rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .stage-features-list li {
-    font-size: 0.82rem;
-    color: var(--text-metal-secondary);
-    line-height: 1.45;
-    position: relative;
-    padding-left: 14px;
-  }
-
-  .stage-features-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--anodized-green-edge);
-    font-weight: bold;
-    font-size: 0.75rem;
-  }
-
   @media (max-width: 900px) {
     .workflow-stages-grid {
       grid-template-columns: 1fr;
@@ -571,15 +429,8 @@
     border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  .assessment-card-machined {
-    background: linear-gradient(145deg, #181b21 0%, #0e1014 100%);
-    border: 1px solid var(--chamfer-subtle);
-    border-top: 1px solid var(--anodized-green-edge);
-    border-radius: 20px;
+  .assessment-card {
     padding: clamp(1.75rem, 4vw, 2.5rem);
-    box-shadow: 
-      inset 0 1px 0 rgba(118, 227, 171, 0.2),
-      0 16px 40px -8px rgba(0, 0, 0, 0.6);
   }
 
   .assessment-header {
@@ -657,19 +508,6 @@
     line-height: 1.5;
   }
 
-  .assessment-action-panel {
-    background: rgba(0, 0, 0, 0.35);
-    border: 1px solid var(--chamfer-subtle);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 14px;
-    padding: 1.4rem 1.75rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.25rem;
-  }
-
   .action-caption {
     display: flex;
     flex-direction: column;
@@ -681,29 +519,9 @@
     color: var(--text-laser-white);
   }
 
-  .action-buttons-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
   @media (max-width: 900px) {
     .deliverables-grid {
       grid-template-columns: 1fr;
-    }
-
-    .assessment-action-panel {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .action-buttons-group {
-      width: 100%;
-    }
-
-    .action-buttons-group .button {
-      flex: 1;
-      justify-content: center;
     }
   }
 </style>

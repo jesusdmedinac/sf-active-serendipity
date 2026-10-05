@@ -3,7 +3,7 @@
 ---
 
 <section id="consulting" class="section-container">
-  <div class="consulting-card-machined">
+  <div class="machined-chassis">
     <div class="card-glow"></div>
     
     <div class="card-content">
@@ -13,16 +13,16 @@
         <span class="badge-metal badge-anodized-green">Pacific Time (PST)</span>
       </div>
 
-      <h2 class="card-title">Specialized Mobile Architecture Services</h2>
+      <h2 class="section-title">Specialized Mobile Architecture Services</h2>
       
-      <p class="card-pitch">
+      <p class="section-subtitle">
         High-leverage architectural leadership for engineering leaders navigating mobile burn rate, hybrid tech debt, or scaling to unified Kotlin Multiplatform codebases.
       </p>
 
       <!-- 3-Tier Productized Services Grid -->
       <div class="tiers-grid">
         <!-- Tier 1: Architecture & Performance Audit -->
-        <div class="tier-card tier-card-machined">
+        <div class="machined-module-card tier-card">
           <div class="tier-badge-row">
             <span class="tier-scope-tag">5-DAY DIAGNOSTIC</span>
             <span class="tier-num">TIER 1</span>
@@ -36,16 +36,16 @@
           <p class="tier-description">
             Deep forensic diagnosis of memory leaks, jank, ANRs, test suite coverage, and modularization health check.
           </p>
-          <ul class="tier-deliverables">
-            <li><span>✓</span> Trace profiling with Perfetto & Instruments</li>
-            <li><span>✓</span> Clean Architecture & dependency health review</li>
-            <li><span>✓</span> TDD test harness & CI/CD bottleneck audit</li>
-            <li><span>✓</span> Executive remediation roadmap & KMP viability report</li>
+          <ul class="deliverables-list">
+            <li>Trace profiling with Perfetto & Instruments</li>
+            <li>Clean Architecture & dependency health review</li>
+            <li>TDD test harness & CI/CD bottleneck audit</li>
+            <li>Executive remediation roadmap & KMP viability report</li>
           </ul>
         </div>
 
         <!-- Tier 2: KMP Pilot Sprint (Featured) -->
-        <div class="tier-card tier-card-machined tier-featured">
+        <div class="machined-module-card is-featured tier-card">
           <div class="tier-badge-row">
             <span class="tier-scope-tag badge-anodized">2-WEEK ACCELERATOR</span>
             <span class="tier-num highlight">TIER 2</span>
@@ -59,16 +59,16 @@
           <p class="tier-description">
             Production-ready shared Kotlin core sprint connecting business logic directly to native SwiftUI and Jetpack Compose.
           </p>
-          <ul class="tier-deliverables">
-            <li><span>✓</span> Shared networking, cache & domain architecture</li>
-            <li><span>✓</span> Clean MVI state flow with zero native bridge penalty</li>
-            <li><span>✓</span> Automated CI/CD builds & Kotlin Toolchain setup</li>
-            <li><span>✓</span> Hands-on team enablement & developer runbooks</li>
+          <ul class="deliverables-list">
+            <li>Shared networking, cache & domain architecture</li>
+            <li>Clean MVI state flow with zero native bridge penalty</li>
+            <li>Automated CI/CD builds & Kotlin Toolchain setup</li>
+            <li>Hands-on team enablement & developer runbooks</li>
           </ul>
         </div>
 
         <!-- Tier 3: Fractional Architect -->
-        <div class="tier-card tier-card-machined">
+        <div class="machined-module-card tier-card">
           <div class="tier-badge-row">
             <span class="tier-scope-tag">STAFF EMBEDDED</span>
             <span class="tier-num">TIER 3</span>
@@ -82,17 +82,17 @@
           <p class="tier-description">
             Embedded staff platform advisory (20–30 hrs/week) aligning executive product vision with mobile engineering velocity.
           </p>
-          <ul class="tier-deliverables">
-            <li><span>✓</span> 20–30 hours/week dedicated architectural leadership</li>
-            <li><span>✓</span> Pacific Time alignment with California cross-border presence</li>
-            <li><span>✓</span> Code review standards, TDD culture & staff mentorship</li>
-            <li><span>✓</span> Direct technical liaison between leadership and sprint teams</li>
+          <ul class="deliverables-list">
+            <li>20–30 hours/week dedicated architectural leadership</li>
+            <li>Pacific Time alignment with California cross-border presence</li>
+            <li>Code review standards, TDD culture & staff mentorship</li>
+            <li>Direct technical liaison between leadership and sprint teams</li>
           </ul>
         </div>
       </div>
 
       <!-- Action Panel: Direct Calendar Integration alongside Direct Contact -->
-      <div class="action-panel-machined">
+      <div class="machined-action-bar">
         <div class="action-info">
           <span class="engraved-label">[ DIRECT CONSULTATION BOOKING ]</span>
           <p class="action-tagline">Select a 30-minute diagnostic session directly on the calendar or initiate instant contact:</p>
@@ -122,27 +122,6 @@
 </section>
 
 <style>
-  .section-container {
-    position: relative;
-    z-index: 1;
-    max-width: 1040px;
-    margin: 0 auto;
-    padding: 3.5rem 1.25rem;
-  }
-
-  .consulting-card-machined {
-    position: relative;
-    background: linear-gradient(145deg, #181b21 0%, #0e1014 100%);
-    border: 1px solid var(--chamfer-subtle);
-    border-top: 1px solid var(--chamfer-light);
-    border-radius: 24px;
-    padding: clamp(2rem, 5vw, 3.5rem);
-    overflow: hidden;
-    box-shadow: 
-      inset 0 1px 0 rgba(255, 255, 255, 0.08),
-      0 20px 50px -10px rgba(0, 0, 0, 0.85);
-  }
-
   .card-glow {
     position: absolute;
     top: -25%;
@@ -159,27 +138,7 @@
     z-index: 1;
   }
 
-  .badge-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1.25rem;
-  }
-
-  .card-title {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    margin-bottom: 1rem;
-    line-height: 1.15;
-    color: #ffffff;
-    letter-spacing: -0.03em;
-  }
-
-  .card-pitch {
-    color: var(--text-metal-secondary);
-    font-size: 1.05rem;
-    line-height: 1.6;
-    max-width: 780px;
+  .section-subtitle {
     margin-bottom: 2.5rem;
   }
 
@@ -189,35 +148,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     margin-bottom: 2.5rem;
-  }
-
-  .tier-card-machined {
-    position: relative;
-    background: linear-gradient(160deg, #16191f 0%, #0f1115 100%);
-    border: 1px solid var(--chamfer-subtle);
-    border-top: 1px solid var(--chamfer-light);
-    border-radius: 18px;
-    padding: 1.75rem 1.4rem;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 8px 24px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-
-  .tier-card-machined:hover {
-    transform: translateY(-3px);
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .tier-featured {
-    background: linear-gradient(160deg, #18231d 0%, #0e1511 100%);
-    border-color: rgba(72, 165, 116, 0.4);
-    border-top: 1px solid var(--anodized-green-edge);
-    box-shadow: 
-      inset 0 1px 0 rgba(118, 227, 171, 0.2),
-      0 12px 32px -6px rgba(37, 87, 62, 0.35);
   }
 
   .tier-badge-row {
@@ -294,47 +224,7 @@
     margin-bottom: 1.25rem;
   }
 
-  .tier-deliverables {
-    list-style: none;
-    margin-top: auto;
-    padding-top: 1.15rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .tier-deliverables li {
-    font-size: 0.82rem;
-    color: var(--text-laser-white);
-    line-height: 1.45;
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
-  }
-
-  .tier-deliverables li span {
-    color: var(--anodized-green-edge);
-    font-weight: bold;
-    line-height: 1;
-    margin-top: 1px;
-    flex-shrink: 0;
-  }
-
   /* Action Panel */
-  .action-panel-machined {
-    background: rgba(0, 0, 0, 0.35);
-    border: 1px solid var(--chamfer-subtle);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 1.4rem 1.75rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.25rem;
-  }
-
   .action-info {
     display: flex;
     flex-direction: column;
@@ -346,39 +236,9 @@
     color: var(--text-laser-white);
   }
 
-  .action-buttons-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .btn-anodized-green {
-    padding: 0 24px;
-    font-size: 0.95rem;
-  }
-
-  .btn-titanium {
-    padding: 0 22px;
-    font-size: 0.95rem;
-  }
-
   @media (max-width: 900px) {
     .tiers-grid {
       grid-template-columns: 1fr;
-    }
-
-    .action-panel-machined {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .action-buttons-group {
-      width: 100%;
-    }
-
-    .action-buttons-group .button {
-      flex: 1;
-      justify-content: center;
     }
   }
 
