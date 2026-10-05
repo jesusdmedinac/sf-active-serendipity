@@ -64,7 +64,7 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Define Migration Feasibility Assessment and Deliverables
 
 ## Feature: Zora KMP Starter Kit and Flagship Project Showcase (#3)
-- [ ] Scenario: Display Zora KMP Starter Kit Featured Product Bay
-- [ ] Scenario: Concierge MVP Direct WhatsApp Purchase CTA
-- [ ] Scenario: Showcase Zora Flagship Teaser Bay
-- [ ] Scenario: Maintain Responsive Unified Bento and Section Flow
+- [x] Scenario: Display Zora KMP Starter Kit Featured Product Bay
+- [x] Scenario: Concierge MVP Direct WhatsApp Purchase CTA
+- [x] Scenario: Showcase Zora Flagship Teaser Bay
+- [x] Scenario: Maintain Responsive Unified Bento and Section Flow
