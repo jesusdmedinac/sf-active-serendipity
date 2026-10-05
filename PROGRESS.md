@@ -65,6 +65,6 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 
 ## Feature: Zora KMP Starter Kit and Flagship Project Showcase (#3)
 - [x] Scenario: Display Zora KMP Starter Kit Featured Product Bay
-- [ ] Scenario: Concierge MVP Direct WhatsApp Purchase CTA
+- [x] Scenario: Concierge MVP Direct WhatsApp Purchase CTA
 - [ ] Scenario: Showcase Zora Flagship Teaser Bay
 - [ ] Scenario: Maintain Responsive Unified Bento and Section Flow
