@@ -253,13 +253,25 @@ const slides: Slide[] = [
     transition: width 0.1s linear;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .jb-carousel-wrapper {
       max-width: 100%;
     }
     
     .jb-slides-stage {
       max-height: 380px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .jb-slides-stage {
+      max-height: 280px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .jb-slides-stage {
+      max-height: 220px;
     }
   }
 </style>

@@ -117,7 +117,6 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
   .hero-showcase {
     display: flex;
     justify-content: center;
-    width: 100%;
   }
 
   /* Availability Bezel */
@@ -220,11 +219,7 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
   }
 
   /* Responsive Stacking */
-  @media (max-width: 1024px) {
-    .hero-container {
-      padding: 3.5rem 1.25rem 3rem;
-    }
-
+  @media (max-width: 768px) {
     .hero-split-grid {
       grid-template-columns: 1fr;
       gap: 3rem;
@@ -243,5 +238,30 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
     .hero-cta-group {
       justify-content: center;
     }
+
+    .hero-showcase {
+      width: 100%;
+    }
   }
+
+  @media (max-width: 425px) {
+    .hero-split-grid {
+      padding: 0 1.5rem;
+    }
+
+    .hero-headline {
+      font-size: clamp(2.3rem, 4.6vw, 3.85rem);
+    }
+  }
+
+  @media (max-width: 320px) {
+    .hero-split-grid {
+      padding: 0;
+    }
+
+    .hero-headline {
+      padding: 0;
+    }
+  }
+
 </style>
