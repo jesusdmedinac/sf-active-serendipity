@@ -1,10 +1,21 @@
 ---
 // Atmospheric Hero component: JetBrains-inspired Engineering Authority & Zora Palette
-// Split-layout Architecture with Production Showcase Carousel
+// Split-layout Architecture with Production Showcase Carousel & Zora Brand Assets
 import ShowcaseCarousel from './ShowcaseCarousel.astro';
 ---
 
 <header class="hero-container">
+  <!-- Atmospheric Background Graphic (Zora Cards) -->
+  <div class="hero-backdrop" aria-hidden="true">
+    <img 
+      src="/images/zora-cards.png" 
+      alt="" 
+      loading="eager" 
+      decoding="async" 
+      class="backdrop-graphic"
+    />
+  </div>
+
   <div class="hero-split-grid">
     <!-- Left Column: Editorial Authority & Action -->
     <div class="hero-content">
@@ -18,7 +29,18 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
         <span class="bezel-highlight">California On-Site Ready</span>
       </div>
 
-      <!-- Primary Headline (Titanium Solid White - Anti-AI slop) -->
+      <!-- Zora Brand Logo Icon over the Headline -->
+      <div class="hero-brand-icon">
+        <img 
+          src="/images/zora-transparent.png" 
+          alt="Zora / Jesús Daniel Medina Cruz" 
+          width="64" 
+          height="64" 
+          class="brand-icon-img"
+        />
+      </div>
+
+      <!-- Primary Headline (Titanium Solid White - JetBrains style) -->
       <h1 class="hero-headline">
         Native iOS & Android.<br />
         One unified Kotlin codebase.
@@ -29,27 +51,7 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
         Staff Mobile Platform Architect & KMP Specialist. Architecting high-performance shared foundations for North American scale-ups—delivering 120 FPS display-native rendering with zero compromise on platform feel.
       </p>
 
-      <!-- Platform Readiness Strip (JetBrains Inspired Proof of Reality) -->
-      <div class="platform-readiness-strip">
-        <div class="platform-pill">
-          <span class="platform-name">iOS</span>
-          <span class="platform-status status-stable">Stable</span>
-        </div>
-        <div class="platform-pill">
-          <span class="platform-name">Android</span>
-          <span class="platform-status status-native">Jetpack</span>
-        </div>
-        <div class="platform-pill">
-          <span class="platform-name">Desktop</span>
-          <span class="platform-status status-subtle">macOS / Linux / Windows</span>
-        </div>
-        <div class="platform-pill">
-          <span class="platform-name">Web</span>
-          <span class="platform-status status-beta">Wasm Beta</span>
-        </div>
-      </div>
-
-      <!-- CTAs Group -->
+      <!-- CTAs Group (Direct & Focused) -->
       <div class="hero-cta-group">
         <a href="#consulting" class="button btn-zora-spectrum">
           <span>Book Architecture Audit</span>
@@ -76,7 +78,28 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
     width: 100%;
     max-width: 1240px;
     margin: 0 auto;
-    padding: 5rem 1.5rem 4rem;
+    padding: 5rem 1.5rem 4.5rem;
+    overflow: hidden;
+  }
+
+  /* Atmospheric Backdrop Graphic */
+  .hero-backdrop {
+    position: absolute;
+    top: -15%;
+    right: -10%;
+    width: 900px;
+    height: 900px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.18;
+    filter: blur(2px);
+  }
+
+  .backdrop-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(-8deg);
   }
 
   /* Split Layout Grid */
@@ -113,7 +136,7 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
       0 4px 14px rgba(0, 0, 0, 0.6);
     padding: 7px 18px;
     border-radius: 9999px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
   }
 
   .status-indicator {
@@ -145,9 +168,23 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
     color: var(--zora-edge);
   }
 
+  /* Brand Icon Over Title */
+  .hero-brand-icon {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .brand-icon-img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 16px rgba(138, 77, 255, 0.4));
+  }
+
   /* Solid White Titanium Headline */
   .hero-headline {
-    font-size: clamp(2.3rem, 4.8vw, 3.85rem);
+    font-size: clamp(2.3rem, 4.6vw, 3.85rem);
     font-weight: 800;
     line-height: 1.08;
     letter-spacing: -0.04em;
@@ -161,73 +198,9 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
     font-size: clamp(1.02rem, 1.8vw, 1.18rem);
     color: #b0b8c4;
     line-height: 1.62;
-    max-width: 620px;
-    margin-bottom: 2rem;
-    letter-spacing: -0.01em;
-  }
-
-  /* Platform Readiness Strip */
-  .platform-readiness-strip {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
+    max-width: 600px;
     margin-bottom: 2.25rem;
-    padding: 8px 14px;
-    background: rgba(18, 20, 26, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 14px;
-    backdrop-filter: blur(12px);
-  }
-
-  .platform-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 4px 10px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-  }
-
-  .platform-name {
-    font-weight: 700;
-    color: #ffffff;
-  }
-
-  .platform-status {
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 2px 6px;
-    border-radius: 4px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .status-stable {
-    color: #8A4DFF;
-    background: rgba(138, 77, 255, 0.15);
-    border: 1px solid rgba(138, 77, 255, 0.3);
-  }
-
-  .status-native {
-    color: #CD00EC;
-    background: rgba(205, 0, 236, 0.15);
-    border: 1px solid rgba(205, 0, 236, 0.3);
-  }
-
-  .status-subtle {
-    color: var(--text-metal-secondary);
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  .status-beta {
-    color: #ED158A;
-    background: rgba(237, 21, 138, 0.15);
-    border: 1px solid rgba(237, 21, 138, 0.3);
+    letter-spacing: -0.01em;
   }
 
   /* CTAs */
@@ -255,6 +228,14 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
       padding: 3.5rem 1.25rem 3rem;
     }
 
+    .hero-backdrop {
+      width: 600px;
+      height: 600px;
+      top: -5%;
+      right: -20%;
+      opacity: 0.12;
+    }
+
     .hero-split-grid {
       grid-template-columns: 1fr;
       gap: 3rem;
@@ -268,10 +249,6 @@ import ShowcaseCarousel from './ShowcaseCarousel.astro';
     .hero-subheadline {
       margin-left: auto;
       margin-right: auto;
-    }
-
-    .platform-readiness-strip {
-      justify-content: center;
     }
 
     .hero-cta-group {
