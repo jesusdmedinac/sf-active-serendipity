@@ -68,3 +68,11 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Concierge MVP Direct WhatsApp Purchase CTA
 - [x] Scenario: Showcase Zora Flagship Teaser Bay
 - [x] Scenario: Maintain Responsive Unified Bento and Section Flow
+
+## Feature: Human Craft & Engineering Authority Site Redesign
+- [x] Scenario: Refactor AtmosphericHero with JetBrains-inspired engineering authority
+- [ ] Scenario: Professionalize ProofOfWorkBento with visible engineering artifacts
+- [ ] Scenario: Streamline ConsultingCard productized advisory offerings
+- [ ] Scenario: Clarify MigrationServices architectural pathways
+- [ ] Scenario: Spotlight ZoraProductShowcase as a flagship KMP production product
+- [ ] Scenario: Unify ContactGrid and Footer with personal authorship

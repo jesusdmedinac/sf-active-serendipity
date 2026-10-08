@@ -14,19 +14,33 @@
   --border-metal: 1px solid var(--chamfer-subtle);
   --border-cnc-top: 1px solid var(--chamfer-light);
   
-  /* 2. Anodized Green Tokens (Hero Metallic Accent) */
-  --anodized-green-deep: #163325;
-  --anodized-green-base: #25573e;
-  --anodized-green-surface: linear-gradient(145deg, #327051 0%, #1c4531 60%, #275d43 100%);
-  --anodized-green-surface-active: linear-gradient(145deg, #1a3e2c 0%, #295d43 100%);
-  --anodized-green-luster: #48a574;
-  --anodized-green-edge: #76e3ab;
-  --anodized-green-glow: rgba(72, 165, 116, 0.35);
+  /* 2. Zora Master Brand Spectrum Tokens (Official #8A4DFF -> #ED158A) */
+  --zora-violet: #8A4DFF;
+  --zora-orchid: #A732FD;
+  --zora-magenta: #CD00EC;
+  --zora-fuchsia: #E200C1;
+  --zora-raspberry: #ED158A;
 
-  /* 3. Scorched Titanium Violet Tokens (JetBrains & KMP) */
-  --titanium-violet-deep: #25143e;
+  --zora-gradient: linear-gradient(135deg, #8A4DFF 0%, #A732FD 25%, #CD00EC 50%, #E200C1 75%, #ED158A 100%);
+  --zora-gradient-subtle: linear-gradient(135deg, rgba(138, 77, 255, 0.15) 0%, rgba(237, 21, 138, 0.15) 100%);
+  --zora-surface: linear-gradient(145deg, #2b184a 0%, #1a0f30 60%, #20103a 100%);
+  --zora-surface-active: linear-gradient(145deg, #3d1f6a 0%, #221040 100%);
+  --zora-glow: rgba(167, 50, 253, 0.35);
+  --zora-edge: #b993f7;
+
+  /* Backward compatibility aliases */
+  --anodized-green-deep: #1a0f30;
+  --anodized-green-base: #8A4DFF;
+  --anodized-green-surface: var(--zora-gradient);
+  --anodized-green-surface-active: linear-gradient(135deg, #7835f0 0%, #db0f7d 100%);
+  --anodized-green-luster: #A732FD;
+  --anodized-green-edge: #ED158A;
+  --anodized-green-glow: var(--zora-glow);
+
+  /* 3. Titanium & KMP Deep Foundation Tokens */
+  --titanium-violet-deep: #1a0f30;
   --titanium-violet-base: #4a2d77;
-  --titanium-violet-surface: linear-gradient(135deg, #513182 0%, #2a1647 60%, #3e2265 100%);
+  --titanium-violet-surface: linear-gradient(135deg, #3a1e63 0%, #1f1035 60%, #2a1647 100%);
   --titanium-violet-luster: #8d62da;
   --titanium-violet-edge: #b993f7;
   --titanium-violet-glow: rgba(141, 98, 218, 0.3);
@@ -118,34 +132,36 @@ button:focus-visible, a:focus-visible {
   outline-offset: 3px;
 }
 
-/* The Anodized Green Aluminum Billet Button */
+/* The Zora Master Spectrum Button */
+.btn-zora-spectrum,
 .btn-anodized-green {
-  padding: 0 24px;
-  background: var(--anodized-green-surface);
-  border: 1px solid var(--anodized-green-luster);
-  border-top-color: var(--anodized-green-edge);
-  border-bottom-color: var(--anodized-green-deep);
+  padding: 0 26px;
+  background: var(--zora-gradient);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
   box-shadow: 
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4),
     0 4px 16px -2px rgba(0, 0, 0, 0.7),
-    0 0 20px -4px var(--anodized-green-glow);
-  color: #f1fcf6;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+    0 0 24px -2px var(--zora-glow);
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+.btn-zora-spectrum:hover,
 .btn-anodized-green:hover {
   transform: translateY(-2px);
   box-shadow: 
-    inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
     0 6px 20px -2px rgba(0, 0, 0, 0.8),
-    0 0 26px -2px var(--anodized-green-glow);
+    0 0 32px 0px var(--zora-glow);
 }
 
+.btn-zora-spectrum:active,
 .btn-anodized-green:active {
-  background: var(--anodized-green-surface-active);
   transform: translateY(1px);
+  filter: brightness(0.92);
   box-shadow: 
     inset 0 2px 4px rgba(0, 0, 0, 0.6),
     0 1px 2px rgba(0, 0, 0, 0.5);
