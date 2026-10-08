@@ -1,5 +1,6 @@
 ---
 // ShowcaseCarousel.astro: JetBrains-style Production Showcase Carousel
+// Precision responsive layout across sm (640px), md (768px), lg (1024px), xl (1280px)
 export interface Slide {
   id: number;
   image: string;
@@ -59,8 +60,8 @@ const slides: Slide[] = [
 ];
 ---
 
-<div class="jb-carousel-wrapper" id="showcase-carousel" aria-label="Production showcase carousel">
-  <!-- Slides Stage: Large edge-curved screen gallery -->
+<div class="jb-carousel" id="showcase-carousel" aria-label="Production showcase carousel">
+  <!-- Slides Stage: Large screen gallery -->
   <div class="jb-slides-stage">
     {slides.map((slide, index) => (
       <div 
@@ -79,16 +80,18 @@ const slides: Slide[] = [
   </div>
 
   <!-- Bottom Info & Controls Bar (JetBrains Style) -->
-  <div class="jb-carousel-footer">
+  <div class="jb-carousel-controls">
     <div class="jb-text-container">
-      {slides.map((slide, index) => (
-        <p 
-          class={`jb-text-item ${index === 0 ? 'is-active' : ''}`}
-          data-text-index={index}
-        >
-          {slide.description}
-        </p>
-      ))}
+      <div class="jb-text-wrapper">
+        {slides.map((slide, index) => (
+          <p 
+            class={`jb-text-item ${index === 0 ? 'is-active' : ''}`}
+            data-text-index={index}
+          >
+            {slide.description}
+          </p>
+        ))}
+      </div>
     </div>
 
     <!-- Navigation Buttons with minimal 1px outline -->
@@ -115,27 +118,28 @@ const slides: Slide[] = [
 </div>
 
 <style>
-  .jb-carousel-wrapper {
+  /* Base (Mobile-First < 640px) */
+  .jb-carousel {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(138, 77, 255, 0.45) 0%, rgba(32, 16, 58, 0.95) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+      0 20px 40px -12px rgba(0, 0, 0, 0.8),
+      0 0 32px -8px rgba(138, 77, 255, 0.25);
     display: flex;
     flex-direction: column;
   }
 
-  /* Large Screen Stage */
+  /* Slides Stage */
   .jb-slides-stage {
     position: relative;
     width: 100%;
-    aspect-ratio: 1400 / 1280;
-    max-height: 440px;
-    border-radius: 24px;
+    aspect-ratio: 1400 / 1200;
     overflow: hidden;
     background: #090a0d;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 
-      0 24px 48px -12px rgba(0, 0, 0, 0.8),
-      0 0 40px -10px rgba(138, 77, 255, 0.2);
   }
 
   .jb-slide {
@@ -143,7 +147,7 @@ const slides: Slide[] = [
     inset: 0;
     opacity: 0;
     transform: scale(0.98);
-    transition: opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
     pointer-events: none;
     display: flex;
     align-items: center;
@@ -163,48 +167,53 @@ const slides: Slide[] = [
     object-position: center top;
   }
 
-  /* Footer Controls & Editorial Text */
-  .jb-carousel-footer {
+  /* Bottom Controls & Editorial Quotes */
+  .jb-carousel-controls {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1.5rem;
-    margin-top: 1.25rem;
-    padding: 0 4px;
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px 20px 14px;
+    background: #15181e;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .jb-text-container {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .jb-text-wrapper {
     position: relative;
-    flex-grow: 1;
-    min-height: 52px;
+    min-height: 64px;
   }
 
   .jb-text-item {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     margin: 0;
-    font-size: 0.92rem;
-    line-height: 1.55;
-    color: #b0b8c4;
+    font-size: 13px;
+    line-height: 20px;
+    color: #c0c7d2;
     opacity: 0;
-    transform: translateY(4px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.3s ease-in-out;
     pointer-events: none;
   }
 
   .jb-text-item.is-active {
+    position: relative;
     opacity: 1;
-    transform: translateY(0);
     pointer-events: auto;
   }
 
-  /* Minimal Outline Buttons */
+  /* Buttons: full width with spread out arrows in mobile for thumb ergonomics */
   .jb-carousel-buttons {
     display: flex;
-    gap: 10px;
-    flex-shrink: 0;
-    margin-top: 2px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
   }
 
   .jb-nav-btn {
@@ -214,7 +223,7 @@ const slides: Slide[] = [
     min-height: 40px;
     padding: 0;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.16);
     color: #ffffff;
     display: inline-flex;
@@ -225,10 +234,9 @@ const slides: Slide[] = [
   }
 
   .jb-nav-btn:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.14);
     border-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   }
 
   .jb-nav-btn:active {
@@ -236,14 +244,11 @@ const slides: Slide[] = [
     background: rgba(255, 255, 255, 0.08);
   }
 
-  /* Progress Bar */
+  /* Progress Line */
   .jb-progress-track {
     width: 100%;
     height: 2px;
     background: rgba(255, 255, 255, 0.08);
-    border-radius: 9999px;
-    margin-top: 14px;
-    overflow: hidden;
   }
 
   .jb-progress-bar {
@@ -253,25 +258,74 @@ const slides: Slide[] = [
     transition: width 0.1s linear;
   }
 
-  @media (max-width: 768px) {
-    .jb-carousel-wrapper {
-      max-width: 100%;
-    }
-    
-    .jb-slides-stage {
-      max-height: 380px;
+  /* Breakpoint: Small Mobile (width <= 472px) */
+  @media (max-width: 472px) {
+    .jb-text-wrapper {
+      min-height: 80px;
     }
   }
 
-  @media (max-width: 425px) {
-    .jb-slides-stage {
-      max-height: 280px;
+  /* Breakpoint: sm (width >= 40rem / 640px) */
+  @media (min-width: 40rem) {
+    .jb-carousel {
+      border-radius: 24px;
+    }
+
+    .jb-carousel-controls {
+      padding: 22px 24px 18px;
+    }
+
+    .jb-text-item {
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 
-  @media (max-width: 320px) {
+  /* Breakpoint: md / tablet (width >= 48rem / 768px) */
+  @media (min-width: 48rem) {
+    .jb-carousel-controls {
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      padding: 24px;
+    }
+
+    .jb-text-wrapper {
+      min-height: 54px;
+    }
+
+    .jb-carousel-buttons {
+      width: auto;
+      gap: 16px;
+      align-self: center;
+      margin-top: 0;
+    }
+  }
+
+  /* Breakpoint: lg / desktop (width >= 64rem / 1024px) */
+  @media (min-width: 64rem) {
+    .jb-carousel {
+      border-radius: 32px;
+      max-width: 540px;
+    }
+
     .jb-slides-stage {
-      max-height: 220px;
+      aspect-ratio: 1400 / 1260;
+    }
+
+    .jb-text-wrapper {
+      min-height: 68px;
+    }
+  }
+
+  /* Breakpoint: xl (width >= 80rem / 1280px) */
+  @media (min-width: 80rem) {
+    .jb-carousel {
+      max-width: 600px;
+    }
+
+    .jb-text-wrapper {
+      min-height: 72px;
     }
   }
 </style>
