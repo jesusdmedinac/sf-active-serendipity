@@ -76,3 +76,11 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [ ] Scenario: Clarify MigrationServices architectural pathways
 - [ ] Scenario: Spotlight ZoraProductShowcase as a flagship KMP production product
 - [ ] Scenario: Unify ContactGrid and Footer with personal authorship
+
+## Feature: Tailwind CSS v4 Architecture Migration
+- [x] Scenario: Integrate Tailwind CSS v4 via official @tailwindcss/vite plugin
+- [x] Scenario: Map master Zora chromatic spectrum and titanium tokens to @theme in CSS
+- [x] Scenario: Migrate AtmosphericHero, ShowcaseCarousel, and SupportedPlatforms to atomic utilities
+- [ ] Scenario: Migrate ProofOfWorkBento to Tailwind CSS grid and flex layout
+- [ ] Scenario: Migrate ConsultingCard, MigrationServices, and ZoraProductShowcase to Tailwind CSS
+- [ ] Scenario: Migrate ContactGrid, Footer, and KioskDisplay to Tailwind CSS

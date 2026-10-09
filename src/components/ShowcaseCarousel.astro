@@ -1,6 +1,6 @@
 ---
 // ShowcaseCarousel.astro: JetBrains-style Production Showcase Carousel
-// Precision responsive layout across sm (640px), md (768px), lg (1024px), xl (1280px)
+// Migrated to Tailwind CSS v4 with native responsive layout and zero-CLS height reservation
 export interface Slide {
   id: number;
   image: string;
@@ -60,12 +60,12 @@ const slides: Slide[] = [
 ];
 ---
 
-<div class="jb-carousel" id="showcase-carousel" aria-label="Production showcase carousel">
-  <!-- Slides Stage: Large screen gallery -->
-  <div class="jb-slides-stage">
+<div class="relative w-full overflow-hidden rounded-2xl sm:rounded-3xl border border-white/12 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.8),0_0_32px_-8px_rgba(138,77,255,0.25)] flex flex-col bg-gradient-to-b from-[#8A4DFF]/50 to-[#1a0836]/95" id="showcase-carousel" aria-label="Production showcase carousel">
+  <!-- Slides Stage: Dynamic natural image sizing -->
+  <div class="relative w-full overflow-hidden bg-[#090a0d]">
     {slides.map((slide, index) => (
       <div 
-        class={`jb-slide ${index === 0 ? 'is-active' : ''}`}
+        class={`jb-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none flex items-center justify-center transition-all duration-350 ease-in-out ${index === 0 ? 'is-active' : ''}`}
         data-slide-index={index}
       >
         <img 
@@ -73,19 +73,20 @@ const slides: Slide[] = [
           alt={`${slide.app} - Compose Multiplatform in production`}
           loading={index === 0 ? 'eager' : 'lazy'}
           decoding="async"
-          class="jb-slide-image"
+          class="w-full h-auto block"
         />
       </div>
     ))}
   </div>
 
   <!-- Bottom Info & Controls Bar (JetBrains Style) -->
-  <div class="jb-carousel-controls">
-    <div class="jb-text-container">
-      <div class="jb-text-wrapper">
+  <div class="flex flex-col md:flex-row gap-4 md:gap-6 p-5 sm:p-6 bg-[#19191c] w-full border-t border-white/8 box-border">
+    <div class="flex-1 overflow-hidden">
+      <!-- Stepped min-height reservation to eliminate CLS -->
+      <div class="relative min-h-[80px] sm:min-h-[48px] lg:min-h-[72px]">
         {slides.map((slide, index) => (
           <p 
-            class={`jb-text-item ${index === 0 ? 'is-active' : ''}`}
+            class={`jb-text-item absolute top-0 left-0 w-full m-0 text-[13px] sm:text-sm leading-5 sm:leading-[22px] text-[#c0c7d2] opacity-0 transition-opacity duration-300 pointer-events-none ${index === 0 ? 'is-active' : ''}`}
             data-text-index={index}
           >
             {slide.description}
@@ -94,15 +95,15 @@ const slides: Slide[] = [
       </div>
     </div>
 
-    <!-- Navigation Buttons with minimal 1px outline -->
-    <div class="jb-carousel-buttons">
-      <button type="button" class="jb-nav-btn" id="carousel-prev" aria-label="Previous slide">
+    <!-- Navigation Buttons with minimal outline -->
+    <div class="flex w-full md:w-auto justify-between md:justify-end items-center gap-4 select-none self-center">
+      <button type="button" class="w-10 h-10 min-w-10 min-h-10 p-0 rounded-full bg-white/5 border border-white/20 text-white inline-flex items-center justify-center cursor-pointer hover:bg-white/15 hover:border-white/45 hover:-translate-y-0.5 active:translate-y-0.5 active:bg-white/10 transition-all" id="carousel-prev" aria-label="Previous slide">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="19" y1="12" x2="5" y2="12"></line>
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
       </button>
-      <button type="button" class="jb-nav-btn" id="carousel-next" aria-label="Next slide">
+      <button type="button" class="w-10 h-10 min-w-10 min-h-10 p-0 rounded-full bg-white/5 border border-white/20 text-white inline-flex items-center justify-center cursor-pointer hover:bg-white/15 hover:border-white/45 hover:-translate-y-0.5 active:translate-y-0.5 active:bg-white/10 transition-all" id="carousel-next" aria-label="Next slide">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
@@ -112,221 +113,32 @@ const slides: Slide[] = [
   </div>
 
   <!-- Subtle Progress Line -->
-  <div class="jb-progress-track">
-    <div class="jb-progress-bar" id="progress-bar-fill"></div>
+  <div class="w-full h-0.5 bg-white/8">
+    <div class="w-0 h-full transition-[width] duration-100 ease-linear [background:var(--zora-gradient)]" id="progress-bar-fill"></div>
   </div>
 </div>
 
 <style>
-  /* Base (Mobile-First < 640px) */
-  .jb-carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 16px;
-    background: linear-gradient(180deg, rgba(138, 77, 255, 0.45) 0%, rgba(32, 16, 58, 0.95) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 
-      0 20px 40px -12px rgba(0, 0, 0, 0.8),
-      0 0 32px -8px rgba(138, 77, 255, 0.25);
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Slides Stage */
-  .jb-slides-stage {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1400 / 1200;
-    overflow: hidden;
-    background: #090a0d;
-  }
-
+  /* Minimal dynamic state rules driven by JavaScript */
   .jb-slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transform: scale(0.98);
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-    pointer-events: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: translateX(100%);
   }
-
   .jb-slide.is-active {
+    position: relative;
     opacity: 1;
-    transform: scale(1);
+    transform: translateX(0);
     pointer-events: auto;
   }
-
-  .jb-slide-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-  }
-
-  /* Bottom Controls & Editorial Quotes */
-  .jb-carousel-controls {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 18px 20px 14px;
-    background: #15181e;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .jb-text-container {
-    flex: 1;
-    overflow: hidden;
-  }
-
-  .jb-text-wrapper {
-    position: relative;
-    min-height: 64px;
-  }
-
-  .jb-text-item {
+  .jb-slide.is-prev {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    font-size: 13px;
-    line-height: 20px;
-    color: #c0c7d2;
+    transform: translateX(-100%);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
     pointer-events: none;
   }
-
   .jb-text-item.is-active {
     position: relative;
     opacity: 1;
     pointer-events: auto;
-  }
-
-  /* Buttons: full width with spread out arrows in mobile for thumb ergonomics */
-  .jb-carousel-buttons {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    user-select: none;
-  }
-
-  .jb-nav-btn {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
-    padding: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.15s ease;
-  }
-
-  .jb-nav-btn:hover {
-    background: rgba(255, 255, 255, 0.14);
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(-1px);
-  }
-
-  .jb-nav-btn:active {
-    transform: translateY(1px);
-    background: rgba(255, 255, 255, 0.08);
-  }
-
-  /* Progress Line */
-  .jb-progress-track {
-    width: 100%;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.08);
-  }
-
-  .jb-progress-bar {
-    width: 0%;
-    height: 100%;
-    background: var(--zora-gradient);
-    transition: width 0.1s linear;
-  }
-
-  /* Breakpoint: Small Mobile (width <= 472px) */
-  @media (max-width: 472px) {
-    .jb-text-wrapper {
-      min-height: 80px;
-    }
-  }
-
-  /* Breakpoint: sm (width >= 40rem / 640px) */
-  @media (min-width: 40rem) {
-    .jb-carousel {
-      border-radius: 24px;
-    }
-
-    .jb-carousel-controls {
-      padding: 22px 24px 18px;
-    }
-
-    .jb-text-item {
-      font-size: 14px;
-      line-height: 22px;
-    }
-  }
-
-  /* Breakpoint: md / tablet (width >= 48rem / 768px) */
-  @media (min-width: 48rem) {
-    .jb-carousel-controls {
-      flex-direction: row;
-      gap: 24px;
-      align-items: flex-start;
-      padding: 24px;
-    }
-
-    .jb-text-wrapper {
-      min-height: 54px;
-    }
-
-    .jb-carousel-buttons {
-      width: auto;
-      gap: 16px;
-      align-self: center;
-      margin-top: 0;
-    }
-  }
-
-  /* Breakpoint: lg / desktop (width >= 64rem / 1024px) */
-  @media (min-width: 64rem) {
-    .jb-carousel {
-      border-radius: 32px;
-      max-width: 540px;
-    }
-
-    .jb-slides-stage {
-      aspect-ratio: 1400 / 1260;
-    }
-
-    .jb-text-wrapper {
-      min-height: 68px;
-    }
-  }
-
-  /* Breakpoint: xl (width >= 80rem / 1280px) */
-  @media (min-width: 80rem) {
-    .jb-carousel {
-      max-width: 600px;
-    }
-
-    .jb-text-wrapper {
-      min-height: 72px;
-    }
   }
 </style>
 
@@ -343,29 +155,51 @@ const slides: Slide[] = [
 
     const totalSlides = slides.length;
     let currentIndex = 0;
+    let prevIndex = -1;
     const intervalMs = 5000;
     let startTime = Date.now();
     let isPaused = false;
     let progressAnimId: number | null = null;
 
-    function showSlide(index: number) {
+    function showSlide(newIndex: number, forward = true) {
+      prevIndex = currentIndex;
+      currentIndex = newIndex;
+
       slides.forEach((slide, i) => {
-        slide.classList.toggle('is-active', i === index);
+        slide.classList.remove('is-active', 'is-prev');
+
+        if (i === currentIndex) {
+          slide.style.transform = forward ? 'translateX(100%)' : 'translateX(-100%)';
+          slide.style.opacity = '0';
+          void slide.offsetWidth; // Reflow
+          slide.classList.add('is-active');
+          slide.style.transform = '';
+          slide.style.opacity = '';
+        } else if (i === prevIndex) {
+          slide.classList.add('is-prev');
+          slide.style.transform = forward ? 'translateX(-100%)' : 'translateX(100%)';
+          slide.style.opacity = '0';
+        } else {
+          slide.style.transform = '';
+          slide.style.opacity = '';
+        }
       });
+
       texts.forEach((text, i) => {
-        text.classList.toggle('is-active', i === index);
+        text.classList.toggle('is-active', i === currentIndex);
       });
+
       startTime = Date.now();
     }
 
     function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      showSlide(currentIndex);
+      const next = (currentIndex + 1) % totalSlides;
+      showSlide(next, true);
     }
 
     function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      showSlide(currentIndex);
+      const prev = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(prev, false);
     }
 
     function tickProgress() {
@@ -392,7 +226,6 @@ const slides: Slide[] = [
       });
     }
 
-    // Hover pause
     container.addEventListener('mouseenter', () => {
       isPaused = true;
     });
@@ -402,7 +235,6 @@ const slides: Slide[] = [
       startTime = Date.now();
     });
 
-    // Touch swipe support
     let touchStartX = 0;
     container.addEventListener('touchstart', (e) => {
       touchStartX = e.changedTouches[0].screenX;

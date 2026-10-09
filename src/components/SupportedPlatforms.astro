@@ -1,249 +1,87 @@
 ---
 // SupportedPlatforms.astro: JetBrains-inspired full-width platform readiness section
+// Migrated to Tailwind CSS v4
 ---
 
-<section class="platforms-section" id="platforms">
-  <div class="platforms-container">
-    <div class="platforms-header">
-      <h2 class="platforms-title">
+<section class="relative z-10 w-full py-12 md:py-16 border-y border-white/6 bg-[#0a0b0f]/60 backdrop-blur-md" id="platforms">
+  <div class="max-w-7xl mx-auto flex flex-col gap-10 px-5 sm:px-7 md:px-10">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white mb-3 leading-tight">
         Production-ready architectures for mobile, desktop, and web.
       </h2>
-      <p class="platforms-subtitle">
-        Powered by official <span class="highlight-kmp">Kotlin Multiplatform</span> and <span class="highlight-compose">Compose</span>. Display-native framerates on every screen.
+      <p class="text-[#9aa4b2] text-base sm:text-lg leading-relaxed">
+        Powered by official <span class="text-zora-violet font-semibold">Kotlin Multiplatform</span> and <span class="text-zora-magenta font-semibold">Compose</span>. Display-native framerates on every screen.
       </p>
     </div>
 
-    <div class="platforms-grid">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <!-- iOS Platform -->
-      <div class="platform-card">
-        <div class="platform-icon-box">
+      <div class="flex items-center gap-4 bg-gradient-to-br from-[#16181f] to-[#101217] border border-white/7 border-t-white/16 rounded-2xl p-5 sm:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_8px_24px_-4px_rgba(0,0,0,0.6)] hover:-translate-y-0.5 hover:border-white/20 transition-all">
+        <div class="w-12 h-12 rounded-xl bg-white/4 border border-white/8 flex items-center justify-center text-white shrink-0">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.38c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.57.66-.99 1.72-.86 2.76.99.08 2.01-.52 2.56-1.26z"/>
           </svg>
         </div>
-        <div class="platform-info">
-          <div class="platform-headline">
-            <span class="platform-name">iOS</span>
-            <span class="platform-badge badge-stable">Stable</span>
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center gap-2">
+            <span class="text-base font-bold text-white tracking-tight">iOS</span>
+            <span class="font-mono text-[11px] font-bold px-2 py-0.5 rounded tracking-wider uppercase text-zora-violet bg-zora-violet/15 border border-zora-violet/30">Stable</span>
           </div>
-          <p class="platform-note">Native UIKit/SwiftUI interop & SKIE</p>
+          <p class="text-xs sm:text-[13px] text-[#9aa4b2] leading-snug">Native UIKit/SwiftUI interop & SKIE</p>
         </div>
       </div>
 
       <!-- Android Platform -->
-      <div class="platform-card">
-        <div class="platform-icon-box">
+      <div class="flex items-center gap-4 bg-gradient-to-br from-[#16181f] to-[#101217] border border-white/7 border-t-white/16 rounded-2xl p-5 sm:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_8px_24px_-4px_rgba(0,0,0,0.6)] hover:-translate-y-0.5 hover:border-white/20 transition-all">
+        <div class="w-12 h-12 rounded-xl bg-white/4 border border-white/8 flex items-center justify-center text-white shrink-0">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.523 15.341a1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1m-11.046 0a1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1m11.405-6.02l1.997-3.46a.416.416 0 0 0-.152-.568.416.416 0 0 0-.568.152l-2.023 3.504A12.02 12.02 0 0 0 12 7.822c-1.83 0-3.543.408-5.136 1.127L4.841 5.445a.416.416 0 0 0-.568-.152.416.416 0 0 0-.152.568l1.997 3.46C2.688 11.286.5 15.18.5 19.67h23c0-4.49-2.188-8.384-5.618-10.349"/>
           </svg>
         </div>
-        <div class="platform-info">
-          <div class="platform-headline">
-            <span class="platform-name">Android</span>
-            <span class="platform-badge badge-native">Native</span>
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center gap-2">
+            <span class="text-base font-bold text-white tracking-tight">Android</span>
+            <span class="font-mono text-[11px] font-bold px-2 py-0.5 rounded tracking-wider uppercase text-zora-magenta bg-zora-magenta/15 border border-zora-magenta/30">Native</span>
           </div>
-          <p class="platform-note">via official Jetpack Compose</p>
+          <p class="text-xs sm:text-[13px] text-[#9aa4b2] leading-snug">via official Jetpack Compose</p>
         </div>
       </div>
 
       <!-- Desktop Platform -->
-      <div class="platform-card">
-        <div class="platform-icon-box">
+      <div class="flex items-center gap-4 bg-gradient-to-br from-[#16181f] to-[#101217] border border-white/7 border-t-white/16 rounded-2xl p-5 sm:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_8px_24px_-4px_rgba(0,0,0,0.6)] hover:-translate-y-0.5 hover:border-white/20 transition-all">
+        <div class="w-12 h-12 rounded-xl bg-white/4 border border-white/8 flex items-center justify-center text-white shrink-0">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
             <line x1="8" y1="21" x2="16" y2="21"></line>
             <line x1="12" y1="17" x2="12" y2="21"></line>
           </svg>
         </div>
-        <div class="platform-info">
-          <div class="platform-headline">
-            <span class="platform-name">Desktop</span>
-            <span class="platform-badge badge-stable">Stable</span>
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center gap-2">
+            <span class="text-base font-bold text-white tracking-tight">Desktop</span>
+            <span class="font-mono text-[11px] font-bold px-2 py-0.5 rounded tracking-wider uppercase text-zora-violet bg-zora-violet/15 border border-zora-violet/30">Stable</span>
           </div>
-          <p class="platform-note">macOS, Windows & Linux</p>
+          <p class="text-xs sm:text-[13px] text-[#9aa4b2] leading-snug">macOS, Windows & Linux</p>
         </div>
       </div>
 
       <!-- Web Platform -->
-      <div class="platform-card">
-        <div class="platform-icon-box">
+      <div class="flex items-center gap-4 bg-gradient-to-br from-[#16181f] to-[#101217] border border-white/7 border-t-white/16 rounded-2xl p-5 sm:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_8px_24px_-4px_rgba(0,0,0,0.6)] hover:-translate-y-0.5 hover:border-white/20 transition-all">
+        <div class="w-12 h-12 rounded-xl bg-white/4 border border-white/8 flex items-center justify-center text-white shrink-0">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="2" y1="12" x2="22" y2="12"></line>
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
           </svg>
         </div>
-        <div class="platform-info">
-          <div class="platform-headline">
-            <span class="platform-name">Web</span>
-            <span class="platform-badge badge-beta">Wasm Beta</span>
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center gap-2">
+            <span class="text-base font-bold text-white tracking-tight">Web</span>
+            <span class="font-mono text-[11px] font-bold px-2 py-0.5 rounded tracking-wider uppercase text-zora-raspberry bg-zora-raspberry/15 border border-zora-raspberry/30">Wasm Beta</span>
           </div>
-          <p class="platform-note">WebAssembly compilation</p>
+          <p class="text-xs sm:text-[13px] text-[#9aa4b2] leading-snug">WebAssembly compilation</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  .platforms-section {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    padding: 3rem 1.5rem 4rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(10, 11, 15, 0.6);
-    backdrop-filter: blur(16px);
-  }
-
-  .platforms-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    padding: 0 1.25rem;
-  }
-
-  @media (min-width: 40rem) {
-    .platforms-container {
-      padding: 0 1.75rem;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .platforms-container {
-      padding: 0 2.5rem;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .platforms-container {
-      padding: 0 2rem;
-    }
-  }
-
-  .platforms-header {
-    max-width: 760px;
-  }
-
-  .platforms-title {
-    font-size: clamp(1.6rem, 3.2vw, 2.3rem);
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.03em;
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-  }
-
-  .platforms-subtitle {
-    font-size: 1.05rem;
-    color: #9aa4b2;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .highlight-kmp {
-    color: var(--zora-violet);
-    font-weight: 600;
-  }
-
-  .highlight-compose {
-    color: var(--zora-magenta);
-    font-weight: 600;
-  }
-
-  .platforms-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.25rem;
-  }
-
-  .platform-card {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: linear-gradient(145deg, #16181f 0%, #101217 100%);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 16px;
-    padding: 1.25rem 1.5rem;
-    box-shadow: 
-      inset 0 1px 0 rgba(255, 255, 255, 0.06),
-      0 8px 24px -4px rgba(0, 0, 0, 0.6);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-
-  .platform-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .platform-icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    flex-shrink: 0;
-  }
-
-  .platform-info {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-
-  .platform-headline {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .platform-name {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.01em;
-  }
-
-  .platform-badge {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 4px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .badge-stable {
-    color: #8A4DFF;
-    background: rgba(138, 77, 255, 0.14);
-    border: 1px solid rgba(138, 77, 255, 0.3);
-  }
-
-  .badge-native {
-    color: #CD00EC;
-    background: rgba(205, 0, 236, 0.14);
-    border: 1px solid rgba(205, 0, 236, 0.3);
-  }
-
-  .badge-beta {
-    color: #ED158A;
-    background: rgba(237, 21, 138, 0.14);
-    border: 1px solid rgba(237, 21, 138, 0.3);
-  }
-
-  .platform-note {
-    font-size: 0.84rem;
-    color: #9aa4b2;
-    margin: 0;
-    line-height: 1.4;
-  }
-</style>

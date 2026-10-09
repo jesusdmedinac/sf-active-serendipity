@@ -1,3 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-zora-violet: #8A4DFF;
+  --color-zora-orchid: #A732FD;
+  --color-zora-magenta: #CD00EC;
+  --color-zora-fuchsia: #E200C1;
+  --color-zora-raspberry: #ED158A;
+
+  --color-metal-void: #090a0d;
+  --color-metal-gunmetal: #0f1115;
+  --color-metal-titanium: #16181d;
+  --color-metal-steel-mid: #1d2127;
+  --color-metal-steel-bright: #282e37;
+
+  --color-text-laser-white: #f3f5f8;
+  --color-text-metal-secondary: #9aa4b2;
+  --color-text-engraved: #667282;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "Geist", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+
 /* Modern Craft Design System: Machined Titanium & Anodized Alloys */
 :root {
   /* 1. Base Metal Chassis Tokens (CNC Aerospace Alloys) */
