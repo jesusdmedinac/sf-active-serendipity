@@ -23,8 +23,11 @@ Feature: Zora KMP Starter Kit and Flagship Project Showcase
     And it must highlight the real-time reverse auction engine connecting car owners with salvage yards
     And it must indicate active development status and private beta access
 
-  Scenario: Maintain Responsive Unified Bento and Section Flow
-    Given the main landing page structure
-    When the page renders across mobile, tablet, and desktop viewports
-    Then the product and flagship bays must integrate smoothly into the existing industrial design system
-    And it must not disrupt the primary advisory and consulting conversion pathways
+  Scenario: Dedicated Zora KMP Kits Hub and Architectural Matrix at /zora-kmp
+    Given the standalone page at /zora-kmp
+    When a visitor accesses the dedicated Zora KMP Hub
+    Then it must detail the 3 progressive tiers: Community ($0 Mini-Zora), Basic ($149 AI Copilot with json-to-compose SDUI), and Premium ($299 Two-Sided Marketplace)
+    And it must render the comprehensive technical comparison matrix
+    And it must explain the 2-seat hardware fingerprinting and non-transferable licensing model
+    And the home page showcase must provide a streamlined teaser directing traffic to /zora-kmp
+

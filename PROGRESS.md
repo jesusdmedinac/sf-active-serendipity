@@ -67,6 +67,7 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Display Zora KMP Starter Kit Featured Product Bay
 - [x] Scenario: Concierge MVP Direct WhatsApp Purchase CTA
 - [x] Scenario: Showcase Zora Flagship Teaser Bay
+- [x] Scenario: Dedicated Zora KMP Kits Hub and Architectural Matrix at /zora-kmp
 - [x] Scenario: Maintain Responsive Unified Bento and Section Flow
 
 ## Feature: Human Craft & Engineering Authority Site Redesign
@@ -74,13 +75,15 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [ ] Scenario: Professionalize ProofOfWorkBento with visible engineering artifacts
 - [ ] Scenario: Streamline ConsultingCard productized advisory offerings
 - [ ] Scenario: Clarify MigrationServices architectural pathways
-- [ ] Scenario: Spotlight ZoraProductShowcase as a flagship KMP production product
+- [x] Scenario: Spotlight ZoraProductShowcase as a flagship KMP production product
 - [ ] Scenario: Unify ContactGrid and Footer with personal authorship
+
 
 ## Feature: Tailwind CSS v4 Architecture Migration
 - [x] Scenario: Integrate Tailwind CSS v4 via official @tailwindcss/vite plugin
 - [x] Scenario: Map master Zora chromatic spectrum and titanium tokens to @theme in CSS
 - [x] Scenario: Migrate AtmosphericHero, ShowcaseCarousel, and SupportedPlatforms to atomic utilities
-- [ ] Scenario: Migrate ProofOfWorkBento to Tailwind CSS grid and flex layout
-- [ ] Scenario: Migrate ConsultingCard, MigrationServices, and ZoraProductShowcase to Tailwind CSS
-- [ ] Scenario: Migrate ContactGrid, Footer, and KioskDisplay to Tailwind CSS
+- [x] Scenario: Eliminate modern-craft.css legacy file and transition entirely to global.css with Tailwind @utility directives
+- [ ] Scenario: Migrate ProofOfWorkBento to pure Tailwind CSS utilities
+- [ ] Scenario: Migrate ConsultingCard, MigrationServices, and ZoraProductShowcase to pure Tailwind CSS utilities
+- [ ] Scenario: Migrate ContactGrid, Footer, and KioskDisplay to pure Tailwind CSS utilities

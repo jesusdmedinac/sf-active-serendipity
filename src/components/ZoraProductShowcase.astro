@@ -1,678 +1,386 @@
 ---
-// Zora Product Showcase Component: Zora KMP Starter Kit & Flagship Initiative
+// Zora Product Showcase Component: Streamlined Flagship Hub Teaser
+// Directs visitors to the dedicated architecture & comparison specification at /zora-kmp
+const whatsappBaseUrl = "https://wa.me/14704061747";
+const whatsappMsg = encodeURIComponent("Hello Jesús, I would like to learn more about the Zora KMP Kits licenses.");
 ---
 
 <section id="products" class="section-container">
   <div class="machined-chassis">
+    <!-- Header -->
     <div class="section-header">
       <div class="badge-row">
         <span class="engraved-label">[ COMMERCIAL DIGITAL PRODUCTS & STARTER KITS ]</span>
-        <span class="badge-metal badge-scorched-violet">Kotlin Foundation Ecosystem</span>
-        <span class="badge-metal badge-anodized-green">Production-Ready KMP</span>
+        <span class="badge-metal badge-violet">Kotlin Foundation Ecosystem</span>
+        <span class="badge-metal badge-titanium">Production-Ready KMP</span>
       </div>
-      <h2 class="section-title">Zora KMP Starter Kit</h2>
+      <h2 class="section-title">Zora KMP Starter Kits</h2>
       <p class="section-subtitle">
-        Accelerate your mobile roadmap with production-hardened multiplatform architecture. Pre-configured with the official Kotlin Foundation ecosystem and the automated Kotlin Toolchain.
+        Production-hardened multiplatform architecture eliminating 80+ hours of setup debt. From an open-source Mini-Zora to an AI-powered driver copilot and a complete two-sided reverse-auction salvage marketplace.
       </p>
     </div>
 
-    <!-- Official Kotlin Foundation Member Tech Stack & Kotlin Toolchain Banner -->
-    <div class="ecosystem-showcase-panel">
-      <div class="panel-header">
-        <span class="engraved-label">[ OFFICIAL ECOSYSTEM INTEGRATION ]</span>
-        <h3 class="panel-title">Engineered with Kotlin Foundation Members</h3>
+    <!-- Official Kotlin Foundation Member Tech Stack Banner -->
+    <div class="ecosystem-banner">
+      <div class="ecosystem-label">
+        <span class="engraved-label">OFFICIAL ECOSYSTEM STACK:</span>
       </div>
-
-      <div class="ecosystem-grid">
-        <div class="ecosystem-pill">
-          <span class="pill-dot jetbrains">●</span>
-          <div class="pill-info">
-            <strong>JetBrains</strong>
-            <span>Kotlin & Compose Multiplatform Core</span>
-          </div>
-        </div>
-        <div class="ecosystem-pill">
-          <span class="pill-dot google">●</span>
-          <div class="pill-info">
-            <strong>Google</strong>
-            <span>AndroidX & Modern Declarative UI</span>
-          </div>
-        </div>
-        <div class="ecosystem-pill">
-          <span class="pill-dot touchlab">●</span>
-          <div class="pill-info">
-            <strong>Touchlab</strong>
-            <span>SKIE Seamless Swift/Kotlin Interop</span>
-          </div>
-        </div>
-        <div class="ecosystem-pill">
-          <span class="pill-dot kotzilla">●</span>
-          <div class="pill-info">
-            <strong>Kotzilla</strong>
-            <span>Koin Dependency Injection & Telemetry</span>
-          </div>
-        </div>
-        <div class="ecosystem-pill">
-          <span class="pill-dot gradle">●</span>
-          <div class="pill-info">
-            <strong>Gradle</strong>
-            <span>Optimized Incremental Multiplatform Builds</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Kotlin Toolchain Highlight Box -->
-      <div class="toolchain-callout">
-        <div class="toolchain-meta">
-          <span class="engraved-label">AUTOMATED BUILD ENGINE</span>
-          <a href="https://kotlin-toolchain.org" target="_blank" rel="noopener noreferrer" class="toolchain-link">
-            <span>kotlin-toolchain.org</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-          </a>
-        </div>
-        <p class="toolchain-desc">
-          Integrated directly with <strong>Kotlin Toolchain</strong> (<a href="https://kotlin-toolchain.org" target="_blank" rel="noopener noreferrer" class="link-inline">kotlin-toolchain.org</a>) to <strong>eliminate Gradle configuration complexity</strong>. Automatically provisions deterministic JDK environments, compiler targets, and multiplatform toolchains out-of-the-box.
-        </p>
+      <div class="ecosystem-tags">
+        <span class="tag-item"><strong>JetBrains</strong> Compose Multiplatform</span>
+        <span class="tag-item"><strong>Google</strong> AndroidX & Gemini AI</span>
+        <span class="tag-item"><strong>Touchlab</strong> SKIE Swift Bridge</span>
+        <span class="tag-item"><strong>Kotzilla</strong> Koin DI</span>
+        <span class="tag-item"><strong>Gradle</strong> Kotlin Toolchain</span>
       </div>
     </div>
 
-    <!-- 3-Tier Product Pricing Structure -->
-    <div class="product-tiers-header">
-      <span class="engraved-label">[ PRODUCT STRUCTURE & LICENSING ]</span>
-      <h3 class="tiers-headline">Choose Your Starter Kit License</h3>
-    </div>
-
-    <div class="product-tiers-grid">
-      <!-- Tier 1: Community -->
-      <div class="machined-module-card tier-card">
-        <div class="tier-badge-row">
-          <span class="tier-scope-tag">OPEN CORE</span>
-          <span class="tier-num">TIER 1</span>
-        </div>
-        <h4 class="tier-name">Community</h4>
-        <div class="tier-pricing">
-          <span class="price-currency">$</span>
-          <span class="price-val">0</span>
-          <span class="price-unit">USD</span>
-        </div>
-        <p class="tier-description">
-          Open-source foundation with shared networking, clean architecture patterns, and standard repository setups.
+    <!-- 3-Tier Simplified Cards Preview -->
+    <div class="tiers-preview-grid">
+      <!-- Tier 1 -->
+      <div class="preview-card">
+        <div class="card-tier-tag">TIER 1 &bull; OPEN CORE</div>
+        <h3 class="card-heading">Community Edition</h3>
+        <div class="card-price">$0 <span>USD</span></div>
+        <p class="card-body">
+          A functional open-source <strong>Mini-Zora</strong> automotive parts catalog. Kotlin Toolchain (<code>module.yaml</code>), Compose Multiplatform, Koin, Navigation KMP, and Ktor Client.
         </p>
-        <ul class="deliverables-list text-secondary">
-          <li>Shared Ktor & Kotlinx Serialization core</li>
-          <li>Dual native UI templates (Compose & SwiftUI)</li>
-          <li>Basic MVI state management patterns</li>
-          <li>Open-source Apache 2.0 license</li>
-        </ul>
-        <div class="tier-action-wrap">
-          <a href="https://github.com/jesusdmedinac" target="_blank" rel="noopener noreferrer" class="tier-btn btn-titanium">
-            <span>Get Open Core</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </div>
+        <span class="card-badge">Open Source on GitHub</span>
       </div>
 
-      <!-- Tier 2: Basic Starter Kit -->
-      <div class="machined-module-card tier-card">
-        <div class="tier-badge-row">
-          <span class="tier-scope-tag">SOLO FOUNDERS & APPS</span>
-          <span class="tier-num">TIER 2</span>
-        </div>
-        <h4 class="tier-name">Basic Starter Kit</h4>
-        <div class="tier-pricing">
-          <span class="price-currency">$</span>
-          <span class="price-val">149</span>
-          <span class="price-unit">USD</span>
-        </div>
-        <p class="tier-description">
-          Complete production baseline eliminating weeks of initial boilerplate and multiplatform configuration hurdles.
+      <!-- Tier 2 -->
+      <div class="preview-card featured-preview">
+        <div class="card-tier-tag tag-violet">TIER 2 &bull; INDIE ACCELERATOR</div>
+        <h3 class="card-heading">Basic Starter Kit</h3>
+        <div class="card-price">$149 <span>USD</span></div>
+        <p class="card-body">
+          Full B2C Client App with <strong>hybrid on-device & cloud Google AI</strong>, generative chat UI powered by <code>json-to-compose</code>, domain guardrails, and Room KMP "My Garage" persistence.
         </p>
-        <ul class="deliverables-list text-secondary">
-          <li>Pre-configured Kotlin Toolchain automated build engine</li>
-          <li>Touchlab SKIE for seamless Swift async/await & sealed classes</li>
-          <li>Kotzilla Koin DI & SQLDelight offline-first caching</li>
-          <li>Automated GitHub Actions CI/CD multiplatform build checks</li>
-        </ul>
-        <div class="tier-action-wrap">
-          <a href="https://wa.me/14704061747?text=Hi%20Jesus%2C%20I%20want%20to%20acquire%20the%20Basic%20Zora%20KMP%20Starter%20Kit%20license%20(%24149)." target="_blank" rel="noopener noreferrer" class="tier-btn btn-titanium">
-            <span>Get Basic License</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </div>
+        <span class="card-badge badge-accent">AI Copilot + SDUI</span>
       </div>
 
-      <!-- Tier 3: Premium Enterprise Kit (Featured) -->
-      <div class="machined-module-card is-featured tier-card">
-        <div class="tier-badge-row">
-          <span class="tier-scope-tag badge-anodized">SCALE-UPS & AGENCIES</span>
-          <span class="tier-num highlight">TIER 3</span>
-        </div>
-        <h4 class="tier-name">Premium Enterprise Kit</h4>
-        <div class="tier-pricing">
-          <span class="price-currency">$</span>
-          <span class="price-val">349</span>
-          <span class="price-unit">USD</span>
-        </div>
-        <p class="tier-description">
-          Turnkey enterprise architecture with production CI/CD, modular feature isolation, design system integration, and priority onboarding.
+      <!-- Tier 3 -->
+      <div class="preview-card enterprise-preview">
+        <div class="card-tier-tag tag-pink">TIER 3 &bull; MARKETPLACE IN A BOX</div>
+        <h3 class="card-heading">Premium Enterprise</h3>
+        <div class="card-price">$299 <span>USD</span></div>
+        <p class="card-body">
+          Two-sided reverse-auction marketplace: Driver App, Salvage Yard Demand Radar, Ktor WebSockets server, zero-PII privacy enclave, Native Auth, RevenueCat, and GitHub Actions CI/CD.
         </p>
-        <ul class="deliverables-list text-secondary">
-          <li>Everything in Basic + multi-module feature modularization</li>
-          <li>Automated App Store & Google Play Fastlane deployment</li>
-          <li>Design tokens sync & shared UI component library</li>
-          <li>1-on-1 Concierge Onboarding session (60 mins)</li>
-        </ul>
-        <div class="tier-action-wrap">
-          <a href="https://wa.me/14704061747?text=Hi%20Jesus%2C%20I%20want%20to%20acquire%20the%20Premium%20Zora%20KMP%20Starter%20Kit%20license%20(%24349)%20with%20concierge%20onboarding." target="_blank" rel="noopener noreferrer" class="tier-btn btn-anodized-green">
-            <span>Get Premium License</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </div>
+        <span class="card-badge badge-enterprise">Double Agent + Server</span>
       </div>
     </div>
 
-    <!-- Action Bar: Concierge MVP Direct Purchase & Instant Onboarding -->
-    <div class="machined-action-bar products-action-bar">
-      <div class="action-info">
-        <span class="engraved-label">[ CONCIERGE MVP LICENSE ONBOARDING ]</span>
-        <p class="action-tagline">
-          Direct license acquisition and repo access handled directly via WhatsApp with the author:
+    <!-- Navigation Action Plaque -->
+    <div class="action-plaque">
+      <div class="plaque-info">
+        <span class="engraved-label">[ COMPREHENSIVE ARCHITECTURE & LICENSING SPECIFICATION ]</span>
+        <h4 class="plaque-headline">Explore the Complete Technical Matrix & Capabilities</h4>
+        <p class="plaque-sub">
+          Review the side-by-side feature matrix, on-device AI integration details, 2-seat hardware fingerprinting model, and concierge acquisition terms.
         </p>
       </div>
-      <div class="action-buttons-group">
-        <a href="https://wa.me/14704061747?text=Hi%20Jesus%2C%20I%20am%20interested%20in%20acquiring%20a%20license%20for%20the%20Zora%20KMP%20Starter%20Kit." target="_blank" rel="noopener noreferrer" class="button btn-anodized-green">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.549 1.742.883 2.796.883 3.183 0 5.77-2.587 5.77-5.766.001-3.182-2.585-5.769-5.77-5.769zm10.154 5.767c0 5.614-4.57 10.183-10.185 10.183-1.782 0-3.453-.464-4.912-1.272l-5.688 1.492 1.517-5.541c-.896-1.503-1.402-3.256-1.402-5.132 0-5.614 4.568-10.184 10.185-10.184 5.615 0 10.185 4.57 10.185 10.184z"/></svg>
-          <span>Purchase Starter Kit via WhatsApp</span>
+      <div class="plaque-buttons">
+        <a href="/zora-kmp" class="btn-primary-action">
+          <span>Explore Zora Kits & Matrix</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
         </a>
-        <a href="https://github.com/jesusdmedinac" target="_blank" rel="noopener noreferrer" class="button btn-titanium">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          <span>Explore Community Core</span>
+        <a href={`${whatsappBaseUrl}?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" class="btn-concierge">
+          WhatsApp Concierge →
         </a>
       </div>
-    </div>
-
-    <!-- Flagship Engineering Initiative: Zora Used Auto Parts Marketplace -->
-    <div class="flagship-block">
-      <div class="flagship-header">
-        <div class="badge-row">
-          <span class="engraved-label">[ FLAGSHIP ENGINEERING INITIATIVE ]</span>
-          <span class="badge-metal badge-scorched-violet">AI Reverse Auction</span>
-          <span class="badge-metal badge-anodized-green">
-            <span class="led-diode-green"></span> Active Development • Private Beta
-          </span>
-        </div>
-        <h3 class="flagship-title">Zora: Global AI-Powered Auto Parts Marketplace</h3>
-        <p class="flagship-subtitle">
-          Disrupting the multi-billion dollar fragmented auto recyclers industry with an AI-driven reverse auction engine that connects vehicle owners directly to licensed salvage yards.
-        </p>
-      </div>
-
-      <div class="flagship-chassis-grid">
-        <!-- Feature 1: Reverse Auction Engine -->
-        <div class="machined-module-card flagship-card">
-          <div class="flagship-card-header">
-            <span class="card-icon-tag">01</span>
-            <span class="engraved-label">REAL-TIME BIDDING ENGINE</span>
-          </div>
-          <h4 class="flagship-feature-title">Real-Time Reverse Auction</h4>
-          <p class="flagship-feature-desc">
-            Vehicle owners post part requests with VIN verification and damage photos. Licensed salvage yards submit competing bids within minutes, compressing search times from days to seconds.
-          </p>
-          <ul class="deliverables-list text-secondary">
-            <li>Sub-second bid broadcast via WebSocket & KMP reactive state</li>
-            <li>Automated VIN decoding and OEM interchange part cross-referencing</li>
-            <li>Direct escrow payment hold and automated freight shipping generation</li>
-          </ul>
-        </div>
-
-        <!-- Feature 2: Multimodal AI Visual Part Inspection -->
-        <div class="machined-module-card is-featured flagship-card">
-          <div class="flagship-card-header">
-            <span class="card-icon-tag tag-green">02</span>
-            <span class="engraved-label">MULTIMODAL AI & COMPUTER VISION</span>
-          </div>
-          <h4 class="flagship-feature-title">AI Part Diagnostics & Verification</h4>
-          <p class="flagship-feature-desc">
-            On-device and edge multimodal vision pipelines inspect salvage yard part photos, assessing wear, corrosion, and verifying exact compatibility before bid acceptance.
-          </p>
-          <ul class="deliverables-list text-secondary">
-            <li>Multimodal LLM / vision verification for structural damage detection</li>
-            <li>Automated OEM part stamping recognition and serial validation</li>
-            <li>Fraud prevention and counterfeit component filtering</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Private Beta Telemetry & Invitation Strip -->
-      <div class="flagship-telemetry-strip">
-        <div class="telemetry-info">
-          <div class="telemetry-item">
-            <span class="telemetry-label">STATUS</span>
-            <span class="telemetry-val"><span class="led-diode-green"></span> Active Development • Private Beta</span>
-          </div>
-          <div class="telemetry-item">
-            <span class="telemetry-label">CORE PLATFORM</span>
-            <span class="telemetry-val">100% Shared Kotlin Multiplatform</span>
-          </div>
-          <div class="telemetry-item">
-            <span class="telemetry-label">PARTNER NETWORK</span>
-            <span class="telemetry-val">North American Recyclers & Salvage Yards</span>
-          </div>
-        </div>
-        <div class="telemetry-action">
-          <a href="https://wa.me/14704061747?text=Hi%20Jesus%2C%20I%20am%20interested%20in%20the%20Zora%20marketplace%20private%20beta%20and%20technical%20preview." target="_blank" rel="noopener noreferrer" class="button btn-anodized-green btn-compact">
-            <span>Request Private Beta Access</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Secondary Consulting Liaison Hook -->
-    <div class="secondary-offering-hook">
-      <span class="engraved-label">[ BESPOKE ARCHITECTURAL ENGAGEMENT ]</span>
-      <a href="#consulting" class="hook-link">
-        <span>Need custom architectural leadership or a hands-on audit? View Consulting & Advisory Services</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-      </a>
     </div>
   </div>
 </section>
 
 <style>
-  .action-info {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  .section-container {
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .action-tagline {
-    font-size: 0.92rem;
+  .machined-chassis {
+    background: var(--metal-void);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid var(--chamfer-light);
+    border-radius: 12px;
+    padding: 3rem 2.25rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Header */
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .engraved-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--text-engraved);
+  }
+
+  .badge-metal {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    background: var(--metal-steel-mid);
+    border: 1px solid var(--chamfer-subtle);
     color: var(--text-laser-white);
   }
 
-  .products-action-bar {
-    margin-top: 2rem;
+  .badge-violet {
+    border-color: rgba(138, 77, 255, 0.4);
+    color: #d1b8ff;
   }
 
-  .tier-action-wrap {
-    margin-top: 1.25rem;
-  }
-
-  .tier-btn {
-    width: 100%;
-    min-height: 42px;
-    font-size: 0.88rem;
-    gap: 6px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-  }
-  .ecosystem-showcase-panel {
-    background: rgba(0, 0, 0, 0.35);
-    border: 1px solid var(--chamfer-subtle);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 18px;
-    padding: 1.75rem;
-    margin-bottom: 3rem;
-  }
-
-  .panel-header {
-    margin-bottom: 1.25rem;
-  }
-
-  .panel-title {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-top: 0.35rem;
-    letter-spacing: -0.02em;
-  }
-
-  .ecosystem-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 0.85rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .ecosystem-pill {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 12px;
-    padding: 10px 14px;
-    transition: border-color 0.15s ease, background 0.15s ease;
-  }
-
-  .ecosystem-pill:hover {
-    background: rgba(255, 255, 255, 0.05);
+  .badge-titanium {
     border-color: rgba(255, 255, 255, 0.15);
   }
 
-  .pill-dot {
-    font-size: 0.85rem;
-    flex-shrink: 0;
-  }
-
-  .pill-dot.jetbrains { color: #f97316; }
-  .pill-dot.google    { color: #38bdf8; }
-  .pill-dot.touchlab  { color: #a855f7; }
-  .pill-dot.kotzilla  { color: #22c55e; }
-  .pill-dot.gradle    { color: #06b6d4; }
-
-  .pill-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .pill-info strong {
-    font-size: 0.88rem;
-    color: var(--text-laser-white);
-  }
-
-  .pill-info span {
-    font-size: 0.72rem;
-    color: var(--text-metal-secondary);
-    line-height: 1.3;
-  }
-
-  .toolchain-callout {
-    background: rgba(37, 87, 62, 0.18);
-    border: 1px solid rgba(72, 165, 116, 0.35);
-    border-radius: 12px;
-    padding: 1.15rem 1.4rem;
-  }
-
-  .toolchain-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .toolchain-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--anodized-green-edge);
-    transition: opacity 0.15s ease;
-  }
-
-  .toolchain-link:hover {
-    opacity: 0.85;
-    text-decoration: underline;
-  }
-
-  .toolchain-desc {
-    font-size: 0.88rem;
-    color: var(--text-laser-white);
-    line-height: 1.55;
-  }
-
-  .link-inline {
-    color: var(--anodized-green-edge);
-    text-decoration: underline;
-    font-family: var(--font-mono);
-  }
-
-  .product-tiers-header {
-    margin-bottom: 1.5rem;
-  }
-
-  .tiers-headline {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-top: 0.35rem;
-    letter-spacing: -0.02em;
-  }
-
-  .product-tiers-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-  }
-
-  .tier-badge-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.85rem;
-  }
-
-  .tier-scope-tag {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    font-weight: 700;
-    color: var(--text-engraved);
-    letter-spacing: 0.06em;
-  }
-
-  .tier-scope-tag.badge-anodized {
-    color: var(--anodized-green-edge);
-  }
-
-  .tier-num {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--text-metal-secondary);
-  }
-
-  .tier-num.highlight {
-    color: var(--anodized-green-edge);
-  }
-
-  .tier-name {
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.25;
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-  }
-
-  .tier-pricing {
-    font-family: var(--font-mono);
-    display: flex;
-    align-items: baseline;
-    gap: 3px;
-    margin-bottom: 0.85rem;
-    color: #ffffff;
-  }
-
-  .price-currency {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--anodized-green-edge);
-  }
-
-  .price-val {
-    font-size: 2rem;
+  .section-title {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
     font-weight: 800;
     letter-spacing: -0.03em;
-    line-height: 1;
+    color: var(--text-laser-white);
+    margin: 0.25rem 0 0.85rem;
   }
 
-  .price-unit {
-    font-size: 0.85rem;
+  .section-subtitle {
+    font-size: 1.05rem;
     color: var(--text-metal-secondary);
-    font-weight: 600;
-    margin-left: 2px;
+    line-height: 1.6;
+    max-width: 820px;
+    margin: 0;
   }
 
-  .tier-description {
-    font-size: 0.86rem;
-    color: var(--text-metal-secondary);
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-  }
-
-  @media (max-width: 900px) {
-    .product-tiers-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* Flagship Engineering Initiative Styles */
-  .flagship-block {
-    margin-top: 3.5rem;
-    padding-top: 3rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .flagship-header {
-    margin-bottom: 2rem;
-  }
-
-  .flagship-title {
-    font-size: 1.45rem;
-    color: #ffffff;
-    margin-top: 0.35rem;
-    letter-spacing: -0.02em;
-  }
-
-  .flagship-subtitle {
-    font-size: 0.95rem;
-    color: var(--text-metal-secondary);
-    line-height: 1.55;
-    max-width: 760px;
-    margin-top: 0.4rem;
-  }
-
-  .flagship-chassis-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .flagship-card {
-    padding: 1.75rem 1.5rem;
-  }
-
-  .flagship-card-header {
+  /* Ecosystem Banner */
+  .ecosystem-banner {
     display: flex;
     align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--metal-gunmetal);
+    border: 1px solid var(--chamfer-subtle);
+    border-radius: 6px;
+    margin-bottom: 2.5rem;
+  }
+
+  .ecosystem-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .tag-item {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-metal-secondary);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+  }
+
+  .tag-item strong {
+    color: var(--text-laser-white);
+  }
+
+  /* Tiers Grid */
+  .tiers-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .preview-card {
+    background: var(--metal-gunmetal);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid var(--chamfer-light);
+    border-radius: 8px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featured-preview {
+    border-color: rgba(138, 77, 255, 0.45);
+    background: linear-gradient(180deg, rgba(22, 24, 29, 0.95) 0%, rgba(15, 17, 21, 0.98) 100%);
+  }
+
+  .enterprise-preview {
+    border-color: rgba(237, 21, 138, 0.45);
+    background: linear-gradient(180deg, rgba(29, 33, 39, 0.95) 0%, rgba(15, 17, 21, 0.98) 100%);
+  }
+
+  .card-tier-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-engraved);
+    margin-bottom: 0.5rem;
+  }
+
+  .tag-violet {
+    color: #d1b8ff;
+  }
+
+  .tag-pink {
+    color: #ff9dcb;
+  }
+
+  .card-heading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-laser-white);
+    margin: 0 0 0.5rem;
+  }
+
+  .card-price {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--text-laser-white);
     margin-bottom: 0.85rem;
   }
 
-  .card-icon-tag {
+  .card-price span {
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--text-engraved);
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--chamfer-subtle);
-    border-radius: 6px;
-    padding: 2px 7px;
   }
 
-  .card-icon-tag.tag-green {
-    color: var(--anodized-green-edge);
-    background: rgba(37, 87, 62, 0.3);
-    border-color: rgba(72, 165, 116, 0.4);
-  }
-
-  .flagship-feature-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-  }
-
-  .flagship-feature-desc {
-    font-size: 0.88rem;
+  .card-body {
+    font-size: 0.92rem;
     color: var(--text-metal-secondary);
     line-height: 1.55;
-    margin-bottom: 1.25rem;
+    margin: 0 0 1.25rem;
+    flex-grow: 1;
   }
 
-  /* Telemetry Strip */
-  .flagship-telemetry-strip {
-    background: rgba(0, 0, 0, 0.45);
-    border: 1px solid var(--chamfer-subtle);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 14px;
-    padding: 1.25rem 1.6rem;
+  .card-badge {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-metal-secondary);
+  }
+
+  .badge-accent {
+    background: rgba(138, 77, 255, 0.2);
+    color: #d1b8ff;
+  }
+
+  .badge-enterprise {
+    background: rgba(237, 21, 138, 0.2);
+    color: #ff9dcb;
+  }
+
+  /* Action Plaque */
+  .action-plaque {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
     flex-wrap: wrap;
+    gap: 1.75rem;
+    padding: 2rem;
+    background: var(--metal-steel-mid);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid var(--chamfer-light);
+    border-radius: 8px;
   }
 
-  .telemetry-info {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+  .plaque-info {
+    max-width: 640px;
   }
 
-  .telemetry-item {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-
-  .telemetry-label {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
+  .plaque-headline {
+    font-size: 1.35rem;
     font-weight: 700;
-    color: var(--text-engraved);
-    letter-spacing: 0.06em;
-  }
-
-  .telemetry-val {
-    font-family: var(--font-mono);
-    font-size: 0.82rem;
+    letter-spacing: -0.02em;
     color: var(--text-laser-white);
+    margin: 0.4rem 0 0.5rem;
+  }
+
+  .plaque-sub {
+    font-size: 0.92rem;
+    color: var(--text-metal-secondary);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .plaque-buttons {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
     align-items: center;
-    gap: 6px;
   }
 
-  .btn-compact {
-    min-height: 42px;
-    font-size: 0.88rem;
-    padding: 0 18px;
+  .btn-primary-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--zora-gradient);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(167, 50, 253, 0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
-  @media (max-width: 900px) {
-    .flagship-chassis-grid {
-      grid-template-columns: 1fr;
-    }
+  .btn-primary-action:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(167, 50, 253, 0.4);
+  }
 
-    .flagship-telemetry-strip {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.25rem;
-    }
+  .btn-concierge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-laser-white);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--chamfer-subtle);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
 
-    .telemetry-info {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
+  .btn-concierge:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
 
-    .telemetry-action {
-      width: 100%;
-    }
-
-    .telemetry-action .button {
-      width: 100%;
-    }
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.15em 0.35em;
+    border-radius: 3px;
+    color: #d1b8ff;
   }
 </style>
