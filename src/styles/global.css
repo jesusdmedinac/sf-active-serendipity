@@ -21,23 +21,18 @@
   --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
 }
 
-/* Modern Craft Design System: Machined Titanium & Anodized Alloys */
+/* Custom Design System Tokens */
 :root {
-  /* 1. Base Metal Chassis Tokens (CNC Aerospace Alloys) */
   --metal-void: #090a0d;
   --metal-gunmetal: #0f1115;
   --metal-titanium: #16181d;
   --metal-steel-mid: #1d2127;
   --metal-steel-bright: #282e37;
-  
-  /* Specular Chamfers & Milling Details */
+
   --chamfer-light: rgba(255, 255, 255, 0.18);
   --chamfer-subtle: rgba(255, 255, 255, 0.08);
   --chamfer-dark: rgba(0, 0, 0, 0.6);
-  --border-metal: 1px solid var(--chamfer-subtle);
-  --border-cnc-top: 1px solid var(--chamfer-light);
-  
-  /* 2. Zora Master Brand Spectrum Tokens (Official #8A4DFF -> #ED158A) */
+
   --zora-violet: #8A4DFF;
   --zora-orchid: #A732FD;
   --zora-magenta: #CD00EC;
@@ -46,12 +41,9 @@
 
   --zora-gradient: linear-gradient(135deg, #8A4DFF 0%, #A732FD 25%, #CD00EC 50%, #E200C1 75%, #ED158A 100%);
   --zora-gradient-subtle: linear-gradient(135deg, rgba(138, 77, 255, 0.15) 0%, rgba(237, 21, 138, 0.15) 100%);
-  --zora-surface: linear-gradient(145deg, #2b184a 0%, #1a0f30 60%, #20103a 100%);
-  --zora-surface-active: linear-gradient(145deg, #3d1f6a 0%, #221040 100%);
   --zora-glow: rgba(167, 50, 253, 0.35);
   --zora-edge: #b993f7;
 
-  /* Backward compatibility aliases */
   --anodized-green-deep: #1a0f30;
   --anodized-green-base: #8A4DFF;
   --anodized-green-surface: var(--zora-gradient);
@@ -60,15 +52,6 @@
   --anodized-green-edge: #ED158A;
   --anodized-green-glow: var(--zora-glow);
 
-  /* 3. Titanium & KMP Deep Foundation Tokens */
-  --titanium-violet-deep: #1a0f30;
-  --titanium-violet-base: #4a2d77;
-  --titanium-violet-surface: linear-gradient(135deg, #3a1e63 0%, #1f1035 60%, #2a1647 100%);
-  --titanium-violet-luster: #8d62da;
-  --titanium-violet-edge: #b993f7;
-  --titanium-violet-glow: rgba(141, 98, 218, 0.3);
-
-  /* 4. Typography & Monospace Instrumentation */
   --text-laser-white: #f3f5f8;
   --text-metal-secondary: #9aa4b2;
   --text-engraved: #667282;
@@ -77,12 +60,7 @@
   --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Base setup */
 html, body {
   background-color: var(--metal-void);
   color: var(--text-laser-white);
@@ -108,31 +86,7 @@ body::before {
   opacity: 0.6;
 }
 
-/* Typography Helpers */
-h1, h2, h3, h4 {
-  font-weight: 700;
-  letter-spacing: -0.035em;
-  color: var(--text-laser-white);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Laser-Engraved Monospace Labels */
-.engraved-label {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-engraved);
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.9), 0 1px 0 rgba(255, 255, 255, 0.08);
-}
-
-/* Interactive Anodized & Machined Buttons */
-button, a.button {
+@utility button {
   min-height: 48px;
   min-width: 48px;
   display: inline-flex;
@@ -151,14 +105,7 @@ button, a.button {
   overflow: hidden;
 }
 
-button:focus-visible, a:focus-visible {
-  outline: 2px solid var(--anodized-green-edge);
-  outline-offset: 3px;
-}
-
-/* The Zora Master Spectrum Button */
-.btn-zora-spectrum,
-.btn-anodized-green {
+@utility btn-zora-spectrum {
   padding: 0 26px;
   background: var(--zora-gradient);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -170,29 +117,26 @@ button:focus-visible, a:focus-visible {
     0 0 24px -2px var(--zora-glow);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+      0 6px 20px -2px rgba(0, 0, 0, 0.8),
+      0 0 32px 0px var(--zora-glow);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    filter: brightness(0.92);
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 0, 0, 0.6),
+      0 1px 2px rgba(0, 0, 0, 0.5);
+  }
 }
 
-.btn-zora-spectrum:hover,
-.btn-anodized-green:hover {
-  transform: translateY(-2px);
-  box-shadow: 
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
-    0 6px 20px -2px rgba(0, 0, 0, 0.8),
-    0 0 32px 0px var(--zora-glow);
-}
-
-.btn-zora-spectrum:active,
-.btn-anodized-green:active {
-  transform: translateY(1px);
-  filter: brightness(0.92);
-  box-shadow: 
-    inset 0 2px 4px rgba(0, 0, 0, 0.6),
-    0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* Machined Titanium Secondary Button */
-.btn-titanium {
+@utility btn-titanium {
   padding: 0 22px;
   background: linear-gradient(145deg, #22262d 0%, #15181d 100%);
   border: 1px solid var(--chamfer-subtle);
@@ -204,50 +148,37 @@ button:focus-visible, a:focus-visible {
     0 4px 12px rgba(0, 0, 0, 0.5);
   color: var(--text-laser-white);
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 6px 16px rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
 }
 
-.btn-titanium:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 6px 16px rgba(0, 0, 0, 0.6);
-}
-
-.btn-titanium:active {
-  transform: translateY(1px);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* 3D Bento Grid & Modular Titanium Bays */
-.bento-grid {
+@utility bento-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.5rem;
   width: 100%;
 }
 
-.col-span-12 { grid-column: span 12; }
-.col-span-8  { grid-column: span 8; }
-.col-span-6  { grid-column: span 6; }
-.col-span-4  { grid-column: span 4; }
-
-@media (max-width: 900px) {
-  .col-span-8, .col-span-6, .col-span-4 {
-    grid-column: span 12;
-  }
-}
-
-/* Procedural 3D Tilt Card Base */
-.tilt-card-wrapper {
+@utility tilt-card-wrapper {
   perspective: 1000px;
   width: 100%;
 }
 
-.bento-card-titanium {
+@utility bento-card-titanium {
   background: linear-gradient(135deg, #181b21 0%, #101216 60%, #15181e 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-top: 1px solid rgba(255, 255, 255, 0.18); /* Specular CNC chamfer */
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
   padding: 1.75rem;
   display: flex;
@@ -260,10 +191,17 @@ button:focus-visible, a:focus-visible {
     0 12px 32px -8px rgba(0, 0, 0, 0.7);
   transform-style: preserve-3d;
   transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 20px 40px -10px rgba(0, 0, 0, 0.85),
+      0 0 24px -6px rgba(72, 165, 116, 0.2);
+  }
 }
 
-/* Dynamic Anisotropic Sheen Overlay */
-.anisotropic-sheen {
+@utility anisotropic-sheen {
   position: absolute;
   top: 0;
   left: 0;
@@ -281,20 +219,7 @@ button:focus-visible, a:focus-visible {
   transition: opacity 0.2s ease;
 }
 
-.bento-card-titanium:hover .anisotropic-sheen {
-  opacity: 1;
-}
-
-.bento-card-titanium:hover {
-  border-color: rgba(255, 255, 255, 0.22);
-  box-shadow: 
-    inset 0 1px 0 rgba(255, 255, 255, 0.15),
-    0 20px 40px -10px rgba(0, 0, 0, 0.85),
-    0 0 24px -6px rgba(72, 165, 116, 0.2);
-}
-
-/* Badges Metálicos */
-.badge-metal {
+@utility badge-metal {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -309,22 +234,21 @@ button:focus-visible, a:focus-visible {
   color: var(--text-metal-secondary);
 }
 
-.badge-anodized-green {
+@utility badge-anodized-green {
   background: rgba(37, 87, 62, 0.25);
   border: 1px solid rgba(72, 165, 116, 0.35);
   border-top-color: rgba(118, 227, 171, 0.5);
   color: #86efac;
 }
 
-.badge-scorched-violet {
+@utility badge-scorched-violet {
   background: rgba(74, 45, 119, 0.25);
   border: 1px solid rgba(141, 98, 218, 0.35);
   border-top-color: rgba(185, 147, 247, 0.5);
   color: #c4b5fd;
 }
 
-/* LED Diode Status */
-.led-diode-green {
+@utility led-diode-green {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -340,12 +264,7 @@ button:focus-visible, a:focus-visible {
   50% { opacity: 0.45; transform: scale(0.85); }
 }
 
-/* ==========================================================================
-   Shared Structural Components & Modern Craft Layout Tokens
-   ========================================================================== */
-
-/* Shared Section Container & Header */
-.section-container {
+@utility section-container {
   position: relative;
   z-index: 1;
   max-width: 1080px;
@@ -353,20 +272,11 @@ button:focus-visible, a:focus-visible {
   padding: 3.5rem 1.25rem;
 }
 
-.section-header {
+@utility section-header {
   margin-bottom: 2.5rem;
 }
 
-.section-header.text-center {
-  text-align: center;
-}
-
-.section-header.text-center .section-subtitle {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section-title {
+@utility section-title {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   margin-top: 0.75rem;
   margin-bottom: 0.5rem;
@@ -375,15 +285,14 @@ button:focus-visible, a:focus-visible {
   line-height: 1.15;
 }
 
-.section-subtitle {
+@utility section-subtitle {
   color: var(--text-metal-secondary);
   font-size: 1.05rem;
   line-height: 1.6;
   max-width: 780px;
 }
 
-/* Badge Row */
-.badge-row {
+@utility badge-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -391,8 +300,7 @@ button:focus-visible, a:focus-visible {
   margin-bottom: 1.25rem;
 }
 
-/* Machined Titanium Enclosure / Chassis */
-.machined-chassis {
+@utility machined-chassis {
   position: relative;
   background: linear-gradient(145deg, #171a20 0%, #0d0f13 100%);
   border: 1px solid var(--chamfer-subtle);
@@ -405,15 +313,7 @@ button:focus-visible, a:focus-visible {
     0 20px 50px -10px rgba(0, 0, 0, 0.85);
 }
 
-.machined-chassis.highlight-anodized {
-  border-top: 1px solid var(--anodized-green-edge);
-  box-shadow: 
-    inset 0 1px 0 rgba(118, 227, 171, 0.2),
-    0 16px 40px -8px rgba(0, 0, 0, 0.6);
-}
-
-/* Modular Sub-Cards (Tiers, Pathways, Stages) */
-.machined-module-card {
+@utility machined-module-card {
   position: relative;
   background: linear-gradient(160deg, #171a20 0%, #101216 100%);
   border: 1px solid var(--chamfer-subtle);
@@ -426,24 +326,14 @@ button:focus-visible, a:focus-visible {
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
     0 8px 24px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
-.machined-module-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.machined-module-card.is-featured {
-  background: linear-gradient(160deg, #18231d 0%, #0e1511 100%);
-  border-color: rgba(72, 165, 116, 0.4);
-  border-top: 1px solid var(--anodized-green-edge);
-  box-shadow: 
-    inset 0 1px 0 rgba(118, 227, 171, 0.2),
-    0 12px 32px -6px rgba(37, 87, 62, 0.35);
-}
-
-/* Machined Action Bar (Diagnostic Booking & Contact) */
-.machined-action-bar {
+@utility machined-action-bar {
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid var(--chamfer-subtle);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -456,30 +346,7 @@ button:focus-visible, a:focus-visible {
   gap: 1.25rem;
 }
 
-.action-buttons-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-@media (max-width: 900px) {
-  .machined-action-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .action-buttons-group {
-    width: 100%;
-  }
-
-  .action-buttons-group .button {
-    flex: 1;
-    justify-content: center;
-  }
-}
-
-/* Deliverables & Features Checklist */
-.deliverables-list {
+@utility deliverables-list {
   list-style: none;
   margin-top: auto;
   padding-top: 1.15rem;
@@ -487,37 +354,26 @@ button:focus-visible, a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+
+  li {
+    font-size: 0.82rem;
+    color: var(--text-laser-white);
+    line-height: 1.45;
+    position: relative;
+    padding-left: 18px;
+
+    &::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--anodized-green-edge);
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+  }
 }
 
-.deliverables-list li {
-  font-size: 0.82rem;
-  color: var(--text-laser-white);
-  line-height: 1.45;
-  position: relative;
-  padding-left: 18px;
-}
-
-.deliverables-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--anodized-green-edge);
-  font-weight: bold;
-  font-size: 0.75rem;
-}
-
-.deliverables-list.bulleted li::before {
-  content: "•";
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.deliverables-list.text-secondary li {
-  color: var(--text-metal-secondary);
-}
-
-/* Secondary Offering & Cross-Section Navigation Hooks */
-.secondary-offering-hook {
+@utility secondary-offering-hook {
   margin-top: 2rem;
   display: flex;
   align-items: center;
@@ -530,7 +386,7 @@ button:focus-visible, a:focus-visible {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.hook-link {
+@utility hook-link {
   color: var(--anodized-green-edge);
   text-decoration: none;
   display: inline-flex;
@@ -538,10 +394,10 @@ button:focus-visible, a:focus-visible {
   gap: 6px;
   font-weight: 600;
   transition: opacity 0.2s ease, transform 0.2s ease;
-}
 
-.hook-link:hover {
-  opacity: 0.85;
-  text-decoration: underline;
-  transform: translateX(2px);
+  &:hover {
+    opacity: 0.85;
+    text-decoration: underline;
+    transform: translateX(2px);
+  }
 }

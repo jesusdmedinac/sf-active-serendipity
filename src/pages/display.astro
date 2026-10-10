@@ -1,6 +1,6 @@
 ---
 // Dedicated Full-Screen Tablet Kiosk Mode: Physical Machined Titanium Field Instrument
-import '../styles/modern-craft.css';
+import '../styles/global.css';
 import QRCode from 'qrcode';
 import Analytics from '../components/Analytics.astro';
 
@@ -43,12 +43,10 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
           <header class="kiosk-telemetry-bar">
             <div class="telemetry-item">
               <span class="led-diode-green"></span>
-              <span class="engraved-label">ACTIVE IN</span>
               <span class="telemetry-val">SAN FRANCISCO</span>
             </div>
 
             <div class="telemetry-item wakelock-box" id="wakelock-status">
-              <span class="engraved-label">STATUS</span>
               <span class="status-active">OPEN FOR CHAT</span>
             </div>
 
@@ -116,7 +114,6 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
                 <div class="plate-chamfer-border">
                   <div class="qr-svg-wrapper" set:html={qrSvg}></div>
                   <div class="qr-plate-label">
-                    <span class="engraved-label">[ SCAN FOR CODE & PORTFOLIO ]</span>
                     <span class="target-domain">jesusdmedinac.com</span>
                   </div>
                 </div>
@@ -455,10 +452,6 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
         display: flex;
         flex-direction: column;
         gap: 2px;
-      }
-
-      .engraved-label{
-        font-size: 1rem;
       }
 
       .target-domain {

@@ -97,7 +97,7 @@ The project adheres to a bespoke aerospace machined metal design system encapsul
 - **CNC Tokens:** Precision titanium (`--metal-titanium`), gunmetal (`--metal-gunmetal`), and specular light bevels (`--border-cnc-top`).
 - **Anodized Green:** Primary visual accent echoing CNC billet anodized aluminum (`--anodized-green-surface`, `--anodized-green-edge`).
 - **Scorch Violet:** Heated flame-treated titanium (`--titanium-violet-surface`), referencing JetBrains and Kotlin heritage.
-- **3D Micro-Interactions:** Lightweight procedural tilt physics (`perspective: 1000px`, `data-tilt`), anisotropic sheen, and laser-engraved monospace badges (`.engraved-label`).
+- **3D Micro-Interactions:** Lightweight procedural tilt physics (`perspective: 1000px`, `data-tilt`), anisotropic sheen.
 - **Zero Heavy Runtime Dependencies:** Pure CSS execution ensuring immediate 60fps paint times without JavaScript bundle overhead.
 
 ---
