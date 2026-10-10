@@ -69,6 +69,9 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [x] Scenario: Showcase Zora Flagship Teaser Bay
 - [x] Scenario: Dedicated Zora KMP Kits Hub and Architectural Matrix at /zora-kmp
 - [x] Scenario: Maintain Responsive Unified Bento and Section Flow
+- [x] Scenario: Streamline Homepage Zora Showcase as Compact Architectural Teaser Plaque
+- [x] Scenario: Redesign /zora-kmp with Visual Compose Multiplatform Mockups and High-Converting Commercial Architecture
+
 
 ## Feature: Human Craft & Engineering Authority Site Redesign
 - [x] Scenario: Refactor AtmosphericHero with JetBrains-inspired engineering authority
