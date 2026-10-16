@@ -1,0 +1,90 @@
+# Apollo Product & ICP Knowledge Sheet: Jesús Daniel Medina Cruz
+
+**Document Purpose:** Machine-readable knowledge base for LLM crawlers, AI SDRs, and Apollo.io Context Center to power outbound AI email personalization, ICP qualification, and technical service discovery.
+
+---
+
+## 1. Overview & Executive Profile
+* **Name:** Jesús Daniel Medina Cruz
+* **Professional Positioning:** Staff Mobile Platform Architect & Senior Mobile Contractor
+* **Website / Portfolio:** https://jesusdmedinac.com
+* **LinkedIn:** https://linkedin.com/in/jesusdmedinac
+* **Location & Working Timezone:** Pacific Standard Time (PST) | California & Baja California cross-border corridor
+* **Contracting & Legal Framework:** 
+  * Direct B2B Independent Contractor via US Form W-8BEN (0% IRS withholding, cross-border software export).
+  * Immediate TN Transfer eligibility for hybrid/on-site commitments in San Francisco Bay Area if required.
+
+---
+
+## 2. Core Value Proposition & What We Deliver
+We deliver elite Senior and Staff-level mobile engineering horsepower and architectural leadership for fast-growing, venture-backed startups (Seed to Series B). We help technical founders and engineering leadership take mobile platforms from prototype to resilient, production-scale reality without the overhead of a 6-month executive search.
+
+### Key Technical Capabilities:
+1. **Full-Spectrum Mobile Craftsmanship:**
+   * **Native iOS:** Swift, SwiftUI, Combine, Objective-C, Instruments profiling, and Apple ecosystem standards.
+   * **Cross-Platform & Hybrid:** React Native (TypeScript, custom native TurboModules, JSI bridges, gesture handling).
+   * **Kotlin Multiplatform (KMP):** Code sharing of core networking, business rules, and state engines while keeping native platform UI 100% native.
+2. **AI-Native Mobile Architecture:**
+   * Architecting mobile clients for agentic AI workflows, streaming LLM inference, and Anthropic's Model Context Protocol (MCP).
+   * Real-time conversational UI and fluid 60fps gesture response during heavy background processing.
+3. **High-Concurrency, Real-Time Data & Resilience:**
+   * Proven enterprise track record at **Bitso** (crypto exchange): high-throughput WebSocket ticker feeds, resilient offline-first caching, and sub-second order book updates.
+   * Large-scale modernization and critical navigation architecture at **Wells Fargo**.
+4. **Clean Architecture & Test-Driven Development (TDD):**
+   * Decoupled Domain, Data, and Presentation layers with 100% test coverage on critical business logic.
+   * Fast, automated CI/CD build pipelines (GitHub Actions, Fastlane).
+
+---
+
+## 3. Ideal Customer Profile (ICP) & Target Audience
+
+### A. Target Company Attributes:
+* **Stage:** Seed, Series A, and Series B tech startups.
+* **Funding:** Backed by top-tier venture capital (e.g., Menlo Ventures / Anthology Fund, Anthropic Ecosystem, Y Combinator, True Ventures, GV, Founders Fund).
+* **Industries / Verticals:** 
+  * AI-First Platforms & AI Teammates/Agents (e.g., Nectar Social, marketing operating systems).
+  * B2B SaaS & Developer Tooling with mobile extensions.
+  * Real-time Consumer Social, Healthtech, and High-Trust Fintech / Crypto.
+* **Team Size:** 10 to 150 employees (where technical founders, CTOs, and VPs still review pull requests and actively direct mobile architecture).
+* **Location:** United States (Priority on SF Bay Area, California, Seattle, and Pacific Timezone teams; fully remote-friendly).
+
+### B. Buyer Personas & Decision Makers:
+* **Chief Technology Officer (CTO)**
+* **VP of Engineering / Head of Engineering**
+* **Head of Mobile / Director of Mobile Engineering**
+* **Technical Co-Founder / CEO** (especially at Seed and Series A stages)
+
+---
+
+## 4. Specific Pain Points Solved
+1. **"We need to ship an iOS/mobile app immediately, but our team is predominantly backend/AI engineers":**
+   * *Solution:* Full fractional mobile ownership—handling the architecture, state machines, app store approvals, and SDK integrations from day one.
+2. **"Our mobile app feels laggy, crashes in production, or struggles with real-time WebSocket / AI streaming":**
+   * *Solution:* In-depth performance audits, thread decoupling, memory leak elimination, and native bridge rewrites.
+3. **"We are duplicating dev effort by maintaining two separate native codebases (iOS & Android)":**
+   * *Solution:* Pragmatic shared core architecture (Kotlin Multiplatform or clean TypeScript domain layer) without compromising native UX.
+
+---
+
+## 5. Commercial Engagement Models
+* **Model 1: Fractional Mobile Architect / Senior Contractor (Primary Engine):**
+  * 20 to 40 hours per week of dedicated engineering, architecture, code reviews, and PR delivery.
+  * **Rate:** **$65.00 – $85.00 USD / hour** (or monthly dedicated retainer).
+* **Model 2: 5-Day Mobile Architecture & Performance Audit (Lead Magnet):**
+  * Fixed-scope technical teardown of crash logs, memory consumption, CI/CD bottlenecks, and modularization.
+  * **Price:** **$2,500 – $3,500 USD** (5 business days).
+* **Model 3: 2-Week Core Pilot Sprint:**
+  * Rapid end-to-end delivery of an initial core feature, SDK integration, or shared logic engine.
+  * **Price:** **$3,500 – $5,000 USD** (Fixed price).
+
+---
+
+## 6. AI Copywriting, Tone & Sequence Guidelines
+When generating email copy, icebreakers, or outreach sequences in Apollo:
+* **Tone:** Engineer-to-engineer, sober, authoritative, concise, and respectful.
+* **Length:** Under 120 words. No walls of text. Maximum 3 short paragraphs.
+* **Structure:**
+  1. **Observation:** Acknowledge a specific company milestone (e.g., recent funding round, mobile app launch, scaling mobile engineering).
+  2. **Direct Value:** Mention Staff Mobile Platform Architect experience (ex-Wells Fargo, Bitso, Pacific Timezone, hands-on iOS / React Native / AI-native speed).
+  3. **Low-Friction Call-to-Action (CTA):** Propose a brief 15-minute exploratory chat.
+* **Banned Phrasing:** Never use *"I hope this email finds you well"*, *"synergy"*, *"revolutionary"*, *"best-in-class"*, or pushy sales jargon.
