@@ -136,7 +136,19 @@ const gaId = id || import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
             }
 
             // D. Open Source & Ecosystem Authority (Level 0)
-            if (href.includes('github.com/jesusdmedinac/json-to-compose')) {
+            if (href.includes('kmp.jesusdmedinac.com') || href.includes('github.com/jesusdmedinac/KMP-CLI')) {
+              gtag('event', 'open_source_engagement', {
+                event_category: 'authority',
+                project: 'kmp-cli'
+              });
+              return;
+            } else if (href.includes('github.com/jesusdmedinac/zora-community')) {
+              gtag('event', 'open_source_engagement', {
+                event_category: 'authority',
+                project: 'zora-community'
+              });
+              return;
+            } else if (href.includes('github.com/jesusdmedinac/json-to-compose')) {
               gtag('event', 'open_source_engagement', {
                 event_category: 'authority',
                 project: 'json-to-compose'
