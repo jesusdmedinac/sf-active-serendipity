@@ -1,5 +1,5 @@
 Feature: Human Craft & Engineering Authority Site Redesign
-  As Jesús Daniel Medina Cruz (Staff Mobile Platform Architect & KMP Specialist)
+  As Jesús Daniel Medina Cruz (Senior Mobile Platform Architect & KMP Specialist)
   I want to redesign the website component-by-component eliminating generic AI-generated patterns
   So that engineering leaders, CTOs, and founders perceive genuine authority, human craftsmanship, and technical rigor
 
