@@ -93,12 +93,12 @@ const gaId = id || import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
                 intentLevel = 'flagship_beta_intent';
                 intentDetails.funnel_level = '5_flagship';
                 intentDetails.product = 'zora_marketplace';
-              } else if (lowerHref.includes('basic%20zora')) {
+              } else if (lowerHref.includes('basic%20starter%20kit') || lowerHref.includes('basic%20zora')) {
                 intentLevel = 'product_purchase_intent';
                 intentDetails.funnel_level = '1_product';
                 intentDetails.tier = 'basic';
                 intentDetails.price = 149;
-              } else if (lowerHref.includes('premium%20zora')) {
+              } else if (lowerHref.includes('premium%20enterprise%20kit') || lowerHref.includes('premium%20zora')) {
                 intentLevel = 'product_purchase_intent';
                 intentDetails.funnel_level = '1_product';
                 intentDetails.tier = 'premium';

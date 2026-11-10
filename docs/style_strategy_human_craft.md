@@ -1,6 +1,6 @@
 # Estrategia de Estilo y Artesanía Visual: Human Craft & Engineering Authority
 
-Este documento define la directriz estética, editorial y arquitectónica para el rediseño sistemático del sitio web `sf-active-serendipity`. Su propósito es erradicar la estética y tono de "plantilla generada por IA", reemplazándola con el rigor, sobriedad y credibilidad de un **Staff Mobile Platform Architect & KMP Specialist** (Jesús Daniel Medina Cruz).
+Este documento define la directriz estética, editorial y arquitectónica para el rediseño sistemático del sitio web `sf-active-serendipity`. Su propósito es erradicar la estética y tono de "plantilla generada por IA", reemplazándola con el rigor, sobriedad y credibilidad de un **Senior Mobile Platform Architect & KMP Specialist** (Jesús Daniel Medina Cruz).
 
 Inspirado en los principios editoriales y de diseño de clase mundial de [JetBrains Compose Multiplatform](https://kotlinlang.org/compose-multiplatform/).
 

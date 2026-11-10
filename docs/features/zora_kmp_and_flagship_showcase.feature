@@ -1,5 +1,5 @@
 Feature: Zora KMP Starter Kit and Flagship Project Showcase
-  As Jesús Daniel Medina Cruz (Staff Mobile Platform Architect)
+  As Jesús Daniel Medina Cruz (Senior Mobile Platform Architect)
   I want to showcase my commercial digital product (Zora KMP Starter Kit) and my flagship engineering project (Zora) on jesusdmedinac.com
   So that visitors and prospective buyers can purchase production-grade multiplatform templates and witness real-world AI-driven mobile architecture
 
@@ -8,7 +8,7 @@ Feature: Zora KMP Starter Kit and Flagship Project Showcase
     When a visitor reviews the Zora KMP Starter Kit showcase
     Then it must display the official Kotlin Foundation member tech stack (JetBrains, Google, Touchlab, Kotzilla, Gradle)
     And it must highlight the Kotlin Toolchain (kotlin-toolchain.org) eliminating Gradle configuration complexity
-    And it must clearly outline the 3-tier product structure (Community $0, Basic $129-$149, Premium $299-$349)
+    And it must clearly outline the 3-tier product structure (Community $0, Basic $149, Premium $349)
 
   Scenario: Concierge MVP Direct WhatsApp Purchase CTA
     Given an interested developer, founder, or technical leader
@@ -26,7 +26,7 @@ Feature: Zora KMP Starter Kit and Flagship Project Showcase
   Scenario: Dedicated Zora KMP Kits Hub and Architectural Matrix at /zora-kmp
     Given the standalone page at /zora-kmp
     When a visitor accesses the dedicated Zora KMP Hub
-    Then it must detail the 3 progressive tiers: Community ($0 Mini-Zora), Basic ($149 AI Copilot with json-to-compose SDUI), and Premium ($299 Two-Sided Marketplace)
+    Then it must detail the 3 progressive tiers: Community ($0 Mini-Zora), Basic ($149 AI Copilot with json-to-compose SDUI), and Premium ($349 Two-Sided Marketplace)
     And it must render the comprehensive technical comparison matrix
     And it must explain the 2-seat hardware fingerprinting and non-transferable licensing model
     And the home page showcase must provide a streamlined teaser directing traffic to /zora-kmp

@@ -12,14 +12,14 @@ Feature: Reposicionamiento como Portal Oficial de Consultoría Móvil Independie
   Scenario: Transform ConsultingCard into 3-Tier Productized Services Plaque
     Given the current single-call free audit layout in `ConsultingCard.astro`
     When refactored into the 3-tier productized consulting showcase
-    Then it must display Tier 1 (Architecture & Performance Audit - $3,000 USD), Tier 2 (KMP Pilot Sprint - $3,500 USD), and Tier 3 (Fractional Architect - $65-$85/h)
+    Then it must display Tier 1 (Architecture & Performance Audit - $3,000 USD), Tier 2 (KMP Pilot Sprint - $3,500 USD), and Tier 3 (Senior Contractor & Fractional - $35-$55/h)
     And it must provide direct booking via calendar integration alongside direct contact
 
   Scenario: Reframe Global Meta Tags and Footer for Executive Consulting
     Given the global page metadata and footer in `src/pages/index.astro`
     When updated for the consulting studio launch
-    Then the title and meta description must reflect "Staff Mobile Platform Architect | Kotlin Multiplatform (PST)"
-    And the footer must reflect remote-first Pacific Time operations while preserving the `/display` tablet kiosk link
+    Then the title and meta description must reflect "Senior Android & KMP Architect | Jesús Medina (PST)"
+    And the footer must reflect remote-first Pacific Time operations from Tijuana, Mexico (W-8BEN) and California TN availability while preserving the `/display` tablet kiosk link
 
   Scenario: Retain and Synchronize Tablet Kiosk Mode for California Events
     Given the `/display` tablet kiosk route used for in-person hardware exhibition

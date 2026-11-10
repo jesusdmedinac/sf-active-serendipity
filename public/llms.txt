@@ -1,90 +1,50 @@
-# Apollo Product & ICP Knowledge Sheet: Jesús Daniel Medina Cruz
+# Jesús Daniel Medina Cruz: Android and Kotlin Multiplatform Architecture
 
-**Document Purpose:** Machine-readable knowledge base for LLM crawlers, AI SDRs, and Apollo.io Context Center to power outbound AI email personalization, ICP qualification, and technical service discovery.
+> Senior Android and Kotlin Multiplatform (KMP) engineer with 11 years of mobile production experience across fintech, medical IoT, consumer audio, and banking platforms. Available January 4, 2027 in Pacific Time (PST) from Tijuana, Mexico (US Form W-8BEN) or California on-site (TN visa).
 
----
+## Primary Pages
 
-## 1. Overview & Executive Profile
-* **Name:** Jesús Daniel Medina Cruz
-* **Professional Positioning:** Staff Mobile Platform Architect & Senior Mobile Contractor
-* **Website / Portfolio:** https://jesusdmedinac.com
-* **LinkedIn:** https://linkedin.com/in/jesusdmedinac
-* **Location & Working Timezone:** Pacific Standard Time (PST) | California & Baja California cross-border corridor
-* **Contracting & Legal Framework:** 
-  * Direct B2B Independent Contractor via US Form W-8BEN (0% IRS withholding, cross-border software export).
-  * Immediate TN Transfer eligibility for hybrid/on-site commitments in San Francisco Bay Area if required.
+* [Home & Consulting Services](https://jesusdmedinac.com/): Senior Android and KMP contract engineering ($35-$55 USD/hour), 5-day architecture audits, and 2-week pilot sprints.
+* [Zora KMP Starter Kits](https://jesusdmedinac.com/zora-kmp): Preconfigured Kotlin Multiplatform templates built with declarative Kotlin Toolchain, Gemini Nano on-device AI with Gemini Flash fallback, and json-to-compose Server-Driven UI.
+* [Display Kiosk View](https://jesusdmedinac.com/display): Tablet kiosk summary for events and in-person meetings.
 
----
+## Executive Profile
 
-## 2. Core Value Proposition & What We Deliver
-We deliver elite Senior and Staff-level mobile engineering horsepower and architectural leadership for fast-growing, venture-backed startups (Seed to Series B). We help technical founders and engineering leadership take mobile platforms from prototype to resilient, production-scale reality without the overhead of a 6-month executive search.
+* Name: Jesús Daniel Medina Cruz
+* Role: Senior Mobile Platform Architect & Android / KMP Contractor
+* Timezone & Location: Pacific Standard Time (PST), based in Tijuana, Baja California and San Diego / California corridor
+* Contracting: Direct B2B contractor via US Form W-8BEN (cross-border software export; available January 4, 2027), or TN Visa for hybrid/on-site roles in California
+* [LinkedIn Profile](https://linkedin.com/in/jesusdmedinac): Jesús Daniel Medina Cruz on LinkedIn
+* [GitHub Profile](https://github.com/jesusdmedinac): jesusdmedinac on GitHub
 
-### Key Technical Capabilities:
-1. **Full-Spectrum Mobile Craftsmanship:**
-   * **Native iOS:** Swift, SwiftUI, Combine, Objective-C, Instruments profiling, and Apple ecosystem standards.
-   * **Cross-Platform & Hybrid:** React Native (TypeScript, custom native TurboModules, JSI bridges, gesture handling).
-   * **Kotlin Multiplatform (KMP):** Code sharing of core networking, business rules, and state engines while keeping native platform UI 100% native.
-2. **AI-Native Mobile Architecture:**
-   * Architecting mobile clients for agentic AI workflows, streaming LLM inference, and Anthropic's Model Context Protocol (MCP).
-   * Real-time conversational UI and fluid 60fps gesture response during heavy background processing.
-3. **High-Concurrency, Real-Time Data & Resilience:**
-   * Proven enterprise track record at **Bitso** (crypto exchange): high-throughput WebSocket ticker feeds, resilient offline-first caching, and sub-second order book updates.
-   * Large-scale modernization and critical navigation architecture at **Wells Fargo**.
-4. **Clean Architecture & Test-Driven Development (TDD):**
-   * Decoupled Domain, Data, and Presentation layers with 100% test coverage on critical business logic.
-   * Fast, automated CI/CD build pipelines (GitHub Actions, Fastlane).
+## Core Engineering Capabilities
 
----
+* **Native Android:** Kotlin, Jetpack Compose, Android SDK internals, Coroutines, StateFlow, Clean Architecture, and Unidirectional Data Flow (UDF).
+* **Kotlin Multiplatform (KMP) & iOS Interop:** Shared domain logic, Ktor networking, SQLDelight or Room persistence, paired with native Jetpack Compose and SwiftUI interfaces through Touchlab SKIE and Swift Package Manager.
+* **Cross-Platform Migrations:** React Native (TypeScript and custom native Android modules) migrations into native Android, SwiftUI, and shared Kotlin cores.
+* **AI-Assisted Engineering:** Daily delivery with coding agents (Claude Code), spec-driven planning, TDD, and automated CI checks.
 
-## 3. Ideal Customer Profile (ICP) & Target Audience
+## Open-Source & Reference Artifacts
 
-### A. Target Company Attributes:
-* **Stage:** Seed, Series A, and Series B tech startups.
-* **Funding:** Backed by top-tier venture capital (e.g., Menlo Ventures / Anthology Fund, Anthropic Ecosystem, Y Combinator, True Ventures, GV, Founders Fund).
-* **Industries / Verticals:** 
-  * AI-First Platforms & AI Teammates/Agents (e.g., Nectar Social, marketing operating systems).
-  * B2B SaaS & Developer Tooling with mobile extensions.
-  * Real-time Consumer Social, Healthtech, and High-Trust Fintech / Crypto.
-* **Team Size:** 10 to 150 employees (where technical founders, CTOs, and VPs still review pull requests and actively direct mobile architecture).
-* **Location:** United States (Priority on SF Bay Area, California, Seattle, and Pacific Timezone teams; fully remote-friendly).
+* [json-to-compose on GitHub](https://github.com/jesusdmedinac/json-to-compose): Server-Driven UI engine for Compose published on Maven Central.
+* [KMP CLI Documentation](https://kmp.jesusdmedinac.com): CLI tool, MCP server, and Agent Skills for Kotlin Multiplatform workflows.
+* [Zora Community on GitHub](https://github.com/jesusdmedinac/zora-community): Open-source KMP application targeting Android, iOS, and Desktop, built in under 4 weeks with Clean Architecture, MVI, automated tests, and CI.
+* [Desde0 Academy](https://desde0.jesusdmedinac.com): Bilingual Android and Kotlin engineering curriculum where around 30 developers started their engineering careers.
 
-### B. Buyer Personas & Decision Makers:
-* **Chief Technology Officer (CTO)**
-* **VP of Engineering / Head of Engineering**
-* **Head of Mobile / Director of Mobile Engineering**
-* **Technical Co-Founder / CEO** (especially at Seed and Series A stages)
+## Verified Experience Highlights
 
----
+* **Wells Fargo (2025-01 to Present):** Senior UI Engineer (Client Platform) leading navigation consolidation and XML to Jetpack Compose modernization for tens of millions of daily active banking users.
+* **Insulet:** Built the offline-first VIEW CGM diabetes monitoring platform using Room/SQLite and a KMP CGM graph, cutting memory usage by 35%.
+* **Bitso:** Integrated the CleverTap user engagement SDK across Android and iOS using Kotlin Multiplatform.
+* **Beek.io:** Led the migration from React Native to native Android and iOS, built a KMP audio player shared across Compose and SwiftUI, introduced CircleCI/Fastlane CI/CD, and sustained 99.9% crash-free sessions.
+* **Dexcom:** Built JUnit 4/5 SDK test suites for G6/G7 continuous glucose monitoring applications.
 
-## 4. Specific Pain Points Solved
-1. **"We need to ship an iOS/mobile app immediately, but our team is predominantly backend/AI engineers":**
-   * *Solution:* Full fractional mobile ownership—handling the architecture, state machines, app store approvals, and SDK integrations from day one.
-2. **"Our mobile app feels laggy, crashes in production, or struggles with real-time WebSocket / AI streaming":**
-   * *Solution:* In-depth performance audits, thread decoupling, memory leak elimination, and native bridge rewrites.
-3. **"We are duplicating dev effort by maintaining two separate native codebases (iOS & Android)":**
-   * *Solution:* Pragmatic shared core architecture (Kotlin Multiplatform or clean TypeScript domain layer) without compromising native UX.
+## Engagement Models & Rates
 
----
+* **Senior Android / KMP Contractor (20 to 40 hrs/week, PST):** $35 to $55 USD/hour via W-8BEN from Mexico or California TN visa, available January 4, 2027.
+* **5-Day Mobile Architecture & Performance Audit:** $2,500 to $3,500 USD fixed scope reviewing crash telemetry, memory allocation, CI/CD bottlenecks, and module structure.
+* **2-Week Core Pilot Sprint:** $3,500 to $5,000 USD fixed price delivering an initial feature, SDK integration, or shared KMP logic module.
 
-## 5. Commercial Engagement Models
-* **Model 1: Fractional Mobile Architect / Senior Contractor (Primary Engine):**
-  * 20 to 40 hours per week of dedicated engineering, architecture, code reviews, and PR delivery.
-  * **Rate:** **$65.00 – $85.00 USD / hour** (or monthly dedicated retainer).
-* **Model 2: 5-Day Mobile Architecture & Performance Audit (Lead Magnet):**
-  * Fixed-scope technical teardown of crash logs, memory consumption, CI/CD bottlenecks, and modularization.
-  * **Price:** **$2,500 – $3,500 USD** (5 business days).
-* **Model 3: 2-Week Core Pilot Sprint:**
-  * Rapid end-to-end delivery of an initial core feature, SDK integration, or shared logic engine.
-  * **Price:** **$3,500 – $5,000 USD** (Fixed price).
+## Target Teams
 
----
-
-## 6. AI Copywriting, Tone & Sequence Guidelines
-When generating email copy, icebreakers, or outreach sequences in Apollo:
-* **Tone:** Engineer-to-engineer, sober, authoritative, concise, and respectful.
-* **Length:** Under 120 words. No walls of text. Maximum 3 short paragraphs.
-* **Structure:**
-  1. **Observation:** Acknowledge a specific company milestone (e.g., recent funding round, mobile app launch, scaling mobile engineering).
-  2. **Direct Value:** Mention Staff Mobile Platform Architect experience (ex-Wells Fargo, Bitso, Pacific Timezone, hands-on iOS / React Native / AI-native speed).
-  3. **Low-Friction Call-to-Action (CTA):** Propose a brief 15-minute exploratory chat.
-* **Banned Phrasing:** Never use *"I hope this email finds you well"*, *"synergy"*, *"revolutionary"*, *"best-in-class"*, or pushy sales jargon.
+Seed to enterprise engineering teams needing Senior Android or KMP execution in Pacific Time, led by CTOs, VPs of Engineering, Heads of Mobile, or technical founders.

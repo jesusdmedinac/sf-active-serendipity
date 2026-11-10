@@ -4,10 +4,10 @@
 
 <section id="contact" class="section-container">
   <div class="section-header text-center">
-    <span class="badge">Direct Channels</span>
-    <h2 class="section-title">Let's Connect in SF</h2>
-    <p class="section-subtitle">
-      Whether you are hiring a Staff Mobile Engineer, seeking architectural advisory, or just want to grab an espresso at a local café.
+    <span class="badge-metal badge-scorched-violet">Direct Channels</span>
+    <h2 class="section-title">Let's Connect</h2>
+    <p class="section-subtitle mx-auto">
+      Available January 4 for Senior Android and KMP contracts ($35–$55/h, 20–40 h/week, PST) and architectural advisory. Remote from Tijuana, Mexico (W-8BEN) or California on-site (TN).
     </p>
   </div>
 
@@ -19,7 +19,7 @@
       </div>
       <div class="channel-info">
         <h3>WhatsApp (Instant)</h3>
-        <p>Best for coffee shop chats or instant messaging</p>
+        <p>Best for contract inquiries, intro calls, or direct messaging</p>
         <span class="channel-action">+1 (470) 406-1747 &rarr;</span>
       </div>
     </a>
@@ -66,8 +66,9 @@
   }
 
   .channel-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
+    background: linear-gradient(160deg, #171a20 0%, #101216 100%);
+    border: 1px solid var(--chamfer-subtle);
+    border-top: 1px solid var(--chamfer-light);
     border-radius: 20px;
     padding: 1.75rem;
     display: flex;
@@ -78,7 +79,7 @@
 
   .channel-card:hover {
     transform: translateY(-3px);
-    border-color: var(--border-focus);
+    border-color: rgba(138, 77, 255, 0.4);
     box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.5);
   }
 
@@ -91,8 +92,8 @@
     justify-content: center;
     flex-shrink: 0;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-subtle);
-    color: var(--text-primary);
+    border: 1px solid var(--chamfer-subtle);
+    color: var(--text-laser-white);
   }
 
   .channel-card.whatsapp:hover .channel-icon-wrap {
@@ -119,7 +120,7 @@
 
   .channel-info p {
     font-size: 0.88rem;
-    color: var(--text-secondary);
+    color: var(--text-metal-secondary);
     line-height: 1.4;
     margin-bottom: 12px;
   }
@@ -128,7 +129,7 @@
     font-family: var(--font-mono);
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--brand-kmp);
+    color: #c9abff;
     transition: color 0.15s ease;
   }
 
