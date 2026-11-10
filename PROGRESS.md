@@ -75,11 +75,11 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 
 ## Feature: Human Craft & Engineering Authority Site Redesign
 - [x] Scenario: Refactor AtmosphericHero with JetBrains-inspired engineering authority
-- [ ] Scenario: Professionalize ProofOfWorkBento with visible engineering artifacts
-- [ ] Scenario: Streamline ConsultingCard productized advisory offerings
-- [ ] Scenario: Clarify MigrationServices architectural pathways
+- [x] Scenario: Professionalize ProofOfWorkBento with visible engineering artifacts
+- [x] Scenario: Streamline ConsultingCard productized advisory offerings
+- [x] Scenario: Clarify MigrationServices architectural pathways
 - [x] Scenario: Spotlight ZoraProductShowcase as a flagship KMP production product
-- [ ] Scenario: Unify ContactGrid and Footer with personal authorship
+- [x] Scenario: Unify ContactGrid and Footer with personal authorship
 
 
 ## Feature: Tailwind CSS v4 Architecture Migration
@@ -90,3 +90,11 @@ Centralized BDD progress tracker for the independent Astro project in `JobSearch
 - [ ] Scenario: Migrate ProofOfWorkBento to pure Tailwind CSS utilities
 - [ ] Scenario: Migrate ConsultingCard, MigrationServices, and ZoraProductShowcase to pure Tailwind CSS utilities
 - [ ] Scenario: Migrate ContactGrid, Footer, and KioskDisplay to pure Tailwind CSS utilities
+
+## Feature: Tijuana Transition, Verified Career Facts & $35–$55/h Alignment (Nov 10)
+- [x] Scenario: Align verified career facts and eliminate unverified claims
+- [x] Scenario: Align Senior Contractor hourly rate ($35-$55/h) and Jan 4 Tijuana / CA availability
+- [x] Scenario: Restore ProofOfWorkBento showcase and unify Zora Premium pricing to $349
+- [x] Scenario: Enforce Zora chromatic palette, WCAG focus visibility, and image dimensions
+- [x] Scenario: Remediate SEO/GEO structure, JSON-LD required fields, and llms.txt formatting
+- [x] Scenario: Edit copy to eliminate AI writing patterns
