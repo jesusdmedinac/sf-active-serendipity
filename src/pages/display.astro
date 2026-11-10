@@ -20,8 +20,19 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>Jesús Medina | Field Instrument Tablet Kiosk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Jesús Medina | KMP Mobile Architecture Kiosk View</title>
+    <link rel="canonical" href="https://jesusdmedinac.com/display" />
+    <meta name="description" content="Kiosk view of Senior Android and KMP contracting ($35-$55/h), architecture audits, and 2-week sprints in Pacific Time." />
+    <meta property="og:title" content="Jesús Medina | KMP Mobile Architecture Kiosk View" />
+    <meta property="og:description" content="Senior Android and KMP contracting ($35-$55/h) in Pacific Time. Remote from Tijuana, Mexico (W-8BEN) or California on-site (TN)." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jesusdmedinac.com/display" />
+    <meta property="og:image" content="https://jesusdmedinac.com/images/zora-cards.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jesús Medina | KMP Mobile Architecture Kiosk View" />
+    <meta name="twitter:description" content="Senior Android and KMP contracting ($35-$55/h) in Pacific Time from Tijuana and California." />
+    <meta name="twitter:image" content="https://jesusdmedinac.com/images/zora-cards.png" />
     <meta name="theme-color" content="#000000" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -32,22 +43,16 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
     <!-- Physical Instrument Chassis Frame -->
     <div class="chassis-outer">
       <div class="chassis-bevel">
-        <!-- Corner Machined CNC Screws -->
-        <span class="cnc-screw top-left">&oplus;</span>
-        <span class="cnc-screw top-right">&oplus;</span>
-        <span class="cnc-screw bottom-left">&oplus;</span>
-        <span class="cnc-screw bottom-right">&oplus;</span>
-
         <main class="kiosk-viewport">
           <!-- Top Telemetry Instrumentation Bar -->
           <header class="kiosk-telemetry-bar">
             <div class="telemetry-item">
               <span class="led-diode-green"></span>
-              <span class="telemetry-val">SAN FRANCISCO</span>
+              <span class="telemetry-val">PACIFIC TIME · PST</span>
             </div>
 
             <div class="telemetry-item wakelock-box" id="wakelock-status">
-              <span class="status-active">OPEN FOR CHAT</span>
+              <span class="status-active">AVAILABLE JAN 4</span>
             </div>
 
             <button id="fullscreen-btn" class="button btn-titanium fs-btn" aria-label="Toggle Fullscreen">
@@ -61,41 +66,41 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
             <!-- Left: Rotating Diagnostic Telemetry Hook -->
             <div class="telemetry-column">
               <div class="operator-id">
-                <h2 class="operator-name">Jesús Daniel Medina Cruz</h2>
-                <span class="operator-role">Staff Mobile Platform Architect | Kotlin Multiplatform</span>
+                <p class="operator-name">Jesús Daniel Medina Cruz</p>
+                <span class="operator-role">Senior Mobile Platform Architect | Android & Kotlin Multiplatform</span>
               </div>
 
               <div class="hook-rotator" id="hook-rotator">
-                <!-- Slide 1: Green Anodized -->
+                <!-- Slide 1: Zora Violet -->
                 <div class="hook-slide active" data-index="0">
-                  <span class="badge-metal badge-anodized-green">KOTLIN MULTIPLATFORM</span>
+                  <span class="badge-metal badge-scorched-violet">KOTLIN MULTIPLATFORM</span>
                   <h1 class="slide-headline">
-                    Native iOS & Android from a single <span class="gradient-green-luster">Kotlin</span> codebase.
+                    Native iOS & Android from a single Kotlin codebase.
                   </h1>
                   <p class="slide-sub">
-                    Eliminating 2x native engineering burn rate for high-growth startups without cross-platform performance compromises.
+                    Shared Kotlin business logic, networking, and persistence paired with native Jetpack Compose and SwiftUI interfaces.
                   </p>
                 </div>
 
-                <!-- Slide 2: Duo Gradient (Green to Violet) -->
+                <!-- Slide 2: Pacific Time / Cross-Border -->
                 <div class="hook-slide" data-index="1">
-                  <span class="badge-metal badge-metal-duo">CALIFORNIA EVENTS / IN-PERSON</span>
-                  <h1 class="slide-headline">
-                    Connect in person for <span class="gradient-metal-duo">live architecture advisory</span> right here.
-                  </h1>
+                  <span class="badge-metal badge-anodized-green">TIJUANA · SAN DIEGO · PST</span>
+                  <h2 class="slide-headline">
+                    Available Jan 4 for Senior Android & KMP contracts.
+                  </h2>
                   <p class="slide-sub">
-                    Attending this meetup or conference? Ask me anything about mobile platform architecture, KMP adoption, or production scaling.
+                    20–40 h/week in Pacific Time. Remote from Tijuana, Mexico (W-8BEN) or San Diego and California on-site (TN).
                   </p>
                 </div>
 
-                <!-- Slide 3: Scorched Violet -->
+                <!-- Slide 3: Contract & Consulting -->
                 <div class="hook-slide" data-index="2">
-                  <span class="badge-metal badge-scorched-violet">PRODUCTIZED CONSULTING</span>
-                  <h1 class="slide-headline">
-                    Forensic Audits, KMP Sprints & <span class="gradient-violet-luster">Fractional Advisory</span>.
-                  </h1>
+                  <span class="badge-metal badge-scorched-violet">CONTRACT & ADVISORY</span>
+                  <h2 class="slide-headline">
+                    Senior Contracting, Audits & KMP Pilot Sprints.
+                  </h2>
                   <p class="slide-sub">
-                    Architecture Audits ($3k), 2-Week KMP Sprints ($3.5k), and Fractional Staff Platform Leadership ($65–$85/h).
+                    Senior Contract Engineering ($35–$55/h), Architecture Audits ($3k), and 2-Week KMP Sprints ($3.5k).
                   </p>
                 </div>
               </div>
@@ -114,7 +119,11 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
                 <div class="plate-chamfer-border">
                   <div class="qr-svg-wrapper" set:html={qrSvg}></div>
                   <div class="qr-plate-label">
-                    <span class="target-domain">jesusdmedinac.com</span>
+                    <a href="/" class="target-domain" style="text-decoration: none;">jesusdmedinac.com</a>
+                    <span class="spec-sep"> · </span>
+                    <a href="/#consulting" class="target-domain" style="text-decoration: none;">Services</a>
+                    <span class="spec-sep"> · </span>
+                    <a href="/zora-kmp" class="target-domain" style="text-decoration: none;">Zora KMP</a>
                   </div>
                 </div>
               </div>
@@ -127,11 +136,11 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
               <span class="spec-label">CORE ARCHITECTURE:</span>
               <span class="spec-val">Kotlin Multiplatform (KMP)</span>
               <span class="spec-sep">•</span>
-              <span class="spec-val">SwiftUI & Jetpack Compose</span>
+              <span class="spec-val">Jetpack Compose & SwiftUI</span>
               <span class="spec-sep">•</span>
-              <span class="spec-val">Architecture Audits</span>
+              <span class="spec-val">AI-Native Delivery</span>
               <span class="spec-sep">•</span>
-              <span class="spec-val">Fractional Staff Leadership</span>
+              <span class="spec-val">Senior Contracting ($35–$55/h)</span>
               <span class="spec-sep">•</span>
               <span class="spec-val">Pacific Time (PST)</span>
             </div>
@@ -338,38 +347,11 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
         color: #ffffff;
       }
 
-      .gradient-metal-duo {
-        background: linear-gradient(135deg, #76e3ab 0%, #48a574 40%, #b993f7 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .gradient-green-luster {
-        background: linear-gradient(135deg, #76e3ab 0%, #347253 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .gradient-violet-luster {
-        background: linear-gradient(135deg, #b993f7 0%, #63429e 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
       .slide-sub {
         font-size: clamp(0.95rem, 1.8vw, 1.15rem);
         color: var(--text-metal-secondary);
         line-height: 1.5;
         max-width: 520px;
-      }
-
-      .badge-metal-duo {
-        background: linear-gradient(135deg, rgba(37, 87, 62, 0.4) 0%, rgba(74, 45, 119, 0.4) 100%);
-        border: 1px solid rgba(118, 227, 171, 0.45);
-        border-right-color: rgba(185, 147, 247, 0.55);
-        border-bottom-color: rgba(185, 147, 247, 0.55);
-        color: #f1f5f9;
-        box-shadow: 0 0 12px rgba(118, 227, 171, 0.2);
       }
 
       .slide-indicators {
@@ -387,21 +369,21 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
       }
 
       .indicator-segment.active.dot-green {
-        background: var(--anodized-green-edge, #76e3ab);
+        background: #8A4DFF;
         width: 52px;
-        box-shadow: 0 0 12px rgba(118, 227, 171, 0.8);
+        box-shadow: 0 0 12px rgba(138, 77, 255, 0.7);
       }
 
       .indicator-segment.active.dot-duo {
-        background: linear-gradient(90deg, #76e3ab 0%, #b993f7 100%);
+        background: linear-gradient(90deg, #8A4DFF 0%, #ED158A 100%);
         width: 52px;
-        box-shadow: 0 0 12px rgba(185, 147, 247, 0.7);
+        box-shadow: 0 0 12px rgba(205, 0, 236, 0.7);
       }
 
       .indicator-segment.active.dot-violet {
-        background: #b993f7;
+        background: #ED158A;
         width: 52px;
-        box-shadow: 0 0 12px rgba(185, 147, 247, 0.8);
+        box-shadow: 0 0 12px rgba(237, 21, 138, 0.7);
       }
 
       /* Machined Alloy Plate for QR Code */
@@ -419,7 +401,7 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
         padding: 1.25rem;
         box-shadow: 
           0 20px 50px -10px rgba(0, 0, 0, 0.9),
-          0 0 35px -5px rgba(72, 165, 116, 0.25);
+          0 0 35px -5px rgba(138, 77, 255, 0.25);
         width: 100%;
       }
 
@@ -482,7 +464,7 @@ const qrSvg = await QRCode.toString(QR_TARGET_URL, {
       }
 
       .spec-label {
-        color: var(--anodized-green-edge);
+        color: #c9abff;
         font-weight: 700;
         letter-spacing: 0.03em;
       }

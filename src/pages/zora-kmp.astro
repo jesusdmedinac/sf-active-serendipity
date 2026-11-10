@@ -7,7 +7,7 @@ import Analytics from '../components/Analytics.astro';
 
 const whatsappBaseUrl = "https://wa.me/14704061747";
 const basicWhatsappMsg = encodeURIComponent("Hello Jesús, I want to acquire the Zora KMP Basic Starter Kit license ($149 USD).");
-const premiumWhatsappMsg = encodeURIComponent("Hello Jesús, I want to acquire the Zora KMP Premium Enterprise Kit license ($299 USD) with concierge onboarding.");
+const premiumWhatsappMsg = encodeURIComponent("Hello Jesús, I want to acquire the Zora KMP Premium Enterprise Kit license ($349 USD) with concierge onboarding.");
 const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions about the Zora KMP Starter Kit licenses.");
 ---
 
@@ -19,18 +19,27 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>Zora KMP Starter Kits | Production Kotlin Multiplatform with AI Copilot & SDUI</title>
+    <title>Zora KMP Starter Kits | Kotlin Multiplatform & AI</title>
+    <link rel="canonical" href="https://jesusdmedinac.com/zora-kmp" />
     <meta
       name="description"
-      content="Stop burning 80+ engineering hours on Gradle and Xcode setup. Production-hardened Kotlin Multiplatform starter kits with on-device & cloud Google AI, Server-Driven UI via json-to-compose, and a proven marketplace architecture."
+      content="Skip 80+ hours of Gradle and Xcode setup. Kotlin Multiplatform starter kits with Gemini Nano on-device AI, cloud fallback, and json-to-compose Server-Driven UI."
     />
     <meta property="og:title" content="Zora KMP Kits | Production Compose Multiplatform in Days" />
     <meta
       property="og:description"
-      content="Foundation-grade KMP architectures engineered with official Kotlin Foundation member solutions. Fast, reliable, and battle-tested."
+      content="Kotlin Multiplatform architectures built with official Kotlin Foundation tools for Android and iOS."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jesusdmedinac.com/zora-kmp" />
+    <meta property="og:image" content="https://jesusdmedinac.com/images/zora-cards.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zora KMP Starter Kits | Kotlin Multiplatform & AI" />
+    <meta
+      name="twitter:description"
+      content="Kotlin Multiplatform starter kits with declarative Kotlin Toolchain, Gemini AI, and json-to-compose Server-Driven UI."
+    />
+    <meta name="twitter:image" content="https://jesusdmedinac.com/images/zora-cards.png" />
     <Analytics />
   </head>
   <body>
@@ -73,7 +82,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
         </h1>
 
         <p class="hero-subtitle">
-          The foundation-grade Kotlin Multiplatform starter kits backed 100% by official Kotlin Foundation member tools. Pre-configured with the automated Kotlin Toolchain, hybrid on-device & cloud Google AI, generative Server-Driven UI with <code>json-to-compose</code>, and clean enterprise architecture.
+          Kotlin Multiplatform starter kits built on official Kotlin Foundation tools. Preconfigured with declarative Kotlin Toolchain, hybrid on-device and cloud Google AI, generative Server-Driven UI with <code>json-to-compose</code>, and modular clean architecture. Also see <a href="/#consulting" class="link-inline">Senior KMP Consulting</a>.
         </p>
 
         <!-- ROI & Authority Metrics Strip -->
@@ -84,7 +93,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
           </div>
           <div class="metric-divider"></div>
           <div class="metric-block">
-            <span class="metric-val">100%</span>
+            <span class="metric-val">KMP 2.x</span>
             <span class="metric-label">Kotlin Foundation Stack</span>
           </div>
           <div class="metric-divider"></div>
@@ -101,7 +110,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
 
         <div class="hero-actions">
           <a href="#pricing" class="button btn-anodized-green btn-hero-primary">
-            <span>Choose Your License ($0 – $299)</span>
+            <span>Choose Your License ($0 – $349)</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
@@ -213,7 +222,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
     <span class="code-prop">dependencies:</span>
       - <span class="code-val">:core:ai-copilot</span>
       - <span class="code-val">:core:sdui-compose</span>
-      - <span class="code-val">:core:database-room</span>
+      - <span class="code-val">:core:database-sqldelight</span>
       - <span class="code-val">io.insert-koin:koin-compose:4.0.0</span>
       - <span class="code-val">co.touchlab.skie:skie-annotations:0.9.4</span>
 
@@ -240,7 +249,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
               <div class="arch-item">
                 <span class="arch-bullet">✓</span>
                 <div>
-                  <strong>Offline-First SQLDelight:</strong> SQLite persistence across Android, iOS, Desktop, and Web Wasm with Kotlin Coroutines Flow.
+                  <strong>Offline-First SQLDelight:</strong> SQLite persistence across Android, iOS, and Desktop with Kotlin Coroutines Flow.
                 </div>
               </div>
             </div>
@@ -248,12 +257,12 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
         </div>
       </section>
 
-      <!-- PAIN VS RELIEF: The Setup Debt Nightmare -->
+      <!-- PAIN VS RELIEF: Setup Debt -->
       <section class="section-block">
         <div class="section-header">
-          <h2 class="section-title">The Brutal Reality of Building KMP from Scratch</h2>
+          <h2 class="section-title">What Slows Down Every New KMP Codebase</h2>
           <p class="section-subtitle">
-            Every mobile engineering team that adopts Kotlin Multiplatform loses 2 to 4 weeks solving the exact same fragile build hurdles. Zora KMP eliminates them once and for all.
+            Every mobile team adopting Kotlin Multiplatform spends 2 to 4 weeks fixing the same build and linking issues. Zora KMP removes that setup tax upfront.
           </p>
         </div>
 
@@ -297,13 +306,13 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
                 <strong>Touchlab SKIE Pre-Configured:</strong> Native Swift <code>async/await</code> and <code>AsyncSequence</code> ergonomics for Coroutines and Flows out-of-the-box.
               </li>
               <li>
-                <strong>100% Kotlin Foundation Backed:</strong> Exclusively engineered with official solutions from JetBrains, Google, Touchlab, Kotzilla, and Gradle.
+                <strong>Official Kotlin Foundation Backed:</strong> Exclusively engineered with official solutions from JetBrains, Google, Touchlab, Kotzilla, and Gradle.
               </li>
               <li>
                 <strong>Hybrid On-Device & Cloud AI:</strong> Gemini Nano on-device + Gemini Cloud API with dynamic Server-Driven UI via <code>json-to-compose</code>.
               </li>
               <li>
-                <strong>Battle-Tested Real Domain:</strong> Extracted directly from Zora, a multi-sided marketplace demonstrating full clean architecture.
+                <strong>Proven Marketplace Domain:</strong> Extracted directly from Zora, a multi-sided marketplace built with clean architecture.
               </li>
             </ul>
           </div>
@@ -318,9 +327,9 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
             <span class="badge-metal badge-anodized-green">Free Updates for 1 Year</span>
             <span class="badge-metal badge-titanium">Royalty-Free Commercial Apps</span>
           </div>
-          <h2 class="section-title">Invest in Production Velocity</h2>
+          <h2 class="section-title">Invest in Shipping Speed</h2>
           <p class="section-subtitle">
-            Choose the architectural tier that fits your stage. From an open-source starter catalog to an AI-powered copilot with Server-Driven UI, or a complete two-sided marketplace.
+            Choose the tier that matches your project stage: an open-source starter catalog, an AI copilot template with Server-Driven UI, or the full buyer and merchant marketplace kit.
           </p>
         </div>
 
@@ -338,11 +347,11 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
               <span class="price-unit">USD</span>
             </div>
             <p class="tier-description">
-              A fully functional open-source vehicle selector and parts search catalog app running natively on Android and iOS. Perfect for evaluating KMP.
+              A fully functional open-source vehicle selector and parts search catalog app running natively on Android, iOS, and Desktop. Built in under 4 weeks with tests and green CI.
             </p>
             <ul class="deliverables-list text-secondary">
               <li>Declarative Kotlin Toolchain (<code>module.yaml</code>)</li>
-              <li>Compose Multiplatform (Android & iOS shared UI)</li>
+              <li>Compose Multiplatform (Android, iOS & Desktop)</li>
               <li>Koin Dependency Injection & Navigation Compose KMP</li>
               <li>Shared Ktor Client 3.x & kotlinx.serialization</li>
               <li>Instant scaffold via <code>kmp kit create zora-community</code></li>
@@ -350,7 +359,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
             </ul>
             <div class="tier-action-wrap">
               <a href="https://github.com/jesusdmedinac/zora-community" target="_blank" rel="noopener noreferrer" class="tier-btn btn-titanium">
-                <span>Clone on GitHub — Free</span>
+                <span>Clone on GitHub (Free)</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
@@ -399,11 +408,11 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
             <h3 class="tier-name">Premium Enterprise Kit</h3>
             <div class="tier-pricing">
               <span class="price-currency">$</span>
-              <span class="price-val">299</span>
+              <span class="price-val">349</span>
               <span class="price-unit">USD</span>
             </div>
             <p class="tier-description">
-              Full Two-Sided Marketplace System. Merchant Demand Radar Dashboard, Double Agent coordinator, Ktor WebSockets server, Native Auth, and production CI/CD.
+              Full Marketplace System. Merchant Demand Radar Dashboard, Double Agent coordinator, Ktor WebSockets server, Native Auth, and CI/CD.
             </p>
             <ul class="deliverables-list text-secondary">
               <li><strong>Everything in Basic</strong> + Merchant App (<code>:apps:merchant</code>)</li>
@@ -418,7 +427,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
             </ul>
             <div class="tier-action-wrap">
               <a href={`${whatsappBaseUrl}?text=${premiumWhatsappMsg}`} target="_blank" rel="noopener noreferrer" class="tier-btn btn-anodized-green">
-                <span>Acquire Premium Enterprise ($299)</span>
+                <span>Acquire Premium Enterprise ($349)</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
@@ -460,7 +469,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
                 <th>Engineering Layer / Capability</th>
                 <th class="th-tier">Community ($0)</th>
                 <th class="th-tier">Basic ($149)</th>
-                <th class="th-tier highlight-col">Premium ($299)</th>
+                <th class="th-tier highlight-col">Premium ($349)</th>
               </tr>
             </thead>
             <tbody>
@@ -471,7 +480,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
                 <td class="highlight-col">✓ Included</td>
               </tr>
               <tr>
-                <td><strong>Compose Multiplatform (Android + iOS)</strong></td>
+                <td><strong>Compose Multiplatform (Android + iOS + Desktop)</strong></td>
                 <td>✓ Included</td>
                 <td>✓ Included</td>
                 <td class="highlight-col">✓ Included</td>
@@ -480,7 +489,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
                 <td><strong>Application Scope</strong></td>
                 <td>Vehicle Catalog App</td>
                 <td>B2C Client Copilot App</td>
-                <td class="highlight-col">Full Two-Sided Marketplace</td>
+                <td class="highlight-col">Full Marketplace System</td>
               </tr>
               <tr>
                 <td><strong>Koin DI & Jetpack Navigation Compose</strong></td>
@@ -603,7 +612,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
             <div class="flagship-card-header">
               <span class="card-icon-tag tag-green">01</span>
             </div>
-            <h4 class="flagship-feature-title">2 Machine Seats (Laptop + Desktop)</h4>
+            <h3 class="flagship-feature-title">2 Machine Seats (Laptop + Desktop)</h3>
             <p class="flagship-feature-desc">
               When activating with <code>kmp license activate &lt;KEY&gt;</code>, the CLI cryptographically binds your license to your machine hardware UUID (<code>IOPlatformUUID</code> on macOS or <code>machine-id</code> on Linux). Up to 2 machines are authorized simultaneously with offline scaffolding support.
             </p>
@@ -613,7 +622,7 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
             <div class="flagship-card-header">
               <span class="card-icon-tag tag-green">02</span>
             </div>
-            <h4 class="flagship-feature-title">Encrypted Delivery & Watermarking</h4>
+            <h3 class="flagship-feature-title">Encrypted Delivery & Watermarking</h3>
             <p class="flagship-feature-desc">
               Starter kit templates are fetched on-demand via authenticated short-lived pre-signed URLs from Cloudflare R2, embedding your cryptographic developer signature into source headers to prevent unauthorized redistribution.
             </p>
@@ -629,44 +638,44 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
 
         <div class="faq-grid">
           <div class="machined-module-card faq-card">
-            <h4 class="faq-question">Can I use Zora KMP Kits for client commercial applications?</h4>
+            <h3 class="faq-question">Can I use Zora KMP Kits for client commercial applications?</h3>
             <p class="faq-answer">
               <strong>Yes.</strong> The commercial license grants you perpetual rights to scaffold and ship unlimited proprietary and client applications without royalties or seat surcharges for your end-users.
             </p>
           </div>
 
           <div class="machined-module-card faq-card">
-            <h4 class="faq-question">Why does Zora use the Kotlin Toolchain instead of standard Gradle?</h4>
+            <h3 class="faq-question">Why does Zora use the Kotlin Toolchain instead of standard Gradle?</h3>
             <p class="faq-answer">
               The official Kotlin Toolchain (<a href="https://kotlin-toolchain.org" target="_blank" rel="noopener noreferrer" class="link-inline">kotlin-toolchain.org</a>) allows declarative <code>module.yaml</code> definitions, eliminating the fragile build script debt and deprecation churn of imperative Gradle setups while maintaining full CI/CD compatibility.
             </p>
           </div>
 
           <div class="machined-module-card faq-card">
-            <h4 class="faq-question">How does on-device AI operate across Android and iOS?</h4>
+            <h3 class="faq-question">How does on-device AI operate across Android and iOS?</h3>
             <p class="faq-answer">
-              Zora Basic and Premium utilize Google AI Edge / Gemini Nano via LiteRT on Android for zero-latency offline parsing, with an automatic, seamless cloud fallback to the Gemini Flash API on iOS and unsupported hardware.
+              Zora Basic and Premium run Google AI Edge / Gemini Nano via LiteRT on Android for offline parsing on supported devices, with automatic cloud fallback to the Gemini Flash API on iOS and older hardware.
             </p>
           </div>
 
           <div class="machined-module-card faq-card">
-            <h4 class="faq-question">What if I buy a new laptop or format my machine?</h4>
+            <h3 class="faq-question">What if I buy a new laptop or format my machine?</h3>
             <p class="faq-answer">
               You can easily deactivate a machine seat via <code>kmp license deactivate</code> or reach out directly to support to reset your hardware binding in seconds.
             </p>
           </div>
 
           <div class="machined-module-card faq-card">
-            <h4 class="faq-question">How are updates delivered?</h4>
+            <h3 class="faq-question">How are updates delivered?</h3>
             <p class="faq-answer">
               Every commercial license includes 1 year of continuous upstream updates. When new Kotlin Multiplatform or Compose releases launch, simply run <code>kmp kit update</code> in KMP-CLI to fetch updated templates.
             </p>
           </div>
 
           <div class="machined-module-card faq-card">
-            <h4 class="faq-question">Who is behind Zora KMP Starter Kits?</h4>
+            <h3 class="faq-question">Who is behind Zora KMP Starter Kits?</h3>
             <p class="faq-answer">
-              Architected by <strong>Jesús Daniel Medina Cruz</strong>, Staff Mobile Platform Architect with 10+ years of mobile engineering experience (ex-Wells Fargo enterprise mobile architecture, core contributor to <code>kmp-cli</code> and Kotlin multiplatform tooling).
+              Architected by <a href="/" class="link-inline"><strong>Jesús Daniel Medina Cruz</strong></a>, Senior Mobile Platform Architect with 11 years of mobile engineering experience (currently Senior UI Engineer at Wells Fargo; previously Bitso, Insulet, and Beek; creator of <code>json-to-compose</code> and <code>kmp-cli</code>).
             </p>
           </div>
         </div>
@@ -675,9 +684,9 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
       <!-- FINAL HIGH-URGENCY CONCIERGE BANNER -->
       <section class="final-cta-block">
         <div class="final-cta-card machined-chassis">
-          <h2 class="final-cta-title">Ready to Accelerate Your Mobile Roadmap?</h2>
+          <h2 class="final-cta-title">Start Building Your KMP App Without Setup Debt</h2>
           <p class="final-cta-desc">
-            Direct onboarding and license provisioning handled personally by Jesús Daniel Medina Cruz. Skip 80+ hours of setup debt today.
+            Direct onboarding and license provisioning handled personally by Jesús Daniel Medina Cruz. Explore <a href="/#proof-of-work" class="link-inline">open-source proof of work</a> or reach out directly.
           </p>
           <div class="final-cta-buttons">
             <a href={`${whatsappBaseUrl}?text=${premiumWhatsappMsg}`} target="_blank" rel="noopener noreferrer" class="button btn-anodized-green btn-hero-primary">
@@ -694,10 +703,10 @@ const generalWhatsappMsg = encodeURIComponent("Hello Jesús, I have questions ab
       <!-- Footer -->
       <footer class="page-footer">
         <p class="footer-copy">
-          &copy; {new Date().getFullYear()} Jesús Daniel Medina Cruz &bull; Staff Mobile Platform Architect.
+          &copy; {new Date().getFullYear()} Jesús Daniel Medina Cruz &bull; Senior Mobile Platform Architect.
         </p>
         <p class="footer-subcopy">
-          Remote-first Pacific Time (PST) operations serving North America with California on-site availability.
+          Remote-first Pacific Time (PST) from Tijuana, Mexico (W-8BEN), serving North America with San Diego / California on-site availability (TN).
         </p>
       </footer>
     </main>
