@@ -1,27 +1,26 @@
-# language: es
-Característica: Oferta de modernización móvil de escritorio a tablets y smartphones
-  Como fundador o líder técnico de operaciones
-  Quiero entender cómo modernizar mis flujos de escritorio hacia tablets y smartphones sin riesgo
-  Para decidir si agendar un diagnóstico de 5 días con Jesús Daniel Medina Cruz
+Feature: Mobile modernization offer from desktop systems to tablets and smartphones
+  As a founder or operations technical lead
+  I want to understand how to move my desktop workflows to tablets and smartphones without risk
+  So that I can decide whether to book a 5-day paid diagnostic with Jesús Daniel Medina Cruz
 
-  Escenario: Presentación clara de la propuesta de valor en el Hero
-    Dado que visito la página de inicio
-    Entonces debo ver el titular "Tus sistemas de escritorio, ahora en la tablet o el teléfono de tu equipo"
-    Y debo ver el subtítulo enfocado en conexión a sistemas actuales sin reemplazarlos
-    Y debo ver una llamada a la acción clara para agendar llamada de diagnóstico de 20 minutos
+  Scenario: Clear value proposition in the Hero
+    Given I visit the home page
+    Then I should see the headline "Tus sistemas de escritorio, ahora en la tablet o el teléfono de tu equipo"
+    And I should see the subheadline focused on connecting to current systems without replacing them
+    And I should see a clear call to action to book a 20-minute exploratory call
 
-  Escenario: Comprensión del problema y principio cero rip-and-replace
-    Dado que leo la sección del problema
-    Entonces debo ver el contraste entre captura en papel/PC distante y captura móvil en el punto de trabajo
-    Y debo ver claramente lo que NO se hace: no reemplazar ERP, base de datos ni software existente
+  Scenario: Problem statement and the zero rip-and-replace principle
+    Given I read the problem section
+    Then I should see the contrast between paper or remote-PC capture and mobile capture at the point of work
+    And I should clearly see what is NOT done: no replacement of the ERP, database, or existing desktop software
 
-  Escenario: Estructura del proceso de trabajo en 3 etapas
-    Dado que reviso la sección de metodología
-    Entonces debo ver la etapa 1 como Diagnóstico de 5 días a precio fijo
-    Y debo ver la etapa 2 como Piloto de 4 semanas sobre un solo flujo
-    Y debo ver la etapa 3 como Ampliación opcional en bloques de 2 semanas
+  Scenario: Work process structured in 3 stages
+    Given I review the methodology section
+    Then I should see stage 1 as a fixed-price 5-day Diagnostic
+    And I should see stage 2 as a 4-week Pilot on a single workflow
+    And I should see stage 3 as an optional Expansion in 2-week blocks
 
-  Escenario: Filtro estricto de capacidades verificadas
-    Dado que leo las capacidades del servicio
-    Entonces solo deben mostrarse aquellas capacidades técnicas confirmadas y probadas
-    Y las capacidades pendientes de verificación deben mantenerse ocultas o en borrador
+  Scenario: Strict filter for verified capabilities
+    Given I read the service capabilities
+    Then only technically confirmed and proven capabilities should be shown
+    And capabilities pending verification should stay hidden or in draft
