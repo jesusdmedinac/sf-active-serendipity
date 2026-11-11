@@ -38,5 +38,5 @@ Hoy el dato se captura en papel o en una PC lejos del lugar donde ocurre el trab
 
 ## 2. Puntos Operativos y Condiciones Previas a Publicación
 - **Sin caso de cliente:** Ofrecer el **diagnóstico de 5 días** como puerta de entrada accesible y de bajo riesgo, en lugar de vender el piloto como experiencia masiva comprobada.
-- **Transición y Disponibilidad:** La fecha formal de disponibilidad para proyectos externos es **a partir del 2026-12-18** (Transición Tijuana 2026). Las llamadas previas son para descubrimiento, diagnóstico preliminar y reservación de agenda.
+- **Transición y Disponibilidad:** La fecha formal de inicio de cualquier trabajo externo o servicio remunerado es estrictamente **a partir del 2026-12-18** (Transición Tijuana 2026). Antes de esa fecha, cualquier llamada o contacto es **estrictamente una conversación exploratoria de 20 minutos (sin entregables, sin cobro y sin trabajo técnico previo)** únicamente para evaluar fit mutuo y reservar agenda para después del 18 de diciembre de 2026. El diagnóstico de 5 días pagado se ejecuta y entrega únicamente a partir de dicha fecha.
 - **Validación de Capacidades:** Antes de activar cada bullet en la UI pública, verificar la viabilidad técnica y tener claros los ejemplos/demos en KMP.
