@@ -14,6 +14,8 @@
 ### El Problema
 Hoy el dato se captura en papel o en una PC lejos del lugar donde ocurre el trabajo. Llega tarde y con errores de transcripción. Mi enfoque es llevar ese flujo a la tablet o al teléfono, en el punto donde pasa, sin tocar la base de datos ni el software que ya funciona.
 
+<a id="proceso"></a>
+
 ### Cómo Trabajo
 1. **Diagnóstico (5 días, precio fijo):** Mapeo del flujo más costoso, inventario de integraciones (base de datos, exportaciones, APIs) y propuesta técnica con alcance y riesgos.
 2. **Piloto (4 semanas):** Un flujo de punta a punta en dispositivos reales, con lista explícita de lo que incluye y lo que no. *Precio: [por definir; alinear con el Tier 3 de $3,500 / 2 semanas o explicar la diferencia]*.
