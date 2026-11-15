@@ -1,6 +1,6 @@
 # Jesús Daniel Medina Cruz: Android and Kotlin Multiplatform Architecture
 
-> Senior Android and Kotlin Multiplatform (KMP) engineer with 11 years of mobile production experience across fintech, medical IoT, consumer audio, and banking platforms. Available January 4, 2027 in Pacific Time (PST) from Tijuana, Mexico (US Form W-8BEN) or California on-site (TN visa).
+> Senior Android and Kotlin Multiplatform (KMP) engineer with 11 years of mobile production experience across fintech, medical IoT, consumer audio, and banking platforms. Available December 21, 2026 in Pacific Time (PST) from Tijuana, Mexico (US Form W-8BEN) or California on-site (TN visa).
 
 ## Primary Pages
 
@@ -13,7 +13,7 @@
 * Name: Jesús Daniel Medina Cruz
 * Role: Senior Mobile Platform Architect & Android / KMP Contractor
 * Timezone & Location: Pacific Standard Time (PST), based in Tijuana, Baja California and San Diego / California corridor
-* Contracting: Direct B2B contractor via US Form W-8BEN (cross-border software export; available January 4, 2027), or TN Visa for hybrid/on-site roles in California
+* Contracting: Direct B2B contractor via US Form W-8BEN (cross-border software export; available December 21, 2026), or TN Visa for hybrid/on-site roles in California
 * [LinkedIn Profile](https://linkedin.com/in/jesusdmedinac): Jesús Daniel Medina Cruz on LinkedIn
 * [GitHub Profile](https://github.com/jesusdmedinac): jesusdmedinac on GitHub
 
@@ -41,7 +41,7 @@
 
 ## Engagement Models & Rates
 
-* **Senior Android / KMP Contractor (20 to 40 hrs/week, PST):** $35 to $55 USD/hour via W-8BEN from Mexico or California TN visa, available January 4, 2027.
+* **Senior Android / KMP Contractor (20 to 40 hrs/week, PST):** $35 to $55 USD/hour via W-8BEN from Mexico or California TN visa, available December 21, 2026.
 * **5-Day Mobile Architecture & Performance Audit:** $2,500 to $3,500 USD fixed scope reviewing crash telemetry, memory allocation, CI/CD bottlenecks, and module structure.
 * **2-Week Core Pilot Sprint:** $3,500 to $5,000 USD fixed price delivering an initial feature, SDK integration, or shared KMP logic module.
 
