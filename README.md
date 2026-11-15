@@ -70,7 +70,7 @@ The portal implements an executive **B2B Value Ladder** engineered to capture de
 - **Tier 3: Implementation Pilot ($3,500 / 2-week sprint).**
   - **KMP Pilot Sprint:** Time-boxed engagement shipping one shared core module (networking, caching, persistence, and domain logic) connected to SwiftUI and Jetpack Compose with automated tests.
 - **Tier 4: Senior Contract & Fractional Architect ($35 to $55/hr).**
-  - **Senior Android / KMP Contractor:** Dedicated engineering and architecture support (20 to 40 hours/week) in Pacific Time (PST), remote from Tijuana, Mexico (W-8BEN) or San Diego / California on-site (TN), starting January 4.
+  - **Senior Android / KMP Contractor:** Dedicated engineering and architecture support (20 to 40 hours/week) in Pacific Time (PST), remote from Tijuana, Mexico (W-8BEN) or San Diego / California on-site (TN), starting December 21.
 - **Tier 5: Zora Marketplace Equity.**
   - **Zora Marketplace:** Reverse-auction marketplace for used auto parts connecting vehicle owners with auto recyclers via real-time bidding and multimodal inspection. In active development.
 
